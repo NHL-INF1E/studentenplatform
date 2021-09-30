@@ -8,6 +8,14 @@
     <link src="css/styles.css" rel="stylesheet">
 </head>
 <body>
-    
+    <?php
+    //Header
+    include_once('');
+    ?>
+
+    <?php
+    //Footer
+    include_once('');
+    ?>
 </body>
 </html>
