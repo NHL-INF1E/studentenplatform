@@ -1,3 +1,14 @@
+<?php
+    // Haalt de data uit data.json
+    $activities = getJsonContent();
+
+    function getJsonContent() {
+        $json = file_get_contents('data/categorie.json');
+        $content = json_decode($json);
+        return $content;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,31 +25,30 @@
 <body>
     <div class="container">
         <div class="row text-center">
+            <?php
+            foreach ($activities as $key => $item) {
+            ?>
             <div class="col-md-4 kaartje">
                 <div class="row">
                     <div class="col-md-12">
-                        <img class="img-fluid" src="pictures/stock/hardloopTracks.jpeg" alt="">
+                        <img class="img-fluid" src="<?php echo $item->image; ?>" alt="">
                     </div>
                     <div class="col-md-12">
-                        <p class="text-start">Titel</p>
+                        <p class="text-start"><?php echo $item->title; ?></p>
                     </div>
                     <div class="col-md-12">
-                        <p class="text-start">tekst</p>
+                        <p class="text-start"><?php echo $item->beschrijving; ?></p>
                     </div>
                     <div class="col-md-12 text-end">
-                        <button class="button"><a href="index.php">Inschrijven</a></button>
+                        <button class="button"><a href="<?php echo $item->link; ?>">Inschrijven</a></button>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <p>tekst</p>
-            </div>
-            <div class="col-md-4">
-                <p>tekst</p>
-            </div>
+            <?php
+            }
+            ?>
         </div>
     </div>
-
 </body>
 
 </html>

@@ -1,3 +1,29 @@
 {
-    "name": "thijsbv"
+    "1": {
+        "title": "Sport",
+        "beschrijving": "Kom hier naar sport",
+        "image": "pictures/NHL_Stenden_Eropuit_Logo.png",
+        "link": "index.html"
+    },
+
+    "2": {
+        "title": "kunst",
+        "beschrijving": "Kijk hier naar kunst",
+        "image": "pictures/NHL_Stenden_Eropuit_Logo.png",
+        "link": "index.html"
+    },
+
+    "3": {
+        "title": "kunst",
+        "beschrijving": "Kijk hier naar kunst",
+        "image": "pictures/NHL_Stenden_Eropuit_Logo.png",
+        "link": "index.html"
+    },
+
+    "4": {
+        "title": "kunst",
+        "beschrijving": "Kijk hier naar kunst",
+        "image": "pictures/NHL_Stenden_Eropuit_Logo.png",
+        "link": "index.html"
+    }
 }
