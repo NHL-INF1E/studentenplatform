@@ -4,15 +4,76 @@ $filepathID = "../datastores/id.txt";
 $filepathActivities = "../datastores/activities.json";
 
 /**
+ * remove a activity
+ * @param int $ID id of the activity to be deleted
+ */
+function removeActivity($ID){
+    global $filepathActivities;
+    $activities = getActivities();
+    unset($activities[$ID]);
+    json_encode($activities);
+    file_put_contents($filename, $activities);
+}
+
+/**
+ * edit an activity
+ * @param int $ID id of the activity to be edited
+ * @param array $content new content for the selected activity
+ */
+function editActivity($ID, $content){
+    global $filepathActivities;
+    $activities = getActivities();
+    if($activities[$ID] == null){
+        throw new RuntimeException("no such activity found");
+    }else{
+        array_replace($activities[$ID], $content);
+        $activitiesString = json_encode($activities);
+        file_put_contents($filepathActivities, $activitiesString);
+    }
+}
+
+/**
+ * find an activity
+ * @param int $ID id of the activity to find
+ * @return array $activities[$ID] activity with given ID in array form
+ */
+function getActivity($ID){
+    $activities = getActivities();
+    if($activities[$ID] == null){
+        throw new RuntimeException("no such activity found");
+    }else{
+        return $activities[$ID];
+    }
+    
+}
+
+/**
  * adds an activity
  * @param array $content an activity in array form to be encoded and added
  */
 function addActivity($content){
     global $filepathID, $filepathActivities;
+    //get all activities
+    $activities = getActivities();
     
-    //add an ID to the activity and then write it to the datastore
-    $activity = array(getID($filepathID) => $content);
-    file_put_contents($filepathActivities, $activity);
+    //add an ID to the activity and then add it to all activities
+    $newActivity = array(getID($filepathID) => $content);
+    array_push($activities, $newActivity);
+    json_encode($activities);
+    file_put_contents($filepathActivities, $activities);
+}
+
+/**
+ * get all activities
+ * @return array of all added activities
+ */
+function getActivities(){
+    global $filepathActivities;
+    if(!($activities = file_get_contents($filepathActivities))){
+        throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
+    }else{
+        return json_decode($activities);
+    }
 }
 
 /**
@@ -52,8 +113,4 @@ function updateID($ID, $filepath){
         fclose($file);
     }
 }
-
-/**
- * adds an activity the the json datastore
- */
 
