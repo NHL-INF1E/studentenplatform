@@ -3,7 +3,7 @@
     $activities = getJsonContent();
 
     function getJsonContent() {
-        $json = file_get_contents('data/categorie.json');
+        $json = file_get_contents('datastores/categorie.json');
         $content = json_decode($json);
         return $content;
     }
