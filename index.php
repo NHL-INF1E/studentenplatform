@@ -26,17 +26,17 @@
             <div class="col-md-4">
                 <div class="kaartje row <?php echo $item->kleur?>">
                     <div class="content p-0">
-                        <div class="col-md-12 p-0" style="height: 30vh;">
+                        <div class="col-md-12 rowOne">
                             <img class="img-fluid" src="<?php echo $item->image; ?>" alt="">
                         </div>
-                        <div class="col-md-12 p-4" style="height: 5vh;">
+                        <div class="col-md-12 rowTwo">
                             <b><h3 class="text-start"><?php echo $item->title; ?></h3></b>
                         </div>
-                        <div class="col-md-12 p-4" style="height: 27vh;">
+                        <div class="col-md-12 rowThree">
                             <p class="text-start"><?php echo $item->beschrijving; ?></p>
                         </div>
-                        <div class="col-md-12 text-end p-4" style="height: 8vh;">
-                            <button class="button inschrijfKnop"><a href="<?php echo $item->link; ?>">Inschrijven</a></button>
+                        <div class="col-md-12 text-end p-4 rowFour">
+                            <a href="<?php echo $item->link; ?>"><button class="button inschrijfKnop">Inschrijven</button></a>
                         </div>
                     </div>
                 </div>

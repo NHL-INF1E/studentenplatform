@@ -12,24 +12,48 @@
     display: block;
 }
 
+.rowOne {
+    margin-bottom: 1.5rem!important;
+    height: 28vh;
+    overflow-wrap: break-word;
+    display: block;
+    overflow: hidden;
+}
+
+.rowTwo {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    height: 6vh;
+    overflow-wrap: break-word;
+    display: block;
+}
+
+.rowThree {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+    height: 25vh;
+    overflow-wrap: break-word;
+    display: block;
+}
+
+.rowFour {
+    height: 8vh;
+    overflow-wrap: break-word;
+    display: block;
+}
+
 /* CARD BUTTON */
 .inschrijfKnop {
     color: white;
+    background-color: royalblue;
     width: 125px;
     height: 35px;
-    border: none;
-    background-color: royalblue;
-    transition: all 0.3s ease;
-}
-
-.inschrijfKnop a {
-    color: white;
-    text-decoration: none;
     font-size: 17px;
     font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
 }
-
-.inschrijfKnop a:hover {
+.inschrijfKnop:hover {
     color: deepskyblue;
 }
 
