@@ -1,7 +1,8 @@
 <?php
 
 $filepathID = "../datastores/id.txt";
-$filepathActivities = "../datastores/activities.json";
+//Ik denk beter dat we de path mee kunnen sturen aangezien ik vanuit index.php geen ../ nodig ben en anders include errors krijg doordat hij het bestand niet vind/we moeten mijn systeem gebruiken dat niemand snapt :/
+$filepathActivities = "datastores/activities.json";
 
 /**
  * remove a activity

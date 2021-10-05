@@ -1,12 +1,7 @@
 <?php
+    require_once('utilities/dataStoreUtil.php');
     // Haalt de data uit data.json
-    $activities = getJsonContent();
-
-    function getJsonContent() {
-        $json = file_get_contents('datastores/categorie.json');
-        $content = json_decode($json);
-        return $content;
-    }
+    $activities = getActivities();
 ?>
 
 <!DOCTYPE html>
@@ -28,19 +23,21 @@
             <?php
             foreach ($activities as $key => $item) {
             ?>
-            <div class="col-md-4 kaartje">
-                <div class="row">
-                    <div class="col-md-12">
-                        <img class="img-fluid" src="<?php echo $item->image; ?>" alt="">
-                    </div>
-                    <div class="col-md-12">
-                        <p class="text-start"><?php echo $item->title; ?></p>
-                    </div>
-                    <div class="col-md-12">
-                        <p class="text-start"><?php echo $item->beschrijving; ?></p>
-                    </div>
-                    <div class="col-md-12 text-end">
-                        <button class="button"><a href="<?php echo $item->link; ?>">Inschrijven</a></button>
+            <div class="col-md-4">
+                <div class="kaartje row <?php echo $item->kleur?>">
+                    <div class="content p-0">
+                        <div class="col-md-12 p-0" style="height: 30vh;">
+                            <img class="img-fluid" src="<?php echo $item->image; ?>" alt="">
+                        </div>
+                        <div class="col-md-12 p-4" style="height: 5vh;">
+                            <b><h3 class="text-start"><?php echo $item->title; ?></h3></b>
+                        </div>
+                        <div class="col-md-12 p-4" style="height: 27vh;">
+                            <p class="text-start"><?php echo $item->beschrijving; ?></p>
+                        </div>
+                        <div class="col-md-12 text-end p-4" style="height: 8vh;">
+                            <button class="button inschrijfKnop"><a href="<?php echo $item->link; ?>">Inschrijven</a></button>
+                        </div>
                     </div>
                 </div>
             </div>

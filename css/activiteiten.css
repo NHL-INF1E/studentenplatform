@@ -1,4 +1,48 @@
+/* CARDS */
 .kaartje {
     border: 1px solid black;
-    padding: 1%;
+    margin-right: 1% !important;
+    margin-left: 1% !important;
+    margin-top: 5% !important;
+    transition: all 0.3s ease;
+}
+
+.content {
+    height: 70vh;
+    display: block;
+}
+
+/* CARD BUTTON */
+.inschrijfKnop {
+    color: white;
+    width: 125px;
+    height: 35px;
+    border: none;
+    background-color: royalblue;
+    transition: all 0.3s ease;
+}
+
+.inschrijfKnop a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.inschrijfKnop a:hover {
+    color: deepskyblue;
+}
+
+/* CARD BACKGROUNDS */
+.groen:hover {
+    background-color: #5baa002c;
+}
+.roze:hover {
+    background-color: #aa005b2a;
+}
+.blauw:hover {
+    background-color: #0006aa28;
+}
+.rood:hover {
+    background-color: #aa000636;
 }
