@@ -1,15 +1,20 @@
 #header {
-    background-color: #005AAA;
-
-}
-
-#footer {
-    background-color: #005AAA;
-
-}
-
-#button {
+    background-color: #005AAA; }
+    
+#headerbutton {
     color: white;
     font-family: Cera;
     font-weight: bold;
-}
+    padding: 10px; }
+
+#headerlogo {
+    height: 100px;
+    width:  30px; }
+
+#footer {
+    background-color: #005AAA; }
+
+#footertext {
+    Color: white;
+    font-family: Cera;
+    padding-left: 10px; }
