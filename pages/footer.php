@@ -12,21 +12,12 @@
     />
 </head>
 <body>
-<div style="background-color: #005AAA;" class="container-fluid">
-    <div class="col-md-3">
-    <p id="footertext">© NHL Stenden 2021</p>
+<div id="footerbase" class="container-fluid">
+    <div class="col-md-3" style="background-color:#005AAA;">
+      <p id="footertext">© NHL Stenden 2021</p>
     </div>
     <div class="col-md-9">
     </div>
 </div>   
-<!-- footer
-    <div id="footer">
- 
-Text in de footer    
-        <div id="footertext">
-        <p>© NHL Stenden 2021</p>
-        </div>
-        
-    </div> -->  
 </body>
-</html
+</html>

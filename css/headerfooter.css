@@ -7,6 +7,7 @@
     font-family: cera;
     font-weight: bold;
     color:white;
+    float: center;
 
 }
 #buttoncontainerheader {
@@ -21,10 +22,10 @@
     padding-left: 10px;
     float: center;}
 
-#footer {
+#footerbase {
     background-color: #005AAA; }
 
 #footertext {
     Color: white;
     font-family: Cera;
-    padding-left: 10px; }
+    padding-left: 30px; }
