@@ -1,0 +1,27 @@
+
+.content {
+    background-color: #EEEEEC;
+    font-family: Cera;
+    padding: 10px;
+    margin: 10px; 
+    height: auto;
+}
+
+.article-img {
+    padding: 0;
+    margin: 0;
+} 
+
+.article-img img {
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+.article-title {
+    padding: 10px;
+}
+
+.article-text {
+    padding: 10px;
+}
+

@@ -1,0 +1,20 @@
+
+*   {
+    font-family: CeraPRO, sans-serif
+}
+
+.form-text  {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 95%;
+
+}
+
+.col-md-3   {
+    border: 1px solid black;
+}
+
+.float-left {
+    float: left;
+}
+
