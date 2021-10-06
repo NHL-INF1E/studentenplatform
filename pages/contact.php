@@ -13,10 +13,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-
             </div>
             <div class="col-md-3">       
-                <h2>Contact</h2>
+                <h2><b>Contact</b></h2>
                 <form action="/contact.php"><!-- -->
                     <p>
                         <div class="text-center">
@@ -36,14 +35,13 @@
 
                         <div class="text-center">
                             <label class="float-left" for="bericht">Bericht</label><br>
-                            <textarea class="form-text" id="bericht" name="bericht"></textarea>
+                            <textarea class="form-text" id="bericht" name="bericht" placeholder="Type hier je bericht" rows="5"></textarea>
                         </div>
-                        <button type="submit" class="verzenden">Versturen</button>
+                        <button type="submit" class="verzenden">Verzenden</button>
                     </p>
                 </form>
             </div>
             <div class="col-md-5">
-
             </div>
         </div>
     </div> 
