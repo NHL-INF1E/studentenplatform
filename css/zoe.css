@@ -16,6 +16,7 @@
 
 .kaartje {
 	height: 600px;
+	margin-bottom: 25px;
 }
 
 button {
@@ -27,11 +28,12 @@ button {
 
 .knop-box {
 	position: absolute;
-	width: 92%; 
+	width: 90%; 
 	bottom: 10px;
 }
 
 .marginRandje {
 	margin: 5px;
 	border: 1px solid black;
+	height: 600px;
 }
