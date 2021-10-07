@@ -1,20 +1,31 @@
-
+@import url(//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular);
 *   {
-    font-family: CeraPRO, sans-serif
+    font-family: CeraPRO-Regular, sans-serif; 
 }
 
 .form-text  {
     border: 1px solid black;
     border-radius: 5px;
     width: 95%;
-
 }
 
 .col-md-3   {
     border: 1px solid black;
+    padding: 10px;
 }
 
-.float-left {
+label   {
     float: left;
+    margin-left: 3%;
 }
 
+.verzenden  {
+    float: right;
+    margin-right: 3%;
+    background-color: #005AAA; 
+    color: white;
+}
+
+#bericht    {
+    resize: none;
+}

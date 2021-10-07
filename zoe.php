@@ -9,8 +9,8 @@
     <body>
         <div class="container alle-kaartjes">
             <div class="row">
-                <div class="col-md-4 kaartje sport position-relative">
-					<div class="marginRandje">
+                <div class="col-md-4 kaartje position-relative">
+					<div class="marginRandje sport">
 						<img class="img-fluid" src="pictures/stock/hardloopTracks.jpeg" alt="atletiek baan">
 						<h2>Sport</h2>
 						<p>Schrijf je hier in voor sport.</p>
@@ -20,30 +20,36 @@
 					</div>
                 </div>
 
-                <div class="col-md-4 kaartje beeldendekunst position-relative">
-                    <img class="img-fluid" src="pictures/stock/pexels-free-creative-stuff-1193743.jpg" alt="verf spetter">
-					<h2>Beeldende kunst</h2>
-					<p>Schrijf je hier in voor beeldende kunst.</p>
-					<div class="knop-box">
-						<button class="knopje" type="button">Inschrijven</button>	
+                <div class="col-md-4 kaartje position-relative">
+                    <div class="marginRandje beeldendekunst">
+						<img class="img-fluid" src="pictures/stock/pexels-free-creative-stuff-1193743.jpg" alt="verf spetter">
+						<h2>Beeldende kunst</h2>
+						<p>Schrijf je hier in voor beeldende kunst.</p>
+						<div class="knop-box">
+							<button class="knopje" type="button">Inschrijven</button>	
+						</div>
 					</div>
                 </div>
 
-                <div class="col-md-4 kaartje muziekendans position-relative">
-					<img class="img-fluid" src="pictures/stock/guitar.jpg" alt="gitaar">
-                    <h2>Muziek en dans</h2>
-					<p>Schrijf je hier in voor muziek en dans.</p>
-					<div class="knop-box">
-						<button class="knopje" type="button">Inschrijven</button>	
+                <div class="col-md-4 kaartje position-relative">
+					<div class="marginRandje muziekendans">
+						<img class="img-fluid" src="pictures/stock/guitar.jpg" alt="gitaar">
+						<h2>Muziek en dans</h2>
+						<p>Schrijf je hier in voor muziek en dans.</p>
+						<div class="knop-box">
+							<button class="knopje" type="button">Inschrijven</button>	
+						</div>
 					</div>
                 </div>
 
-                <div class="col-md-4 kaartje film position-relative">
-					<img class="img-fluid" src="pictures/stock/popcorn-movie-party-entertainment.jpg" alt="popcorn">
-                    <h2>Film</h2>
-					<p>Schrijf je hier in voor muziek en dans.</p>
-					<div class="knop-box">
-						<button class="knopje" type="button">Inschrijven</button>	
+                <div class="col-md-4 kaartje position-relative">
+					<div class="marginRandje film">
+						<img class="img-fluid" src="pictures/stock/popcorn-movie-party-entertainment.jpg" alt="popcorn">
+						<h2>Film</h2>
+						<p>Schrijf je hier in voor muziek en dans.</p>
+						<div class="knop-box">
+							<button class="knopje" type="button">Inschrijven</button>	
+						</div>
 					</div>
                 </div>
             </div>

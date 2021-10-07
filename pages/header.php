@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>header</title>
+    <title>Header</title>
     <link href=../css/headerfooter.css rel=stylesheet>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
@@ -12,30 +12,25 @@
     />
   </head>
   <body>
-    <div style="background-color: cornflowerblue;" class="container-fluid">
-
+    <!-- header base -->
+    <div style="background-color:#005AAA;" class="container-fluid">
+        <div class="row">
+          <!-- Header logo -->
+          <div class="col-md-3">
+            <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+          </div>
+          <!-- Login gebruikersnaam template -->
+          <div class="col-md-5">
+            <p id="usernameheader">Hallo Stefan</p>
+          </div>
+          <!-- Knoppen naar andere pagina's -->
+          <div class="col-md-4" id="buttoncontainerheader">
+            <a href=activiteiten.php id="headerbutton">Activiteiten</a>
+            <a href=login.php id="headerbutton">Inloggen</a>
+            <a href=contact.php id="headerbutton">Contact</a>
+            <!-- Taal wissel knop hier -->
+          </div>
+        </div>
     </div>
-    <!-- Header
-<div #header>
-
-NHL Stenden Eropuit logo
-    <div>
-        <img src="pictures/NHL_Stenden_Eropuit_Logo.png" 
-             alt="NHL Stenden Eropuit">
-    </div>
-
-Header Knoppen naar ander pagina's
-    <div>
-        <a href=activiteiten.php id="headerbutton">Activiteiten</a>
-        <a href=login.php id="headerbutton">Inloggen</a>
-        <a href=contact.php id="headerbutton">Contact</a>
-    </div>
-
-Taal knop   
-    <div>
-        
-    </div>
-</div>    
--->
   </body>
 </html>

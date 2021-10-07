@@ -1,20 +1,31 @@
-#header {
-    background-color: #005AAA; }
-    
+#logoheader {
+    height: 100px;
+    float: right;
+    line-height: 120px;
+}
+#usernameheader { 
+    font-family: cera;
+    font-weight: bold;
+    color:white;
+    float: center;
+
+}
+#buttoncontainerheader {
+    line-height: 120px;
+}
+
 #headerbutton {
     color: white;
+    text-decoration: none;
     font-family: Cera;
     font-weight: bold;
-    padding: 10px; }
+    padding-left: 10px;
+    float: center;}
 
-#headerlogo {
-    height: 100px;
-    width:  30px; }
-
-#footer {
+#footerbase {
     background-color: #005AAA; }
 
 #footertext {
     Color: white;
     font-family: Cera;
-    padding-left: 10px; }
+    padding-left: 30px; }
