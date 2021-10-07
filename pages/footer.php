@@ -12,10 +12,13 @@
     />
 </head>
 <body>
+<!-- Footer basis -->
 <div id="footerbase" class="container-fluid">
+<!-- Text in footer -->
     <div class="col-md-3" style="background-color:#005AAA;">
       <p id="footertext">© NHL Stenden 2021</p>
     </div>
+<!-- de rest van de collumns -->
     <div class="col-md-9">
     </div>
 </div>   
