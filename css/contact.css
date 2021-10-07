@@ -1,31 +1,44 @@
-@import url(//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular);
+@import url(//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular); /*Hierdoor kan er gebruik worden gemaakt van CeraPRO.*/
 *   {
-    font-family: CeraPRO-Regular, sans-serif; 
+    font-family: CeraPRO-Regular, sans-serif; /*Het lettertype CeraPRO, uit het huisstijldocument en sans-serif als back-up.*/
 }
 
 .form-text  {
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 95%;
+    border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
+    border-radius: 5px; /*Dit zorgt ervoor dat de hoeken afgerond zijn met een radius van 5px.*/
+    width: 95%; /*Dit zorgt ervoor dat de breedte 95% is.*/
 }
 
 .col-md-3   {
-    border: 1px solid black;
-    padding: 10px;
+    border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
+    padding: 10px; /*Dit zorgt voor een leegte tussen de zwarte lijn en de inhoud van 10px.*/
 }
 
 label   {
-    float: left;
-    margin-left: 3%;
+    float: left; /*Dit zorgt ervoor dat de text links is.*/
+    margin-left: 3%; /*Dit zorgt ervoor dat de teskt op gelijke hoogte is met de input.*/
 }
 
 .verzenden  {
-    float: right;
-    margin-right: 3%;
-    background-color: #005AAA; 
-    color: white;
+    float: right; /*Dit zorgt ervoor dat de knop verzenden rechts is.*/
+    margin-right: 3%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
+    background-color: #005AAA; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
+    color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
 }
 
-#bericht    {
-    resize: none;
+#message    {
+    resize: none; /*Dit zorgt ervoor dat de textarea een vaste grootte heeft.*/
+}
+
+.error  {
+    color: red; /*Dit geeft de tekst van de error de kleur rood.*/
+    margin: 0; /*Dit zorgt ervoor dat er geen extra ruimte zit tussen de error en de input.*/
+    float: right; /*Dit zorgt ervoor dat de error rechts is.*/
+    margin-right: 3%; /*Dit zorgt ervoor dat de error op gelijke hoogte is met de input.*/
+}
+
+#gelukt {
+    color: #005AAA; /*Dit geeft de tekst van gelukt de kleur blauw uit het huisstijldocument.*/
+    float: left; /*Dit zorgt ervoor dat de tekst van geluk links naast de knop verzenden staat.*/
+    margin-left: 3%; /*Dit zorgt ervoor dat de tekst van geluk op gelijke hoogte is met de input.*/
 }
