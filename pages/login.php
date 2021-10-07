@@ -12,24 +12,44 @@
     </head>
 
     <body>
-    
+
+        <?php
+
+            $emailErr = "";
+            $email = "";
+            $pass = "";
+            $passErr = "";
+
+            if (isset($_POST["login"])) {
+                if(!empty($_POST["email"])) {
+                    $email = htmlspecialchars($_POST["email"]);
+                } else {
+                    $emailErr = "E-mailadres is verplicht";
+                }
+
+               if(empty($_POST["pass"])) {
+                 $passErr = "Wachtwoord is verplicht";
+                } else {
+                  $pass = htmlspecialchars($_POST["pass"]);
+                }
+            }
+        ?>
+
         <div id="container"> <!-- Divje waar het inlogformulier in staat -->
-            <form method="post" action="../index.php">
+            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <p id="title">Login</p>
 
                 <p id="emailaddress">E-mailadres</p> 
                 <input type="text" id="email" name="email">
+                <span class="error">* <?php echo $emailErr;?></span>
 
                 <p id="password">Wachtwoord</p>
                 <input type="text" id="pass" name="pass">
+                <span class="error">* <?php echo $passErr;?></span>
 
                 <p><input type="submit" id="login" name ="login" value="Inloggen"></p>
             </form>
         </div>
-
-        <?php
-
-        ?>
 
     </body>
 </html>
