@@ -19,7 +19,7 @@
           <div class="col-md-3">
             <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
           </div>
-          <!-- Login gebruikersnaam template -->
+          <!-- Login gebruikersnaam placeholder -->
           <div class="col-md-5">
             <p id="usernameheader">Hallo Stefan</p>
           </div>
@@ -29,6 +29,10 @@
             <a href=login.php id="headerbutton">Inloggen</a>
             <a href=contact.php id="headerbutton">Contact</a>
             <!-- Taal wissel knop hier -->
+            <select name="taal">
+				<option value="Nederlands" id="langdropdown">🇳🇱</option>
+				<option value="english" selected="english" id="langdropdown">🇬🇧</option>
+			</select>
           </div>
         </div>
     </div>

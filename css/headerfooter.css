@@ -19,8 +19,15 @@
     text-decoration: none;
     font-family: Cera;
     font-weight: bold;
+    padding-right: 10px;
+    float: center;
+}
+
+#Langdropdown {
+    font-size: 20px;
     padding-left: 10px;
-    float: center;}
+    float: center;
+}
 
 #footerbase {
     background-color: #005AAA; }
