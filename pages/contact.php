@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> 
+<html lang="en"> 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Contact</title>
     <link href="../css/contact.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <?php
-        $nameErr = $emailErr = $subjectErr = $messageErr = ""; //Hier kirjgen de error variabelen een definitie.
+        $nameErr = $emailErr = $subjectErr = $messageErr = ""; //Hier krijgen de error variabelen een definitie.
         $name = $email = $subject = $message = ""; //Hier krijgen de normale variabelen een definitie.
         $gelukt = ""; //Hier krijgt de gelukt variabele een definitie.
 
@@ -21,17 +21,27 @@
             {
                 $nameErr = "<p class='error'>Naam is verplicht</p>"; //Als de naam leeg is komt dit er te staan.
             }
+            else
+            {
+                $name = $_POST["name"];
+                if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) 
+                {
+                    $nameErr = "<p class='error'>Alleen letters en spaties.</p>";
+                }
+            }
 
             if (empty($_POST["email"])) //Hier wordt gekeken of de E-mail ingevuld is.
             {
                 $emailErr = "<p class='error'>E-mail is verplicht</p>";//Als de email niet is ingevuld komt dit er te staan
             }
-
-            if (empty($_POST["subject"])) //Hier wordt gekeken of het onderwerp ingevuld is.
-            { 
-                $subjectErr = "<p class='error'>Onderwerp is verplicht</p>"; //Als het onderwerp niet is ingevuld komt dit er te staan.
+            else 
+            {
+                $email = $_POST["email"];
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) 
+                {
+                    $emailErr = "<p class='error'>Ongeldig e-mailadres.</p>";
+                }
             }
-
             if (empty($_POST["message"])) //Hier wordt gekeken of het bericht ingevuld is.
             {
                 $messageErr = "<p class='error'>Bericht is verplicht</p>"; //Als het bericht niet is ingevuld komt dit er te staan.
@@ -40,6 +50,11 @@
             if (!empty($_POST["name"]) && !empty($_POST["email"]) && !empty($_POST["subject"]) && !empty($_POST["message"])) //Hier wordt gekeken of alle vakjes ingevuld zijn.
             {
                 $gelukt = "<p id='gelukt'>Je bericht is verzonden</p>"; //Als alle vakjes ingevuld zijn komt dit er te staan.
+                $name = $_POST["name"];
+                $email = $_POST["email"];
+                $subject = $_POST["subject"];
+                $message = $_POST["message"];
+                $arrayContact = array($name, $email, $subject, $message);
             }
         }
     ?>
@@ -63,8 +78,11 @@
 
                         <div class="text-center">
                             <label class="float-left" for="subject">Onderwerp:</label><?php echo $subjectErr; ?><br> <!-- -->
-                            <input type="text" class="form-text" id="subject" placeholder="Onderwerp" name="subject"> <!-- -->                         
-                        </div>
+                            <select name="subject" id="subject" class="form-text">
+                                <option value="extra-activiteiten">Extra activiteiten</option>
+                                <option value="probleem">Probleem</option>
+                            </select>                            
+                         </div>
 
                         <div class="text-center">
                             <label class="float-left" for="message">Bericht:</label><?php echo $messageErr; ?><br> <!-- -->
@@ -72,6 +90,12 @@
                         </div>
                         <input type="submit" class="verzenden" value="Verzenden"> <!-- -->
                         <?php echo $gelukt; ?> <!-- -->
+                        <?php
+                            foreach($arrayContact as $value)
+                            {
+                                echo $value . "<br>";
+                            }
+                            ?>
                     </p>
                 </form>
             </div>
