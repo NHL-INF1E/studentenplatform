@@ -1,5 +1,5 @@
 
-.content {
+.left-content {
     background-color: #EEEEEC;
     font-family: Cera;
     padding: 10px;
@@ -19,9 +19,53 @@
 
 .article-title {
     padding: 10px;
+    color: grey;
 }
 
 .article-text {
+    color: grey;
+    padding: 10px;
+}
+
+.right-content {
+    background-color: #EEEEEC;
+    font-family: Cera;
+    padding: 10px;
+    margin: 10px; 
+    height: 70vh;
+    margin-left: 5vw;
+    margin-top: 85px;
+    padding-left: 25px;
+}
+
+.activity-drop {
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.activity-button {
+    width: 135px;
+    text-align: left;
+    background-color: #EEEEEC;
+    color: grey;
+    font-family: Cera;
+    border-style: none;
+}
+
+.log-check1 {
+    color: red;
+    padding: 10px;
+}
+
+.log-check2 {
+    opacity: 20%;
+    padding: 10px;
+}
+
+.log-check3 {
+    color: blue;
     padding: 10px;
 }
 
