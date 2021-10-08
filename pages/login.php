@@ -21,10 +21,20 @@
             $passErr = "";
 
             if (isset($_POST["login"])) {
-                if(!empty($_POST["email"])) {
-                    $email = htmlspecialchars($_POST["email"]);
-                } else {
+                if(empty($_POST["email"])) {
                     $emailErr = "E-mailadres is verplicht";
+                } else {
+                    $email = htmlspecialchars($_POST["email"]);
+                }
+
+                function validateEmail($email) {
+                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        $emailErr = "Het e-mailadres is niet correct ingevoerd.";
+                    } else {
+                        $email = htmlspecialchars($_POST["email"]);
+                    }
+                    validateEmail('peter.piper@iana.org');
+                    validateEmail('first.last@example.123');
                 }
 
                if(empty($_POST["pass"])) {
