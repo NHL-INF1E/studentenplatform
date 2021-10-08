@@ -14,33 +14,24 @@
     <body>
 
         <?php
-
-            $emailErr = "";
             $email = "";
             $pass = "";
+            $emailErr = "";
             $passErr = "";
+
 
             if (isset($_POST["login"])) {
                 if(empty($_POST["email"])) {
                     $emailErr = "E-mailadres is verplicht";
+                } elseif(empty($_POST["pass"])) {
+                    $passErr = "Wachtwoord is verplicht";
+                } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    echo "Onjuist e-mailadres.";
                 } else {
                     $email = htmlspecialchars($_POST["email"]);
-                }
-
-                function validateEmail($email) {
-                    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                        $emailErr = "Het e-mailadres is niet correct ingevoerd.";
-                    } else {
-                        $email = htmlspecialchars($_POST["email"]);
-                    }
-                    validateEmail('peter.piper@iana.org');
-                    validateEmail('first.last@example.123');
-                }
-
-               if(empty($_POST["pass"])) {
-                 $passErr = "Wachtwoord is verplicht";
-                } else {
-                  $pass = htmlspecialchars($_POST["pass"]);
+                    $pass = htmlspecialchars($_POST["pass"]);
+                    header("Location: http://localhost/project/index.php");
+                    exit();
                 }
             }
         ?>
