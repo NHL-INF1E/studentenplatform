@@ -14,6 +14,7 @@
         $nameErr = $emailErr = $subjectErr = $messageErr = ""; //Hier krijgen de error variabelen een definitie.
         $name = $email = $subject = $message = ""; //Hier krijgen de normale variabelen een definitie.
         $gelukt = ""; //Hier krijgt de gelukt variabele een definitie.
+        $arrayContact = array("");
 
         if ($_SERVER["REQUEST_METHOD"] == "POST")  //Je kijkt hier of er een post methode wordt gebruikt.
         {
