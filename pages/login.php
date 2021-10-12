@@ -8,37 +8,47 @@
         <title>Login</title>
         <link href="../css/login.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-
     </head>
 
     <body>
 
         <?php
-            $email = "";
-            $pass = "";
-            $emailErr = "";
-            $passErr = "";
+        //Defines variables and sets them to empty values.
+            $email = $pass = $emailErr = $passErr = "";
 
+        //Checks if there's dodgy input.
+            function test_input($data) {
+                $data = trim($data);
+                $data = stripslashes($data);
+                $data = htmlspecialchars($data);
+                return $data;
+            }
 
-            if (isset($_POST["login"])) {
+        //Checks if everything is filled in (correctly).
+            if($_SERVER["REQUEST_METHOD"] == "POST") {
                 if(empty($_POST["email"])) {
-                    $emailErr = "E-mailadres is verplicht";
-                } elseif(empty($_POST["pass"])) {
-                    $passErr = "Wachtwoord is verplicht";
-                } elseif(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    echo "Onjuist e-mailadres.";
+                    $emailErr = "Vul een e-mailadres in.";
                 } else {
-                    $email = htmlspecialchars($_POST["email"]);
-                    $pass = htmlspecialchars($_POST["pass"]);
-                    header("Location: http://localhost/project/index.php");
-                    exit();
+                    $email = test_input($_POST["email"]);
+                    if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                        $emailErr = "Het e-mailadres klopt niet.";
+                    }
                 }
+            }
+
+            if(empty($_POST["pass"])) {
+                $passErr = "Vul een wachtwoord in.";
+            } else {
+                $pass = test_input($_POST["pass"]);    
+                //Optionally there could be extra strict password validation here.
             }
         ?>
 
-        <div id="container"> <!-- Divje waar het inlogformulier in staat -->
-            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <!-- The HTML form where site visitors enter their e-mail and password-->
+        <div id="container">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                 <p id="title">Login</p>
+                <p><span class="error">* verplicht veld</span></p>
 
                 <p id="emailaddress">E-mailadres</p> 
                 <input type="text" id="email" name="email">
