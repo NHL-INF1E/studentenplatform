@@ -30,8 +30,8 @@
             <a href=contact.php id="headerbutton">Contact</a>
             <!-- Taal wissel knop hier -->
             <select name="taal">
-				<option value="Nederlands" id="langdropdown">🇳🇱</option>
-				<option value="english" selected="english" id="langdropdown">🇬🇧</option>
+				<option value="Nederlands" selected="Nederlands" id="langdropdown"><img src="../pictures/flags/NL_flag.jpg" id="langdropflag"></option>
+				<option value="English"  id="langdropdown"><img src="../pictures/flags/UK_flag.jpg" id="langdropflag"></option>
 			</select>
           </div>
         </div>
