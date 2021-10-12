@@ -1,19 +1,14 @@
 <?php
 
-$filepathID = "../datastores/id.txt";
-//Ik denk beter dat we de path mee kunnen sturen aangezien ik vanuit index.php geen ../ nodig ben en anders include errors krijg doordat hij het bestand niet vind/we moeten mijn systeem gebruiken dat niemand snapt :/
-$filepathActivities = "datastores/activities.json";
-
 /**
  * remove a activity
  * @param int $ID id of the activity to be deleted
  */
-function removeActivity($ID){
-    global $filepathActivities;
-    $activities = getActivities();
+function removeActivity($ID, $filepathActivities){
+    $activities = getActivities($filepathActivities);
     unset($activities[$ID]);
     json_encode($activities);
-    file_put_contents($filename, $activities);
+    file_put_contents($filepathActivities, $activities);
 }
 
 /**
@@ -21,9 +16,8 @@ function removeActivity($ID){
  * @param int $ID id of the activity to be edited
  * @param array $content new content for the selected activity
  */
-function editActivity($ID, $content){
-    global $filepathActivities;
-    $activities = getActivities();
+function editActivity($ID, $content, $filepathActivities){
+    $activities = getActivities($filepathActivities);
     if($activities[$ID] == null){
         throw new RuntimeException("no such activity found");
     }else{
@@ -38,8 +32,8 @@ function editActivity($ID, $content){
  * @param int $ID id of the activity to find
  * @return array $activities[$ID] activity with given ID in array form
  */
-function getActivity($ID){
-    $activities = getActivities();
+function getActivity($ID, $filepathActivities){
+    $activities = getActivities($filepathActivities);
     if($activities[$ID] == null){
         throw new RuntimeException("no such activity found");
     }else{
@@ -52,10 +46,9 @@ function getActivity($ID){
  * adds an activity
  * @param array $content an activity in array form to be encoded and added
  */
-function addActivity($content){
-    global $filepathID, $filepathActivities;
+function addActivity($content, $filepathID, $filepathActivities){
     //get all activities
-    $activities = getActivities();
+    $activities = getActivities($filepathActivities);
     
     //add an ID to the activity and then add it to all activities
     $newActivity = array(getID($filepathID) => $content);
@@ -68,12 +61,19 @@ function addActivity($content){
  * get all activities
  * @return array of all added activities
  */
-function getActivities(){
-    global $filepathActivities;
+function getActivities($filepathActivities){
     if(!($activities = file_get_contents($filepathActivities))){
         throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
     }else{
         return json_decode($activities);
+    }
+}
+
+function getContacts($filepathContacts){
+    if(!($contacts = file_get_contents($filepathContacts))){
+        throw new RuntimeException();
+    }else{
+        return json_decode($contacts, true);
     }
 }
 

@@ -1,0 +1,14 @@
+
+#activityWrapper{
+    width: 50%;
+    margin: auto;
+}
+
+.contactContainer{
+    width: 50%;
+    float: left;
+}
+
+.contentWrapper{
+    width: 100%;
+}
