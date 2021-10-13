@@ -2,7 +2,7 @@
 
 function getActivity($ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    print_r($activities[$ID][$ID]);
+    return($activities[$ID][$ID]);
     
     
 }
