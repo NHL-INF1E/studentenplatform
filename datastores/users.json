@@ -1,0 +1,16 @@
+{
+    "people":[
+      {
+        "name": "stefan",
+        "email": "stefan@nhlstenden.com",
+        "password": "$2y$10$D/FPBfseoQxQrGtKGMCUMeihORnG9ksxUal1Lt35bShkaqsToF9PW",
+        "role": "admin"
+      },
+      { 
+        "name": "sylvana",
+        "email": "sylvana@nhlstenden.com",
+        "password": "$2y$10$D/FPBfseoQxQrGtKGMCUMeihORnG9ksxUal1Lt35bShkaqsToF9PW",
+        "role": "user"
+      }
+    ]
+  }
