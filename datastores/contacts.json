@@ -1,13 +1,20 @@
-[{
-        "name": "Thijs Janse",
-        "email": "thijs.janse1@student.nhlstenden.com",
-        "subject": "my webpage no workie ;(",
-        "message": "yo EA, fix yo shit"
+[
+    {
+        "name": "stefan",
+        "email": "test@test.nl",
+        "subject": "works",
+        "message": "it does work"
     },
     {
-        "name": "Thijs Janse",
-        "email": "thijs.janse1@student.nhlstenden.com",
-        "subject": "my webpage no workie ;(",
-        "message": "yo EA, fix yo shit"
-    }]
-
+        "name": "te",
+        "email": "se",
+        "subject": "lo",
+        "message": "lol"
+    },
+    {
+        "name": "Franca Baars",
+        "email": "francabaars@gmail.com",
+        "subject": "extra-activiteiten",
+        "message": "kglaj"
+    }
+]
