@@ -11,7 +11,7 @@ session_start();
     <body>
         <?php
         include "../utilities/dataStoreUtil.php";
-        $_SESSION["activityID"] = 0;
+        $_SESSION["activityID"] = 1;
         $error = "";
         if(isset($_POST["submit"])){
             if(empty($_POST["title"]) || empty($_POST["image"]) || empty($_POST["description"]) || empty($_POST["color"]) || empty($_POST["link"])){
@@ -44,7 +44,7 @@ session_start();
             if($_SESSION["activityID"] >= 0){
                 $ID = $_SESSION["activityID"];
                 $currentActivity = getActivity($ID, "../datastores/activities.json");
-                $result = $currentActivity[0][0];
+                $result = $currentActivity[$ID];
                 $title = $result["title"];
                 $description = $result["beschrijving"];
                 $image = $result["image"];

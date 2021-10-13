@@ -1,24 +1,22 @@
 [
     {
-        "0": [
-            {
-                "title": "Films",
-                "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit<\/b> of dit <i>hoi hoi<\/i>",
-                "image": "https:\/\/images.pexels.com\/photos\/436413\/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                "link": "index.html",
-                "kleur": "rood"
-            }
-        ]
+        "0": 
+                {
+                    "title": "Films",
+                    "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit<\/b> of dit <i>hoi hoi<\/i>",
+                    "image": "https:\/\/images.pexels.com\/photos\/436413\/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                    "link": "index.html",
+                    "kleur": "rood"
+                }
     },
     {
-        "1": [
-            {
-                "title": "Films",
-                "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit<\/b> of dit <i>hoi hoi<\/i>",
-                "image": "https:\/\/images.pexels.com\/photos\/436413\/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-                "link": "index.html",
-                "kleur": "rood"
-            }
-        ]
+        "1": 
+                {
+                    "title": "memes",
+                    "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit<\/b> of dit <i>hoi hoi<\/i>",
+                    "image": "https:\/\/images.pexels.com\/photos\/436413\/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                    "link": "index.html",
+                    "kleur": "rood"
+                }
     }
 ]

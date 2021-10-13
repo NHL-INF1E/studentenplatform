@@ -47,7 +47,7 @@ function addActivity($content, $filepathID, $filepathActivities){
     $activities = getActivities($filepathActivities);
     
     //add an ID to the activity and then add it to all activities
-    $newActivity = array(getID($filepathID) => array($content));
+    $newActivity = array(getID($filepathID) => $content);
     array_push($activities, $newActivity);
     echo json_encode($activities, JSON_PRETTY_PRINT);
     file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
