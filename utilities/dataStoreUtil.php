@@ -2,7 +2,8 @@
 
 function getActivity($ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    return $activities[$ID];
+    print_r($activities[$ID][$ID]);
+    
     
 }
 
@@ -11,7 +12,6 @@ function addActivity($content, $filepathID, $filepathActivities){
     
     $newActivity = array(getID($filepathID) => $content);
     array_push($activities, $newActivity);
-    echo json_encode($activities, JSON_PRETTY_PRINT);
     file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
 }
 

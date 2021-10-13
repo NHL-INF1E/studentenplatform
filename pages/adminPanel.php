@@ -44,7 +44,7 @@ session_start();
             if($_SESSION["activityID"] >= 0){
                 $ID = $_SESSION["activityID"];
                 $currentActivity = getActivity($ID, "../datastores/activities.json");
-                $result = $currentActivity[$ID];
+                $result = $currentActivity;
                 $title = $result["title"];
                 $description = $result["beschrijving"];
                 $image = $result["image"];
