@@ -29,10 +29,9 @@
             <a href=login.php id="headerbutton">Inloggen</a>
             <a href=contact.php id="headerbutton">Contact</a>
             <!-- Taal wissel knop hier -->
-            <select name="taal">
-				<option value="Nederlands" selected="Nederlands" id="langdropdown"><img src="../pictures/flags/NL_flag.jpg" id="langdropflag"></option>
-				<option value="English"  id="langdropdown"><img src="../pictures/flags/UK_flag.jpg" id="langdropflag"></option>
-			</select>
+            <a href="enlish page ofz lol "> 
+              <img src="../pictures/flags/UK_flag.jpg" id="langflag">
+            </a>
           </div>
         </div>
     </div>

@@ -23,17 +23,9 @@
     float: center;
 }
 
-#Langdropdown {
-    font-size: 20px;
-    padding-left: 10px;
-    float: center;
-    background-color: #005AAA;
-
-}
-
-#langdropflag {
-    width: 15px;
-    height: 10px;
+#langflag {
+    width: 20px;
+    height: 15px;
 }
 
 #footerbase {
