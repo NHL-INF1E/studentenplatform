@@ -1,0 +1,118 @@
+{
+    "sport": {
+        "title": "Sports",
+        "description": "<p>If you're the athletic type who enjoys playing sports in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you play sports such as football, tennis or rowing.</p> <p>If you're more the strategic type, there are also sports such as e-sports and archery available.</p> ", 
+        "image": "../pictures/stock/hardloopTracks.jpeg",
+        "activity":
+        [
+            {
+                "activityName": "soccer",
+                "activityCount": "24" 
+            },
+
+            {
+                "activityName": "tennis",
+                "activityCount": "25"
+            },
+
+            {
+                "activityName": "rowing",
+                "activityCount": "26"
+            },
+
+            {
+                "activityName": "archery",
+                "activityCount": "23"
+            },
+
+            {
+                "activityName": "e-sports",
+                "activityCount": "40"
+            }
+        ]
+    },
+
+    "film": {
+        "title": "Films",
+        "description": "<p>If you're the creative type who enjoys shooting a movie in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you shoot movies, watch them, or play in them.</p>",
+        "image": "../pictures/stock/pexels-tima-miroshnichenko-7991567.jpg",
+        "activity":
+        [
+            {
+                "activityName": "editor",
+                "activityCount": "10"
+            }, 
+
+            {
+                "activityName": "acteren",
+                "activityCount": "30"
+            },
+
+            {
+                "activityName": "regiseren",
+                "activityCount": "40"
+            }, 
+
+            {
+                "activityName": "decorbouwer",
+                "activityCount": "20"
+            }
+        ]
+    },
+
+    "art": {
+        "title": "Beeldende kunst",
+        "beschrijving": "<p>If you're the expressive type who enjoys to create a form of art in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you create art, break art, civilize art.</p><p>If you're the more daring type, you can als be art.</p> ",
+        "image": "../pictures/stock/pottenbakken.jpg",
+        "activity":
+        [
+            {
+                "activityName": "schilderen",
+                "activityCount ": "20"
+            },
+            
+            {
+                "activityName": "beitelen",
+                "activityCount": "40"
+            },
+            
+            {
+                "activityName": "poëzie",
+                "activityCount": "30"
+            },
+
+            {
+                "activityName": "gedichten",
+                "activityCount": "15"
+            }
+        ]
+    },
+
+    "music": {
+        "title": "Muziek en dans",
+        "beschrijving": "<p>If you're the funky type who enjoys to move their body within a group, then this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you learn choreography, learn how to dance, learn how to play music.</p>",
+        "image": "../pictures/stock/guitar.jpg",
+        "activity": 
+        [
+            {
+                "activityName": "r&b",
+                "activityCount": "20"
+            },
+
+            {
+                "activityName": "guitar",
+                "activityCount": "40"
+            },
+
+            {
+                "activityName": "paino",
+                "activityCount": "30"
+            },
+
+            {
+                "activityName": "dancing",
+                "activityCount": "44"
+            }
+        ]
+    }
+}
