@@ -1,33 +1,24 @@
-{
-    "1": {
-        "title": "Films",
-        "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit</b> of dit <i>hoi hoi</i>",
-        "image": "https://images.pexels.com/photos/436413/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "link": "index.html",
-        "kleur": "rood"
+[
+    {
+        "0": [
+            {
+                "title": "Films",
+                "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit<\/b> of dit <i>hoi hoi<\/i>",
+                "image": "https:\/\/images.pexels.com\/photos\/436413\/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                "link": "index.html",
+                "kleur": "rood"
+            }
+        ]
     },
-
-    "2": {
-        "title": "Sport",
-        "beschrijving": "Er staat hier teksts van een paragraph, je mag dus ook br gebruiken<br>Zoals dat er net een br gebruikt is ;)",
-        "image": "https://cdn.pixabay.com/photo/2017/08/24/21/41/tartan-track-2678544_960_720.jpg",
-        "link": "index.html",
-        "kleur": "roze"
-    },
-
-    "3": {
-        "title": "Beeldende kunst",
-        "beschrijving": "<del>Creative coding: programmeren als kunstvorm</del>",
-        "image": "https://images.pexels.com/photos/1193743/pexels-photo-1193743.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "link": "index.html",
-        "kleur": "groen"
-    },
-
-    "4": {
-        "title": "Muziek en dans",
-        "beschrijving": "Draai een keer in het rond<br>Stamp met je voeten op de grond<br>Zwaai je armen in de lucht<br>Ga nu zitten met een zucht<br>Stap nu rond als een gans<br>Zo gaat de kabouterdans!",
-        "image": "https://images.pexels.com/photos/3423985/pexels-photo-3423985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "link": "index.html",
-        "kleur": "blauw"
+    {
+        "1": [
+            {
+                "title": "Films",
+                "beschrijving": "Dit is het stukje van film, je mag natuurlijk tags gebruiken<br><b>zoals dit<\/b> of dit <i>hoi hoi<\/i>",
+                "image": "https:\/\/images.pexels.com\/photos\/436413\/pexels-photo-436413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+                "link": "index.html",
+                "kleur": "rood"
+            }
+        ]
     }
-}
+]

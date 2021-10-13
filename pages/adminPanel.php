@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 ?>
 <!doctype html>
 <html>
@@ -11,7 +11,7 @@
     <body>
         <?php
         include "../utilities/dataStoreUtil.php";
-//        $_SESSION["activityID"] = -1;
+        $_SESSION["activityID"] = 0;
         $error = "";
         if(isset($_POST["submit"])){
             if(empty($_POST["title"]) || empty($_POST["image"]) || empty($_POST["description"]) || empty($_POST["color"]) || empty($_POST["link"])){
@@ -41,21 +41,22 @@
             $color = "";
             
             //todo make it so that when activityID has a value, the corresponding Activity gets loaded into the form.
-            if($_SESSION["activityID"]){
+            if($_SESSION["activityID"] >= 0){
                 $ID = $_SESSION["activityID"];
                 $currentActivity = getActivity($ID, "../datastores/activities.json");
-                $title = $currentActivity["title"];
-                $description = $currentActivity["beschrijving"];
-                $image = $currentActivity["image"];
-                $link = $currentActivity["link"];
-                $color = $currentActivity["kleur"];
+                $result = $currentActivity[0][0];
+                $title = $result["title"];
+                $description = $result["beschrijving"];
+                $image = $result["image"];
+                $link = $result["link"];
+                $color = $result["kleur"];
             }
         ?>
         <section id="activityWrapper">
-            <form action="post">
+            <form method="post" action="">
                 <input type="text" name="title" id="title" placeholder="title" value="<?=$title?>">
                 <input type="text" name="image" id="image" placeholder="image.jpg" value="<?=$image?>">
-                <textarea rows="4" cols="50" name="description" id="description" placeholder="description..." value="<?=$description?>"></textarea>
+                <textarea rows="4" cols="50" name="description" id="description" placeholder="description..."><?=$description?></textarea>
                 <input type="text" name="color" id="color" placeholder="color"  value="<?=$color?>">
                 <input type="text" name="link" id="link" placeholder="index.php" value="<?=$link?>">
                 <input type="submit" value="Opslaan" id="submit" name="submit">
