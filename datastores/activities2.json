@@ -35,7 +35,7 @@
     "film": {
         "title": "Films",
         "description": "<p>If you're the creative type who enjoys shooting a movie in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you shoot movies, watch them, or play in them.</p>",
-        "image": "../pictures/stock/pexels-tima-miroshnichenko-7991567.jpg",
+        "image": "../pictures/stock/popcorn-movie-party-entertainment.jpg",
         "activity":
         [
             {
@@ -62,13 +62,13 @@
 
     "art": {
         "title": "Beeldende kunst",
-        "beschrijving": "<p>If you're the expressive type who enjoys to create a form of art in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you create art, break art, civilize art.</p><p>If you're the more daring type, you can als be art.</p> ",
+        "description": "<p>If you're the expressive type who enjoys to create a form of art in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you create art, break art, civilize art.</p><p>If you're the more daring type, you can also become art.</p> ",
         "image": "../pictures/stock/pottenbakken.jpg",
         "activity":
         [
             {
                 "activityName": "schilderen",
-                "activityCount ": "20"
+                "activityCount": "20"
             },
             
             {
@@ -90,7 +90,7 @@
 
     "music": {
         "title": "Muziek en dans",
-        "beschrijving": "<p>If you're the funky type who enjoys to move their body within a group, then this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you learn choreography, learn how to dance, learn how to play music.</p>",
+        "description": "<p>If you're the funky type who enjoys to move their body within a group, then this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you learn choreography, learn how to dance, learn how to play music.</p>",
         "image": "../pictures/stock/guitar.jpg",
         "activity": 
         [
