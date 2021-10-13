@@ -11,8 +11,13 @@ session_start();
     <body>
         <?php
         include "../utilities/dataStoreUtil.php";
-        $_SESSION["activityID"] = 1;
+        $_SESSION["activityID"] = -1;
         $error = "";
+        
+        if(isset($_POST["deletus"])){
+            removeActivity($_SESSION["activityID"], "../datastores/activities.json");
+        }
+        
         if(isset($_POST["submit"])){
             if(empty($_POST["title"]) || empty($_POST["image"]) || empty($_POST["description"]) || empty($_POST["color"]) || empty($_POST["link"])){
                 $error = "all fields must be filled out";
@@ -60,6 +65,7 @@ session_start();
                 <input type="text" name="color" id="color" placeholder="color"  value="<?=$color?>">
                 <input type="text" name="link" id="link" placeholder="index.php" value="<?=$link?>">
                 <input type="submit" value="Opslaan" id="submit" name="submit">
+                <input type="submit" value="deletus" id="deletus" name="deletus">
             </form>
             <?=$error?>
         </section>

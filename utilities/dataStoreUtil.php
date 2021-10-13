@@ -3,8 +3,21 @@
 function getActivity($ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
     return($activities[$ID][$ID]);
+}
+
+function removeActivity($ID, $filepathActivities){
+    $activities = getActivities($filepathActivities);
+    unset($activities[$ID]);
+    file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
     
+}
+
+function editActivity($ID, $content, $filepathActivities){
+    $activities = getActivities($filepathActivities);
+    $changedActivity = array($ID => array($ID => $content));
     
+    $result = (array_replace($activities, $changedActivity));
+    file_put_contents($filepathActivities, json_encode($result, JSON_PRETTY_PRINT));
 }
 
 function addActivity($content, $filepathID, $filepathActivities){
@@ -19,7 +32,9 @@ function getActivities($filepathActivities){
     if(!($activities = file_get_contents($filepathActivities))){
         throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
     }else{
-        return json_decode($activities, true);
+        $activitiesArray = json_decode($activities, true);
+        $result = $activitiesArray;
+        return $result;
     }
 }
 
