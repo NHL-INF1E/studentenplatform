@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -25,22 +25,22 @@ session_start();
             <div class="col-md-3 align-self-center">
                 <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
-            <!-- Login gebruikersnaam placeholder -->
+            <!-- Login Gebruikersnaam -->
             <div class="col-md-5 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
+                    echo '<p id="usernameheader">Welcome, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
                 }
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
             <div class="col-md-4" id="buttoncontainerheader">
-                <a href=../index.php class="headerbutton">Activiteiten</a>
-                <a href=login.php class="headerbutton">Inloggen</a>
-                <a href=contact.php class="headerbutton active">Contact</a>
+                <a href=../index_EN.php class="headerbutton">Activities</a>
+                <a href=login_EN.php class="headerbutton ">Sign in</a>
+                <a href=contact_EN.php class="headerbutton active">Contact</a>
                 <!-- Taal wissel knop hier -->
-                <a href="contact_EN.php">
-                    <img src="../pictures/flags/UK_flag.jpg" id="langflag">
+                <a href="contact.php">
+                    <img src="../pictures/flags/NL_flag.jpg" id="langflag">
                 </a>
             </div>
         </div>
@@ -58,30 +58,30 @@ session_start();
                 {
                     if (empty($_POST["name"]))  //Hier wordt gekeken of de naam ingevuld is.
                     {
-                        $nameErr = "<p class='error'>Naam is verplicht</p>"; //Als de naam leeg is komt dit er te staan.
+                        $nameErr = "<p class='error'>Name is required</p>"; //Als de naam leeg is komt dit er te staan.
                     }
 
                     if (empty($_POST["email"])) //Hier wordt gekeken of de E-mail ingevuld is.
                     {
-                        $emailErr = "<p class='error'>E-mail is verplicht</p>";//Als de email niet is ingevuld komt dit er te staan
+                        $emailErr = "<p class='error'>Email is required</p>";//Als de email niet is ingevuld komt dit er te staan
                     }
 
                     if (empty($_POST["message"])) //Hier wordt gekeken of het bericht ingevuld is.
                     {
-                        $messageErr = "<p class='error'>Bericht is verplicht</p>"; //Als het bericht niet is ingevuld komt dit er te staan.
+                        $messageErr = "<p class='error'>A message is required</p>"; //Als het bericht niet is ingevuld komt dit er te staan.
                     }
                 }  
                 elseif (!preg_match("/^[a-zA-Z-' ]*$/",$_POST["name"])) //Hier wordt gecontroleerd of de naam uit alleen letters en spaties bestaat.
                 {
-                    $nameErr = "<p class='error'>Alleen letters en spaties.</p>";//Als de naam uit andere tekens dan letters of spaties bestaat dan krijg je deze error.
+                    $nameErr = "<p class='error'>Only letters and Spaces.</p>";//Als de naam uit andere tekens dan letters of spaties bestaat dan krijg je deze error.
                 } 
                 elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))//Hier wordt gecontroleerd of het e-mailadres geldig is.
                 {
-                    $emailErr = "<p class='error'>Ongeldig e-mailadres.</p>";//Als het e-mailadres niet geldig krijg je dit te zien.
+                    $emailErr = "<p class='error'>Invalid email address.</p>";//Als het e-mailadres niet geldig krijg je dit te zien.
                 }
                 else
                 {
-                    $gelukt = "<p id='gelukt'>Je bericht is verzonden</p>"; //Als alle vakjes ingevuld zijn komt dit er te staan.             
+                    $gelukt = "<p id='gelukt'>Your message has been send</p>"; //Als alle vakjes ingevuld zijn komt dit er te staan.             
                     $name = $_POST["name"];
                     $email = $_POST["email"];
                     $subject = $_POST["subject"];
@@ -128,30 +128,30 @@ session_start();
                     <p>
                     <div class="text-center">
                         <!-- -->
-                        <label for="name">Naam:</label><?php echo $nameErr; ?><br> <!-- -->
-                        <input type="text" class="form-text" id="name" placeholder="Naam" name="name"> <!-- -->
+                        <label for="name">Name:</label><?php echo $nameErr; ?><br> <!-- -->
+                        <input type="text" class="form-text" id="name" placeholder="Name" name="name"> <!-- -->
                     </div>
 
                     <div class="text-center">
-                        <label for="email">E-mail:</label><?php echo $emailErr; ?><br> <!-- -->
-                        <input type="text" class="form-text" id="email" placeholder="E-mail" name="email"> <!-- -->
+                        <label for="email">Email:</label><?php echo $emailErr; ?><br> <!-- -->
+                        <input type="text" class="form-text" id="email" placeholder="Email" name="email"> <!-- -->
                     </div>
 
                     <div class="text-center">
-                        <label for="subject">Onderwerp:</label><?php echo $subjectErr; ?><br>
+                        <label for="subject">Subject:</label><?php echo $subjectErr; ?><br>
                         <!-- -->
                         <select name="subject" id="subject" class="form-text">
-                            <option value="extra-activiteiten">Extra activiteiten</option>
-                            <option value="probleem">Probleem</option>
+                            <option value="extra-activiteiten">Extra activities</option>
+                            <option value="probleem">Problem</option>
                         </select>
                     </div>
 
                     <div class="text-center">
-                        <label class="float-left" for="message">Bericht:</label><?php echo $messageErr; ?><br> <!-- -->
-                        <textarea class="form-text" id="message" name="message" placeholder="Type hier je bericht"
+                        <label class="float-left" for="message">Message:</label><?php echo $messageErr; ?><br> <!-- -->
+                        <textarea class="form-text" id="message" name="message" placeholder="Enter your message here"
                             rows="5"></textarea> <!-- -->
                     </div>
-                    <input type="submit" class="verzenden" value="Verzenden"> <!-- -->
+                    <input type="submit" class="verzenden" value="Submit"> <!-- -->
                     <?php echo $gelukt; ?>
                     <!-- -->
                     <?php

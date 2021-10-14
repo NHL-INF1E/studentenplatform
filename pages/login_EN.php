@@ -26,22 +26,22 @@ session_start();
             <div class="col-md-3 align-self-center">
                 <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
-            <!-- Login gebruikersnaam placeholder -->
+            <!-- Login Gebruikersnaam -->
             <div class="col-md-5 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
+                    echo '<p id="usernameheader">Welcome, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
                 }
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
             <div class="col-md-4" id="buttoncontainerheader">
-                <a href=../index.php class="headerbutton">Activiteiten</a>
-                <a href=login.php class="headerbutton active">Inloggen</a>
-                <a href=contact.php class="headerbutton">Contact</a>
+                <a href=../index_EN.php class="headerbutton">Activities</a>
+                <a href=login_EN.php class="headerbutton active">Sign in</a>
+                <a href=contact_EN.php class="headerbutton">Contact</a>
                 <!-- Taal wissel knop hier -->
-                <a href="login_EN.php">
-                    <img src="../pictures/flags/UK_flag.jpg" id="langflag">
+                <a href="login.php">
+                    <img src="../pictures/flags/NL_flag.jpg" id="langflag">
                 </a>
             </div>
         </div>
@@ -65,17 +65,17 @@ session_start();
         //Checks if everything is filled in (correctly).
         if($_SERVER["REQUEST_METHOD"] == "POST") {
             if(empty($_POST["email"])) {
-                $emailErr = "Vul een e-mailadres in.";
+                $emailErr = "Enter a email address here.";
             } else {
                 $email = test_input($_POST["email"]);
                 if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                    $emailErr = "Het e-mailadres klopt niet.";
+                    $emailErr = "The Email address is incorrect.";
                 }
             }
         }
 
         if(empty($_POST["pass"])) {
-            $passErr = "Vul een wachtwoord in.";
+            $passErr = "Enter a password here.";
         } else {
             $pass = test_input($_POST["pass"]);    
             //Optionally there could be extra strict password validation here.
@@ -102,7 +102,7 @@ session_start();
                     $_SESSION['email'] = $user->email;
                     $_SESSION['role'] = $user->role;
 
-                    echo '<h1 id="redirect">U wordt ingelogd...</h1>';
+                    echo '<h1 id="redirect">You are being logged in...</h1>';
                     echo '<script src="script.js"></script>';
                 }
             }
@@ -113,17 +113,17 @@ session_start();
     <div id="container">
         <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <p id="title">Login</p>
-            <p><span class="error">* verplicht veld</span></p>
+            <p><span class="error">* Required field</span></p>
 
-            <p class="paragraph">E-mailadres</p>
+            <p class="paragraph">Email address</p>
             <input type="text" class="inputBox" name="email">
             <span class="error">* <?php echo $emailErr;?></span>
 
-            <p class="paragraph">Wachtwoord</p>
+            <p class="paragraph">Password</p>
             <input type="password" class="inputBox" name="pass">
             <span class="error">* <?php echo $passErr;?></span>
 
-            <p><input type="submit" id="login" name="login" value="Inloggen"></p>
+            <p><input type="submit" id="login" name="login" value="Sign in"></p>
         </form>
     </div>
 
