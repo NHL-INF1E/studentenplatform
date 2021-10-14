@@ -1,37 +1,54 @@
-#logoheader {
-    height: 100px;
-    float: right;
-    line-height: 120px;
-}
-#usernameheader { 
-    font-family: cera;
-    font-weight: bold;
-    color:white;
-    float: center;
 
+#logoheader {
+  height: 100px;
+  float: right;
+  line-height: 120px;
+}
+#usernameheader {
+  font-weight: bold;
+  color: white;
+  float: center;
 }
 #buttoncontainerheader {
-    line-height: 120px;
+  line-height: 120px;
 }
 
-#headerbutton {
-    color: white;
-    text-decoration: none;
-    font-family: Cera;
-    font-weight: bold;
-    padding-right: 10px;
-    float: center;
+.headerbutton {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding-right: 10px;
+  float: center;
+  transition: all 0.3s ease;
+}
+
+.headerbutton:hover {
+  color: deepskyblue;
 }
 
 #langflag {
-    width: 20px;
-    height: 15px;
+  width: 20px;
+  height: 15px;
+}
+
+#headerbase {
+  background-color:#005AAA;
 }
 
 #footerbase {
-    background-color: #005AAA; }
+  background-color: #005aaa;
+}
 
 #footertext {
-    Color: white;
-    font-family: Cera;
-    padding-left: 30px; }
+  text-align: center;
+  color: white;
+  padding-left: 30px;
+}
+
+.blue {
+  color: deepskyblue;
+}
+
+.active {
+  color: deepskyblue;
+}
