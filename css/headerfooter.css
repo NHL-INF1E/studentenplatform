@@ -36,6 +36,9 @@
 }
 
 #footerbase {
+  position: fixed;
+  bottom: 0;
+  height: 3vh;
   background-color: #005aaa;
 }
 
