@@ -2,7 +2,7 @@
 
 function getActivity($ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    return($activities[$ID]);
+    return ($activities[$ID]);
 }
 
 function removeActivity($ID, $filepathActivities){
@@ -32,8 +32,21 @@ function getActivities($filepathActivities){
     if(!($activities = file_get_contents($filepathActivities))){
         throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
     }else{
-        return json_decode($activities);
+        $activitiesArray = json_decode($activities, true);
+        $result = $activitiesArray;
+        return $result;
     }
+}
+
+function getActivitiesTest($filepathActivities){
+    /*if(!($activities = file_get_contents($filepathActivities))){
+        throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
+    }else{*/
+        $activities = file_get_contents($filepathActivities);
+        $activitiesArray = json_decode($activities, true);
+        $result = $activitiesArray;
+        return $result;
+    //}
 }
 
 function getContacts($filepathContacts){
