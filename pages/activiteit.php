@@ -18,6 +18,15 @@
 </head>
 <body>
     <div class="container">
+    <?php
+        if (isset($_GET['cat'])) {
+            $activity = getActivity($_GET['cat'], '../datastores/activities2.json');
+            foreach ($activity as $test) {
+                echo $test;
+            }
+        }
+    ?>
+
         <div class="row">
             <div class="col-md-4">
                 <div class="left-content">

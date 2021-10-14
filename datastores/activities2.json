@@ -1,5 +1,5 @@
 {
-    "sport": {
+    "Sport": {
         "title": "Sports",
         "description": "<p>If you're the athletic type who enjoys playing sports in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you play sports such as football, tennis or rowing.</p> <p>If you're more the strategic type, there are also sports such as e-sports and archery available.</p> ", 
         "image": "../pictures/stock/hardloopTracks.jpeg",
@@ -32,7 +32,7 @@
         ]
     },
 
-    "film": {
+    "Film": {
         "title": "Films",
         "description": "<p>If you're the creative type who enjoys shooting a movie in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you shoot movies, watch them, or play in them.</p>",
         "image": "../pictures/stock/popcorn-movie-party-entertainment.jpg",
@@ -60,7 +60,7 @@
         ]
     },
 
-    "art": {
+    "Art": {
         "title": "Beeldende kunst",
         "description": "<p>If you're the expressive type who enjoys to create a form of art in teams, this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you create art, break art, civilize art.</p><p>If you're the more daring type, you can also become art.</p> ",
         "image": "../pictures/stock/pottenbakken.jpg",
@@ -88,7 +88,7 @@
         ]
     },
 
-    "music": {
+    "Music": {
         "title": "Muziek en dans",
         "description": "<p>If you're the funky type who enjoys to move their body within a group, then this might just be the category for you. </p><p> You will be making contacts with both Dutch and international students as you learn choreography, learn how to dance, learn how to play music.</p>",
         "image": "../pictures/stock/guitar.jpg",
