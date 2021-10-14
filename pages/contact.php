@@ -128,17 +128,17 @@ session_start();
                     <p>
                     <div class="text-center">
                         <!-- -->
-                        <label class="float-left" for="name">Naam:</label><?php echo $nameErr; ?><br> <!-- -->
+                        <label for="name">Naam:</label><?php echo $nameErr; ?><br> <!-- -->
                         <input type="text" class="form-text" id="name" placeholder="Naam" name="name"> <!-- -->
                     </div>
 
                     <div class="text-center">
-                        <label class="float-left" for="email">E-mail:</label><?php echo $emailErr; ?><br> <!-- -->
+                        <label for="email">E-mail:</label><?php echo $emailErr; ?><br> <!-- -->
                         <input type="text" class="form-text" id="email" placeholder="E-mail" name="email"> <!-- -->
                     </div>
 
                     <div class="text-center">
-                        <label class="float-left" for="subject">Onderwerp:</label><?php echo $subjectErr; ?><br>
+                        <label for="subject">Onderwerp:</label><?php echo $subjectErr; ?><br>
                         <!-- -->
                         <select name="subject" id="subject" class="form-text">
                             <option value="extra-activiteiten">Extra activiteiten</option>
