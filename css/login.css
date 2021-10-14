@@ -37,3 +37,8 @@
     float: right;
     margin-right: 30px;
 }
+
+#redirect {
+    text-align: center;
+    font-size: 20px;
+}

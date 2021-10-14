@@ -92,17 +92,17 @@ session_start();
             foreach ($json->people as $user) {
                 if ($user->email == htmlspecialchars($_POST["email"]) && password_verify(htmlspecialchars($_POST["pass"]), $user->password) ) {
                     //Hier zetten we nu de waardes in de sessie, hievoor moeten we eerst session_start() aanroepen
-                    echo $user->name . '<br>';
-                    echo $user->email . '<br>';
-                    echo $user->password . '<br>';
-                    echo $user->role . '<br>';
+                    //echo $user->name . '<br>';
+                    //echo $user->email . '<br>';
+                    //echo $user->password . '<br>';
+                    //echo $user->role . '<br>';
 
                     //Hier zetten we de waardes van de gebruiker in de sessie
                     $_SESSION['name'] = $user->name;
                     $_SESSION['email'] = $user->email;
                     $_SESSION['role'] = $user->role;
 
-                    echo '<h1 id="redirect" style="text-align: center;">U wordt ingelogd...</h1>';
+                    echo '<h1 id="redirect">U wordt ingelogd...</h1>';
                     echo '<script src="script.js"></script>';
                 }
             }
