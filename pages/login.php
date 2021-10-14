@@ -1,21 +1,53 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Login</title>
-        <link href="../css/login.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    </head>
 
-    <body>
-        <?php
-        //Deze moet in index komen?
-        session_start();
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link href="../css/styles.css" rel=stylesheet>
+    <link href="../css/headerfooter.css" rel=stylesheet>
+    <link href="../css/login.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
 
+<body>
+    <!-- header base -->
+    <div id="headerbase" class="container-fluid mb-5">
+        <div class="row">
+            <!-- Header logo -->
+            <div class="col-md-3 align-self-center">
+                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+            </div>
+            <!-- Login gebruikersnaam placeholder -->
+            <div class="col-md-5 align-self-center">
+                <?php
+                if (isset($_SESSION['name'])) {
+                    echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
+                }
+                ?>
+            </div>
+            <!-- Knoppen naar andere pagina's -->
+            <div class="col-md-4" id="buttoncontainerheader">
+                <a href=../index.php class="headerbutton">Activiteiten</a>
+                <a href=login.php class="headerbutton active">Inloggen</a>
+                <a href=contact.php class="headerbutton">Contact</a>
+                <!-- Taal wissel knop hier -->
+                <a href="enlish page ofz lol">
+                    <img src="../pictures/flags/UK_flag.jpg" id="langflag">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <?php
         //Defines variables and sets them to empty values.
         $email = "";
         $pass = "";
@@ -77,29 +109,34 @@
         }
         ?>
 
-        <!-- The HTML form where site visitors enter their e-mail and password-->
-        <div id="container">
-            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <p id="title">Login</p>
-                <p><span class="error">* verplicht veld</span></p>
+    <!-- The HTML form where site visitors enter their e-mail and password-->
+    <div id="container">
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <p id="title">Login</p>
+            <p><span class="error">* verplicht veld</span></p>
 
-                <p id="emailaddress">E-mailadres</p> 
-                <input type="text" id="email" name="email">
-                <span class="error">* <?php echo $emailErr;?></span>
+            <p id="emailaddress">E-mailadres</p>
+            <input type="text" id="email" name="email">
+            <span class="error">* <?php echo $emailErr;?></span>
 
-                <p id="password">Wachtwoord</p>
-                <input type="text" id="pass" name="pass">
-                <span class="error">* <?php echo $passErr;?></span>
+            <p id="password">Wachtwoord</p>
+            <input type="text" id="pass" name="pass">
+            <span class="error">* <?php echo $passErr;?></span>
 
-                <p><input type="submit" id="login" name ="login" value="Inloggen"></p>
-            </form>
+            <p><input type="submit" id="login" name="login" value="Inloggen"></p>
+        </form>
+    </div>
+
+    <!-- Footer basis -->
+    <div id="footerbase" class="container-fluid mt-5">
+        <!-- Text in footer -->
+        <div class="col-md-3">
+            <p id="footertext">© NHL Stenden 2021</p>
         </div>
+        <!-- de rest van de collumns -->
+        <div class="col-md-9">
+        </div>
+    </div>
+</body>
 
-        <?php
-        if(isset($_SESSION['name'])) {
-            print_r($_SESSION);
-        }
-        ?>
-
-    </body>
 </html>

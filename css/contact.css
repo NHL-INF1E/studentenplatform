@@ -1,15 +1,10 @@
-@import url(//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular); /*Hierdoor kan er gebruik worden gemaakt van CeraPRO.*/
-*   {
-    font-family: CeraPRO-Regular, sans-serif; /*Het lettertype CeraPRO, uit het huisstijldocument en sans-serif als back-up.*/
-}
-
 .form-text  {
     border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
     border-radius: 5px; /*Dit zorgt ervoor dat de hoeken afgerond zijn met een radius van 5px.*/
     width: 95%; /*Dit zorgt ervoor dat de breedte 95% is.*/
 }
 
-.col-md-3   {
+.rand   {
     border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
     padding: 10px; /*Dit zorgt voor een leegte tussen de zwarte lijn en de inhoud van 10px.*/
 }
