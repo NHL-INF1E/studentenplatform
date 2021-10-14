@@ -54,29 +54,23 @@ session_start();
 
     <!-- content -->
     <div class="container">
-    <?php
-        if (isset($_GET['cat'])) {
-            $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
-        }
-    ?>
+        <?php
+            if (isset($_GET['cat'])) {
+                $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
+                
+        ?>
         <div class="row">
             <div class="col-md-4">
                 <div class="left-content">
-                    <?php
-                        foreach ($activities as $key => $item) {
-                    ?>
                     <div class="col-md-12 text-end article-img">
-                        <img class="img-fluid" alt="sports" src="<?php echo $item['image']; ?>">
+                        <img class="img-fluid" alt="sports" src="<?php echo $getActivity['image']; ?>">
                     </div>
                     <div class="col-md-12 article-title">
-                        <h2 class="text-center"><b><?php echo $item['title']; ?></b></h2>
+                        <h2 class="text-center"><b><?php echo $getActivity['title']; ?></b></h2>
                     </div>
                     <div class="col-md-12 article-text">
-                        <?php echo $item['description']; ?>
+                        <?php echo $getActivity['description']; ?>
                     </div>
-                    <?php
-                        }
-                    ?>
                 </div>
             </div>
             <div class="col-md-8">
@@ -129,6 +123,9 @@ session_start();
                 </div>
             </div>
         </div>
+        <?php
+            }
+        ?>
     </div>
 
     <!-- Footer basis -->
