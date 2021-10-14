@@ -1,7 +1,8 @@
 <?php
     require_once('utilities/dataStoreUtil.php');
     // Haalt de data uit data.json
-    $activities = getActivities();
+    $file = 'datastores/activities.json';
+    $activities = getActivities($file);
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +28,7 @@
                 <div class="kaartje row <?php echo $item->kleur?>">
                     <div class="content p-0">
                         <div class="col-md-12 rowOne">
-                            <img class="img-fluid" src="<?php echo $item->image; ?>" alt="">
+                            <img class="img-fluid" src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>">
                         </div>
                         <div class="col-md-12 rowTwo">
                             <b><h3 class="text-start"><?php echo $item->title; ?></h3></b>

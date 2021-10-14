@@ -32,9 +32,7 @@ function getActivities($filepathActivities){
     if(!($activities = file_get_contents($filepathActivities))){
         throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
     }else{
-        $activitiesArray = json_decode($activities, true);
-        $result = $activitiesArray;
-        return $result;
+        return json_decode($activities);
     }
 }
 
