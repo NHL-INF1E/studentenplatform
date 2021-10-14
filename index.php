@@ -3,7 +3,7 @@
     require_once('utilities/dataStoreUtil.php');
     // Haalt de data uit data.json
     $file = 'datastores/activities.json';
-$activities = getActivities($file);
+    $activities = getCategories($file);
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ $activities = getActivities($file);
             <div class="col-md-5 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
+                    echo '<p id="usernameheader"><span class="blue">Hallo </span> ' . $_SESSION['name'] . ' </p>';
                 }
                 ?>
             </div>
