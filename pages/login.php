@@ -115,12 +115,12 @@ session_start();
             <p id="title">Login</p>
             <p><span class="error">* verplicht veld</span></p>
 
-            <p id="emailaddress">E-mailadres</p>
-            <input type="text" id="email" name="email">
+            <p class="paragraph">E-mailadres</p>
+            <input type="text" class="inputBox" name="email">
             <span class="error">* <?php echo $emailErr;?></span>
 
-            <p id="password">Wachtwoord</p>
-            <input type="text" id="pass" name="pass">
+            <p class="paragraph">Wachtwoord</p>
+            <input type="password" class="inputBox" name="pass">
             <span class="error">* <?php echo $passErr;?></span>
 
             <p><input type="submit" id="login" name="login" value="Inloggen"></p>

@@ -1,3 +1,39 @@
 .error {
     color: #FF0000;
 }
+
+#container {
+    border: 2px solid rgba(0, 0, 0, 0.253);
+    width: 350px;
+    height: 380px;
+    margin: 0 auto;
+    padding-left: 30px;
+    margin-top: 100px;
+}
+
+.inputBox {
+    width: 290px;
+    height: 45px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.paragraph {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#title {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#login {
+    border-radius: 0px;
+    width: 130px;
+    background-color: #005AAA;
+    color: white;
+    font-weight: bold;
+    height: 35px;
+    float: right;
+    margin-right: 30px;
+}
