@@ -1,5 +1,13 @@
 <?php
 
+function getCategories($filepathActivities) {
+    if(!($activities = file_get_contents($filepathActivities))){
+        throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
+    }else{
+        return json_decode($activities);
+    }
+}
+
 function getActivity($ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
     return ($activities[$ID]);
