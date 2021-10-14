@@ -1,11 +1,16 @@
 [
-    [
-        {
-            "title": "test",
-            "beschrijving": "test aangepast",
-            "image": "test",
-            "link": "test",
-            "kleur": "test"
-        }
-    ]
+    {
+        "kleur": "roze",
+        "image": "pictures/NHL_Stenden_Eropuit_Logo.png",
+        "title": "Beeldende kunst",
+        "beschrijving": "test aangepast",
+        "link": "pages/activiteit.php?cat=Beeldendekunst"
+    },
+    {
+        "kleur": "groen",
+        "image": "pictures/NHL_Stenden_Eropuit_Logo.png",
+        "title": "Sport",
+        "beschrijving": "test aangepast",
+        "link": "pages/activiteit.php?cat=Sport"
+    }
 ]
