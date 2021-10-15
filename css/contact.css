@@ -5,7 +5,7 @@
 }
 
 .rand   {
-    border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
+    border: 2px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
     padding: 10px; /*Dit zorgt voor een leegte tussen de zwarte lijn en de inhoud van 10px.*/
 }
 
@@ -36,4 +36,10 @@ label   {
     color: #005AAA; /*Dit geeft de tekst van gelukt de kleur blauw uit het huisstijldocument.*/
     float: left; /*Dit zorgt ervoor dat de tekst van geluk links naast de knop verzenden staat.*/
     margin-left: 3%; /*Dit zorgt ervoor dat de tekst van geluk op gelijke hoogte is met de input.*/
+}
+
+#title  {
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 3%;
 }

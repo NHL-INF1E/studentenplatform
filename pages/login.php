@@ -111,20 +111,30 @@ session_start();
 
     <!-- The HTML form where site visitors enter their e-mail and password-->
     <div id="container">
-        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-            <p id="title">Login</p>
-            <p><span class="error">* verplicht veld</span></p>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- -->
+            </div>
+            <div class="col-md-3 rand">
+                <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <p id="title">Login</p>
+                    <p><span class="error">* verplicht veld</span></p>
 
-            <p class="paragraph">E-mailadres</p>
-            <input type="text" class="inputBox" name="email">
-            <span class="error">* <?php echo $emailErr;?></span>
+                    <p class="paragraph">E-mailadres</p>
+                    <input type="text" class="inputBox" name="email">
+                    <span class="error">* <?php echo $emailErr;?></span>
 
-            <p class="paragraph">Wachtwoord</p>
-            <input type="password" class="inputBox" name="pass">
-            <span class="error">* <?php echo $passErr;?></span>
+                    <p class="paragraph">Wachtwoord</p>
+                    <input type="password" class="inputBox" name="pass">
+                    <span class="error">* <?php echo $passErr;?></span>
 
-            <p><input type="submit" id="login" name="login" value="Inloggen"></p>
-        </form>
+                    <p><input type="submit" id="login" name="login" value="Inloggen"></p>
+                </form>
+            </div>
+            <div class="col-md-5">
+                <!-- -->
+            </div>
+        </div>
     </div>
 
     <!-- Footer basis -->

@@ -2,24 +2,16 @@
     color: #FF0000;
 }
 
-#container {
-    border: 2px solid rgba(0, 0, 0, 0.253);
-    width: 350px;
-    height: 380px;
-    margin: 0 auto;
-    padding-left: 30px;
-    margin-top: 100px;
-}
-
 .inputBox {
     width: 290px;
     height: 45px;
+    border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .paragraph {
-    color: rgba(0, 0, 0, 0.7);
+    color: black;
 }
 
 #title {
@@ -41,4 +33,9 @@
 #redirect {
     text-align: center;
     font-size: 20px;
+}
+
+.rand   {
+    border: 2px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
+    padding: 10px; /*Dit zorgt voor een leegte tussen de zwarte lijn en de inhoud van 10px.*/
 }

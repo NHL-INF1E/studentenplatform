@@ -39,7 +39,7 @@ session_start();
                 <a href=login.php class="headerbutton">Inloggen</a>
                 <a href=contact.php class="headerbutton active">Contact</a>
                 <!-- Taal wissel knop hier -->
-                <a href="contact_EN.php">
+                <a href="enlish page ofz lol">
                     <img src="../pictures/flags/UK_flag.jpg" id="langflag">
                 </a>
             </div>
@@ -97,12 +97,7 @@ session_start();
                         "name" => $name,
                         "email" => $email,
                         "subject" => $subject,
-                        "message" => $message,
-                        "test" => array(
-                            "activityName" => 'soccer',
-                            "activityCount" => '24'
-                        )
-                    );
+                        "message" => $message);
 
                     //Hier wordt de nieuwe array toegevoegd aan de array van het json bestand.
                     array_push($jsonArray, $arrayContact);
@@ -127,7 +122,7 @@ session_start();
             </div>
             <div class="col-md-3 rand">
                 <!-- -->
-                <h2><b>Contact</b></h2>
+                <p id="title">Contact</p>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <!-- -->
                     <p>
@@ -158,13 +153,6 @@ session_start();
                     </div>
                     <input type="submit" class="verzenden" value="Verzenden"> <!-- -->
                     <?php echo $gelukt; ?>
-                    <!-- -->
-                    <?php
-                                foreach($arrayContact as $value)
-                                {
-                                    echo $value . "<br>";
-                                }
-                                ?>
                     </p>
                 </form>
             </div>
