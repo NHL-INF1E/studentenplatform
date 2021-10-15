@@ -33,7 +33,7 @@
             <div class="col-md-5 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<p id="usernameheader"><span class="blue">Hallo </span> ' . $_SESSION['name'] . ' </p>';
+                    echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
                 }
                 ?>
             </div>

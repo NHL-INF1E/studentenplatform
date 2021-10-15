@@ -97,7 +97,12 @@ session_start();
                         "name" => $name,
                         "email" => $email,
                         "subject" => $subject,
-                        "message" => $message);
+                        "message" => $message,
+                        "test" => array(
+                            "activityName" => 'soccer',
+                            "activityCount" => '24'
+                        )
+                    );
 
                     //Hier wordt de nieuwe array toegevoegd aan de array van het json bestand.
                     array_push($jsonArray, $arrayContact);
