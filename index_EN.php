@@ -29,22 +29,22 @@
             <div class="col-md-3 align-self-center">
                 <img src="pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
-            <!-- Login gebruikersnaam placeholder -->
+            <!-- Login Gebruikersnaam -->
             <div class="col-md-5 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
+                    echo '<p id="usernameheader">Welcome, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
                 }
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
             <div class="col-md-4" id="buttoncontainerheader">
-                <a href=index.php class="headerbutton active">Activiteiten</a>
-                <a href=pages/login.php class="headerbutton">Inloggen</a>
-                <a href=pages/contact.php class="headerbutton">Contact</a>
+                <a href=index_EN.php class="headerbutton active">Activities</a>
+                <a href=pages/login_EN.php class="headerbutton ">Sign in</a>
+                <a href=pages/contact_EN.php class="headerbutton">Contact</a>
                 <!-- Taal wissel knop hier -->
-                <a href="index_EN.php">
-                    <img src="pictures/flags/UK_flag.jpg" id="langflag">
+                <a href="index.php">
+                    <img src="pictures/flags/NL_flag.jpg" id="langflag">
                 </a>
             </div>
         </div>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="col-md-12 text-end p-4 rowFour">
                             <a href="<?php echo $item->link; ?>"><button
-                                    class="button inschrijfKnop">Inschrijven</button></a>
+                                    class="button inschrijfKnop">Sign up</button></a>
                         </div>
                     </div>
                 </div>
