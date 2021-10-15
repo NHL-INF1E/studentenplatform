@@ -122,11 +122,11 @@ session_start();
 
                     <p class="paragraph">E-mailadres</p>
                     <input type="text" class="inputBox" name="email">
-                    <span class="error">* <?php echo $emailErr;?></span>
+                    <p><span class="error" id = "emailError">* <?php echo $emailErr;?></span></p>
 
                     <p class="paragraph">Wachtwoord</p>
                     <input type="password" class="inputBox" name="pass">
-                    <span class="error">* <?php echo $passErr;?></span>
+                    <p><span class="error" id = "passwordError">* <?php echo $passErr;?></span></p>
 
                     <p><input type="submit" id="login" name="login" value="Inloggen"></p>
                 </form>

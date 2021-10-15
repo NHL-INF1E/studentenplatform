@@ -1,23 +1,27 @@
 .error {
     color: #FF0000;
+    margin-left: 10%;
 }
 
 .inputBox {
-    width: 290px;
+    width: 80%;
     height: 45px;
     border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 20px;
-    margin-left: 200px;
+    margin-left: 50px;
+    margin-right: -10%;
 }
 
 .paragraph {
     color: black;
+    margin-left: 10%;
 }
 
 #title {
     font-weight: bold;
     font-size: 30px;
+    margin-left: 10%;
 }
 
 #login {
