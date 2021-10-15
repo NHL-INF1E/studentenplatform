@@ -74,12 +74,15 @@ session_start();
             }
         }
 
-        if(empty($_POST["pass"])) {
-            $passErr = "Vul een wachtwoord in.";
-        } else {
-            $pass = test_input($_POST["pass"]);    
-            //Optionally there could be extra strict password validation here.
+        if($_SERVER["REQUEST_METHOD"] == "POST") {
+            if(empty($_POST["pass"])) {
+                $passErr = "Vul een wachtwoord in.";
+            } else {
+                $pass = test_input($_POST["pass"]);    
+                //Optionally there could be extra strict password validation here.
+            }
         }
+
         if(isset($_POST["login"]) && !empty($_POST["email"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) && !empty($_POST["pass"])) {
             
             //Dit zorgt ervoor dat er een string wordt gemaakt van het JSON bestand
@@ -122,11 +125,11 @@ session_start();
 
                     <p class="paragraph">E-mailadres</p>
                     <input type="text" class="inputBox" name="email">
-                    <p><span class="error" id = "emailError">* <?php echo $emailErr;?></span></p>
+                    <p><span class="error">* <?php echo $emailErr;?></span></p>
 
                     <p class="paragraph">Wachtwoord</p>
                     <input type="password" class="inputBox" name="pass">
-                    <p><span class="error" id = "passwordError">* <?php echo $passErr;?></span></p>
+                    <p><span class="error">* <?php echo $passErr;?></span></p>
 
                     <p><input type="submit" id="login" name="login" value="Inloggen"></p>
                 </form>

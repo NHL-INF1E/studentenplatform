@@ -8,14 +8,15 @@
     height: 45px;
     border: 1px solid black;
     border-radius: 5px;
-    margin-bottom: 20px;
     margin-left: 50px;
     margin-right: -10%;
+    margin-top: -10%;
 }
 
 .paragraph {
     color: black;
     margin-left: 10%;
+    margin-top: -2%;
 }
 
 #title {
@@ -32,7 +33,8 @@
     font-weight: bold;
     height: 35px;
     float: right;
-    margin-right: 30px;
+    margin-right: 10%;
+    margin-top: -3%;
 }
 
 #redirect {
