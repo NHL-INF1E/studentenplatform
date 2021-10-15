@@ -120,7 +120,7 @@ session_start();
             <div class="col-md-4">
                 <!-- -->
             </div>
-            <div class="col-md-3 rand">
+            <div class="col-md-4 rand">
                 <!-- -->
                 <p id="title">Contact</p>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -156,7 +156,7 @@ session_start();
                     </p>
                 </form>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <!-- -->
             </div>
         </div>
