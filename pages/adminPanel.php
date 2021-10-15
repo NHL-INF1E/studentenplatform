@@ -34,9 +34,19 @@ session_start();
             </div>
             <!-- Knoppen naar andere pagina's -->
             <div class="col-md-4" id="buttoncontainerheader">
-                <a href=index.php class="headerbutton active">Activiteiten</a>
-                <a href=pages/login.php class="headerbutton">Inloggen</a>
-                <a href=pages/contact.php class="headerbutton">Contact</a>
+                <a href="../index.php" class="headerbutton">Activiteiten</a>
+                <?php
+                if (isset($_SESSION['name'])) {
+                    echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                } else {
+                    echo '<a href="login.php" class="headerbutton">Inloggen</a>';
+                }
+                
+                if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
+                    echo '<a href="adminPanel.php" class="headerbutton active">Admin paneel</a>';
+                }
+                ?>
+                <a href="contact.php" class="headerbutton">Contact</a>
                 <!-- Taal wissel knop hier -->
                 <a href="enlish page ofz lol">
                     <img src="../pictures/flags/UK_flag.jpg" id="langflag">

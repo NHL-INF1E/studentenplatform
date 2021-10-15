@@ -36,7 +36,17 @@ session_start();
             <!-- Knoppen naar andere pagina's -->
             <div class="col-md-4" id="buttoncontainerheader">
                 <a href=../index.php class="headerbutton">Activiteiten</a>
-                <a href=login.php class="headerbutton">Inloggen</a>
+                <?php
+                if (isset($_SESSION['name'])) {
+                    echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                } else {
+                    echo '<a href="login.php" class="headerbutton">Inloggen</a>';
+                }
+                
+                if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
+                    echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
+                }
+                ?>
                 <a href=contact.php class="headerbutton active">Contact</a>
                 <!-- Taal wissel knop hier -->
                 <a href="enlish page ofz lol">
