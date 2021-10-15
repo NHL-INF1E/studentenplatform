@@ -115,7 +115,7 @@ session_start();
             <div class="col-md-4">
                 <!-- -->
             </div>
-            <div class="col-md-3 rand">
+            <div class="col-md-4 rand">
                 <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                     <p id="title">Login</p>
                     <p><span class="error">* verplicht veld</span></p>
@@ -131,7 +131,7 @@ session_start();
                     <p><input type="submit" id="login" name="login" value="Inloggen"></p>
                 </form>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <!-- -->
             </div>
         </div>
