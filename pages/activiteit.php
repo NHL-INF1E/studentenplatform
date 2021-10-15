@@ -2,8 +2,8 @@
 session_start();
 ?>
 <?php
-    // a requirement from a different page
-    require_once('../utilities/dataStoreUtil.php');
+// a requirement from a different page
+require_once('../utilities/dataStoreUtil.php');
 ?>
 
 <!DOCTYPE HTML>
@@ -17,8 +17,10 @@ session_start();
     <link href="../css/styles.css" rel=stylesheet>
     <link href="../css/headerfooter.css" rel=stylesheet>
     <link href="../css/activiteiten2.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -58,122 +60,197 @@ session_start();
             // activate function if upperstatement is true
             $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
         ?>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="left-content">
-
-                    <div class="col-md-12 text-end article-img">
-                        <img class="img-fluid" alt="sports" src="<?php echo $getActivity['image']; ?>">
-                    </div>
-
-                    <div class="col-md-12 article-title">
-                        <?php 
-                        //change title based on which activity you clicked
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="left-content">
+                        <?php
+                        //Check if activity was selected or just the category, based on that echo data
                         if (isset($_POST['activity'])) {
                             foreach ($getActivity['activity'] as $key => $item) {
                                 if ($_POST['activity'] == $item['activityName']) {
-                        ?>
-                                <h2 class="text-center">
-                                    <b><?php echo $item['activityName']; ?></b>
-                                </h2>
-                        <?php
+                                    echo '
+                                    <div class="col-md-12 text-end article-img">
+                                        <img class="img-fluid" alt=' . $item['activityName'] . ' src=' . $item['activityImage'] . '>
+                                    </div>
+                                    ';
                                 }
                             }
-                        }else {
-                        ?>
-                            <h2 class="text-center">
-                                <b><?php echo $getActivity['title']; ?></b>
-                            </h2>
-                        <?php
+                        } else {
+                            echo '
+                            <div class="col-md-12 text-end article-img">
+                                <img class="img-fluid" alt=' . $getActivity['title'] . ' src=' . $getActivity['image'] . '>
+                            </div>
+                            ';
                         }
                         ?>
-                        <div class="col-md-12 article-text">
-                            <?php echo $getActivity['description']; ?>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
 
-            <div class="col-md-8">
-
-                <div class="right-content">
-
-                    <div class="col-md-12 article-title">
-                        <h2 class="text-start"><b>Activities</b></h2>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-sm-4">
-                            <?php 
-                            //loop through the array of the json file
-                            foreach ($getActivity['activity'] as $key => $item) {
-                            ?>
-                            <ul class="activity-drop article-text">
-                                <form method="POST">
-                                    <li>
-                                        <input type="submit" class="activity-button" name="activity" value="<?php echo $item['activityName'] ?>">&gt;
-                                    </li>
-                                </form>
-                            </ul>
+                        <div class="col-md-12 article-title">
                             <?php
-                            } 
-                            ?>
-                        </div>
+                            //Check if activity was selected or just the category, based on that echo data
+                            if (isset($_POST['activity'])) {
+                                foreach ($getActivity['activity'] as $key => $item) {
+                                    if ($_POST['activity'] == $item['activityName']) {
+                                        echo '
+                                        <h2 class="text-center"> 
+                                            <b class="text-capitalize"> ' . $item["activityName"] . '</b>
+                                        </h2>
+                                        ';
 
-                        <div class="col-sm-8 text-center">
-                            <p>
-                                <?php 
-                                /*
-                                $_POST[activity] is checked if it has been clicked
-                                if it has been clicked value in html will be echoed
-                                */
-                                if (isset($_POST["activity"])) {
-                                    foreach ($getActivity['activity'] as $key => $item) {
-                                        if ($_POST['activity'] == $item['activityName']) {
-                                ?>
-                                        <div class="col-sm-12 text-center log-check1">
-                                            Login to sign up for an activity
+                                        echo '
+                                        <div class="col-md-12 article-text">
+                                            <p>' . $item["activityDesc"] . '</p>
                                         </div>
-
-                                        <div class="col-sm-12 text-center">
-                                            <form method="POST">
-                                                <input type="image" name="likeDislike" value="<?php $item['activityCount'] + 1 ?>"
-                                                    class="img-fluid log-check2" src="../pictures/stock/icons8-thumbs-up-64.png" />
-                                            </form>
-                                        </div>
-                                        
-                                        <div class="col-sm-12 text-center log-check3">
-                                            <?php echo $item['activityCount']; ?>
-                                        </div>
-                                <?php
-                                        }
+                                        ';
                                     }
                                 }
-                                ?>
-                            </p>
+                            } else {
+                                echo '
+                                <h2 class="text-center"> 
+                                    <b class="text-capitalize"> ' . $getActivity["title"] . '</b>
+                                </h2>
+                                ';
+
+                                echo '
+                                <div class="col-md-12 article-text">
+                                    <p>' . $getActivity["description"] . '</p>
+                                </div>
+                                ';
+                            }
+                            ?>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="right-content">
+                        <div class="col-md-12 article-title">
+                            <h2 class="text-start"><b>Activities</b></h2>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-4">
+
+                                <ul class="activity-drop article-text">
+                                    <form method="POST">
+                                        <?php
+                                        //loop through the array of the json file
+                                        foreach ($getActivity['activity'] as $key => $item) {
+                                        ?>
+                                            <li>
+
+
+                                                <?php
+
+                                                $clicked = false;
+                                                if (isset($_POST['activity'])) {
+                                                    $clicked = true;
+                                                    $test = $_POST['activity'];
+
+                                                    if ($test === $item['activityName']) {
+                                                        echo '
+                                                        <input type="submit" class="activity-button text-capitalize fw-bold activeActivity" name="activity" value=' . $item['activityName'] . '> <i class="bi bi-chevron-down"></i>
+                                                        ';
+                                                    } else {
+                                                        echo '
+                                                        <input type="submit" class="activity-button text-capitalize fw-bold" name="activity" value=' . $item['activityName'] . '> <i class="bi bi-chevron-right"></i>
+                                                        ';
+                                                    }
+                                                } else if (!$clicked) {
+                                                    echo '
+                                                    <input type="submit" class="activity-button text-capitalize fw-bold" name="activity" value=' . $item['activityName'] . '> <i class="bi bi-chevron-right"></i>
+                                                    ';
+                                                }
+                                                ?>
+                                            </li>
+                                        <?php
+                                        }
+                                        ?>
+                                    </form>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-sm-8 text-center">
+                                <p>
+                                    <?php
+                                    /*
+                                    $_POST[activity] is checked if it has been clicked
+                                    if it has been clicked value in html will be echoed
+                                    */
+                                    if (isset($_POST["activity"])) {
+                                        foreach ($getActivity['activity'] as $key => $item) {
+                                            if ($_POST['activity'] == $item['activityName']) {
+
+                                                //Als de sessie niet leeg is(oftwel er is iemand ingelogd)
+                                                if (!empty($_SESSION)) {
+                                                    echo '
+                                                    <div class="col-sm-12 text-center log-check3 fw-bold">
+                                                        <p>Are you interested in this activity?</p>
+                                                    </div>
+                                                    ';
+
+                                                    echo '
+                                                    <div class="col-sm-12 text-center">
+                                                        <form method="POST">
+                                                            <input type="image" name="likeDislike" value=' . $item["activityCount"] + 1 . ' class="img-fluid log-check4" src="../pictures/stock/icons8-thumbs-up-64.png" />
+                                                        </form>
+                                                    </div>
+                                                    ';
+
+                                                    echo '
+                                                    <div class="col-sm-12 text-center log-check3 fw-bold">
+                                                        <p> ' . $item["activityCount"] . ' said yes</p>
+                                                    </div>
+                                                    ';
+                                                } else {
+                                                    echo '
+                                                    <div class="col-sm-12 text-center log-check1 fw-bold">
+                                                        Login to sign up for an activity
+                                                    </div>
+                                                    ';
+
+                                                    echo '
+                                                    <div class="col-sm-12 text-center">
+                                                        <form method="POST">
+                                                            <input disabled type="image" name="likeDislike" value=' . $item["activityCount"] + 1 . ' class="img-fluid log-check2" src="../pictures/stock/icons8-thumbs-up-64.png" />
+                                                        </form>
+                                                    </div>
+                                                    ';
+
+                                                    echo '
+                                                    <div class="col-sm-12 text-center log-check3 fw-bold">
+                                                        <p> ' . $item["activityCount"] . ' said yes</p>
+                                                    </div>
+                                                    ';
+                                                }
+                                            }
+                                        }
+                                    }
+                                    ?>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </div>
-    <?php
-    }
-    ?>
-    </div>
+<?php
+        }
+?>
+</div>
 
-    <!-- Footer basis -->
-    <div id="footerbase" class="container-fluid mt-5">
-        <!-- Text in footer -->
-        <div class="col-md-3">
-            <p id="footertext">© NHL Stenden 2021</p>
-        </div>
-        <!-- de rest van de collumns -->
-        <div class="col-md-9">
-        </div>
+<!-- Footer basis -->
+<div id="footerbase" class="container-fluid mt-5">
+    <!-- Text in footer -->
+    <div class="col-md-3">
+        <p id="footertext">© NHL Stenden 2021</p>
     </div>
+    <!-- de rest van de collumns -->
+    <div class="col-md-9">
+    </div>
+</div>
 </body>
 
 </html>

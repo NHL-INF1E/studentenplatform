@@ -15,6 +15,9 @@ and open the template in the editor.
     <link href="../css/styles.css" rel=stylesheet>
     <link href="../css/headerfooter.css" rel=stylesheet>
     <link href="../css/admin.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -48,17 +51,17 @@ and open the template in the editor.
 
     <div class="contentContainer">
         <?php
-            include '../utilities/dataStoreUtil.php';
-            $contacts = getContacts("../datastores/contacts.json");
-            foreach($contacts as $contact){
-                echo"<div class='contactContainer'>";
-                echo $contact["name"];
-                echo $contact["email"];
-                echo $contact["subject"];
-                echo $contact["message"];
-                echo '</div>';
-            }
-            ?>
+        include '../utilities/dataStoreUtil.php';
+        $contacts = getContacts("../datastores/contacts.json");
+        foreach ($contacts as $contact) {
+            echo "<div class='contactContainer'>";
+            echo $contact["name"];
+            echo $contact["email"];
+            echo $contact["subject"];
+            echo $contact["message"];
+            echo '</div>';
+        }
+        ?>
     </div>
 
     <!-- Footer basis -->

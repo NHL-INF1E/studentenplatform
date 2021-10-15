@@ -7,27 +7,37 @@
         [
             {
                 "activityName": "soccer",
-                "activityCount": "24" 
+                "activityCount": "24",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
 
             {
                 "activityName": "tennis",
-                "activityCount": "25"
+                "activityCount": "25",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "tennis ja"
             },
 
             {
                 "activityName": "rowing",
-                "activityCount": "26"
+                "activityCount": "26",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "rowing ja"
             },
 
             {
                 "activityName": "archery",
-                "activityCount": "23"
+                "activityCount": "23",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "archery ja"
             },
 
             {
                 "activityName": "e-sports",
-                "activityCount": "40"
+                "activityCount": "40",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "e-sports ja"
             }
         ]
     },
@@ -40,22 +50,30 @@
         [
             {
                 "activityName": "editor",
-                "activityCount": "10"
+                "activityCount": "10",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             }, 
 
             {
                 "activityName": "acteren",
-                "activityCount": "30"
+                "activityCount": "30",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
 
             {
                 "activityName": "regiseren",
-                "activityCount": "40"
+                "activityCount": "40",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             }, 
 
             {
                 "activityName": "decorbouwer",
-                "activityCount": "20"
+                "activityCount": "20",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             }
         ]
     },
@@ -68,22 +86,30 @@
         [
             {
                 "activityName": "schilderen",
-                "activityCount": "20"
+                "activityCount": "20",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
             
             {
                 "activityName": "beitelen",
-                "activityCount": "40"
+                "activityCount": "40",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
             
             {
                 "activityName": "poëzie",
-                "activityCount": "30"
+                "activityCount": "30",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
 
             {
                 "activityName": "gedichten",
-                "activityCount": "15"
+                "activityCount": "15",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             }
         ]
     },
@@ -96,22 +122,30 @@
         [
             {
                 "activityName": "r&b",
-                "activityCount": "20"
+                "activityCount": "20",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
 
             {
                 "activityName": "guitar",
-                "activityCount": "40"
+                "activityCount": "40",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
 
             {
                 "activityName": "paino",
-                "activityCount": "30"
+                "activityCount": "30",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             },
 
             {
                 "activityName": "dancing",
-                "activityCount": "44"
+                "activityCount": "44",
+                "activityImage": "../pictures/stock/voetbal.jpg",
+                "activityDesc": "voetbal ja"
             }
         ]
     }

@@ -1,6 +1,5 @@
 .left-content {
     background-color: #EEEEEC;
-    font-family: Cera;
     padding: 10px;
     margin: 10px; 
     height: auto;
@@ -28,7 +27,6 @@
 
 .right-content {
     background-color: #EEEEEC;
-    font-family: Cera;
     padding: 10px;
     margin: 10px; 
     height: 70vh;
@@ -49,7 +47,6 @@
     text-align: left;
     background-color: #EEEEEC;
     color: grey;
-    font-family: Cera;
     border-style: none;
 }
 
@@ -58,13 +55,22 @@
     padding: 10px;
 }
 
+.log-check3 {
+    color: #009BA4;
+    padding: 10px;
+}
+
 .log-check2 {
     opacity: 20%;
     padding: 10px;
 }
 
-.log-check3 {
-    color: blue;
+.log-check4 {
+    opacity: 100%;
     padding: 10px;
+}
+
+.activeActivity {
+    color: #009BA4;
 }
 
