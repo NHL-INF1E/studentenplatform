@@ -49,7 +49,7 @@ require_once('../utilities/dataStoreUtil.php');
                 } else {
                     echo '<a href="login.php" class="headerbutton">Inloggen</a>';
                 }
-                
+
                 if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
                     echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
                 }
@@ -68,8 +68,39 @@ require_once('../utilities/dataStoreUtil.php');
         <?php
         // if $_GET request 'cat' is set
         if (isset($_GET['cat'])) {
-            // activate function if upperstatement is true
+
+            //Activate function if GET isset true (get data for selected activity)
             $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
+
+            //Like button function
+            if (isset($_POST['like'])) {
+                $selectedActivity = $_SESSION['submittedActivity'];
+
+                //Loop door alle activiteiten heen van $getActivity (de kozen categorie, sport/art/film etc.)
+                foreach ($getActivity['activity'] as $activity) {
+                    //Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
+                    if ($activity['activityName'] == $selectedActivity) {
+                        //Tel activiteit deelnemers op met +1
+                        $variableCount = $activity['activityCount'] + 1;
+                        //Zet de geupdate value in een array 'activityCount'
+                        $updatedValueCountArr = array('activityCount' => $variableCount);
+                    }
+                }
+
+                //Replace oude activityCount met de nieuwe activityCount en zet dit in $getActivity neer
+                $countReplace = array_replace($getActivity['activity'][$selectedActivity], $updatedValueCountArr);
+                $getActivity['activity'][$selectedActivity] = $countReplace;
+
+                //Hier wordt de oude volledige json lijst opgehaald en vervangen door de nieuwe value's
+                $oldJson = getActivities('../datastores/activities2.json');
+                $oldJson[$_GET['cat']] = $getActivity;
+
+                //Hier wordt de array omgezet in een JSON object, in json `pretty` formaat
+                $newJson = json_encode($oldJson, JSON_PRETTY_PRINT);
+
+                //Hier wordt het nieuwe JSON object in het bestand gezet
+                file_put_contents('../datastores/activities2.json', $newJson);
+            }
         ?>
             <div class="row">
                 <div class="col-md-4">
@@ -77,6 +108,7 @@ require_once('../utilities/dataStoreUtil.php');
                         <?php
                         //Check if activity was selected or just the category, based on that echo data
                         if (isset($_POST['activity'])) {
+                            $_SESSION['submittedActivity'] = $_POST['activity'];
                             foreach ($getActivity['activity'] as $key => $item) {
                                 if ($_POST['activity'] == $item['activityName']) {
                                     echo '
@@ -150,10 +182,7 @@ require_once('../utilities/dataStoreUtil.php');
                                         foreach ($getActivity['activity'] as $key => $item) {
                                         ?>
                                             <li>
-
-
                                                 <?php
-
                                                 $clicked = false;
                                                 if (isset($_POST['activity'])) {
                                                     $clicked = true;
@@ -180,7 +209,6 @@ require_once('../utilities/dataStoreUtil.php');
                                         ?>
                                     </form>
                                 </ul>
-
                             </div>
 
                             <div class="col-sm-8 text-center">
@@ -193,9 +221,9 @@ require_once('../utilities/dataStoreUtil.php');
                                     if (isset($_POST["activity"])) {
                                         foreach ($getActivity['activity'] as $key => $item) {
                                             if ($_POST['activity'] == $item['activityName']) {
-
                                                 //Als de sessie niet leeg is(oftwel er is iemand ingelogd)
-                                                if (!empty($_SESSION)) {
+                                                if (!empty($_SESSION['name'])) {
+
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
                                                         <p>Are you interested in this activity?</p>
@@ -204,8 +232,8 @@ require_once('../utilities/dataStoreUtil.php');
 
                                                     echo '
                                                     <div class="col-sm-12 text-center">
-                                                        <form method="POST">
-                                                            <input type="image" name="likeDislike" value=' . $item["activityCount"] + 1 . ' class="img-fluid log-check4" src="../pictures/stock/icons8-thumbs-up-64.png" />
+                                                        <form method="POST" action="">
+                                                            <button type="submit" name="like" class="border-0" value=' . $item["activityCount"] + 1 . '><img class="img-fluid log-check4" src="../pictures/stock/icons8-thumbs-up-64.png" alt="meedoen"></button>
                                                         </form>
                                                     </div>
                                                     ';
@@ -225,7 +253,7 @@ require_once('../utilities/dataStoreUtil.php');
                                                     echo '
                                                     <div class="col-sm-12 text-center">
                                                         <form method="POST">
-                                                            <input disabled type="image" name="likeDislike" value=' . $item["activityCount"] + 1 . ' class="img-fluid log-check2" src="../pictures/stock/icons8-thumbs-up-64.png" />
+                                                            <input disabled type="image" name="" value=' . $item["activityCount"] . ' class="img-fluid log-check2" src="../pictures/stock/icons8-thumbs-up-64.png" />
                                                         </form>
                                                     </div>
                                                     ';

@@ -34,6 +34,7 @@
     height: 25vh;
     overflow-wrap: break-word;
     display: block;
+    overflow: hidden;
 }
 
 .rowFour {

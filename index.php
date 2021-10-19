@@ -2,7 +2,7 @@
 session_start();
 require_once('utilities/dataStoreUtil.php');
 // Haalt de data uit data.json
-$file = 'datastores/activities.json';
+$file = 'datastores/activities2.json';
 $activities = getCategories($file);
 ?>
 
@@ -68,10 +68,10 @@ $activities = getCategories($file);
             foreach ($activities as $key => $item) {
             ?>
                 <div class="col-md-4">
-                    <div class="kaartje row <?php echo $item->kleur ?>">
+                    <div class="kaartje row <?php echo $item->color ?>">
                         <div class="content p-0">
                             <div class="col-md-12 rowOne">
-                                <img class="img-fluid" src="<?php echo $item->image; ?>" alt="<?php echo $item->title; ?>">
+                                <img class="img-fluid" src="<?php echo $item->homeImage; ?>" alt="<?php echo $item->title; ?>">
                             </div>
                             <div class="col-md-12 rowTwo">
                                 <b>
@@ -79,7 +79,7 @@ $activities = getCategories($file);
                                 </b>
                             </div>
                             <div class="col-md-12 rowThree">
-                                <p class="text-start"><?php echo $item->beschrijving; ?></p>
+                                <p class="text-start"><?php echo $item->description; ?></p>
                             </div>
                             <div class="col-md-12 text-end p-4 rowFour">
                                 <a href="<?php echo $item->link; ?>"><button class="button inschrijfKnop">Inschrijven</button></a>
