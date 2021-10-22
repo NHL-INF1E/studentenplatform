@@ -49,7 +49,7 @@ session_start();
                 ?>
                 <a href=contact.php class="headerbutton active">Contact</a>
                 <!-- Taal wissel knop hier -->
-                <a href="enlish page ofz lol">
+                <a href="contact_EN.php">
                     <img src="../pictures/flags/UK_flag.jpg" id="langflag">
                 </a>
             </div>
