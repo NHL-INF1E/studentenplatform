@@ -26,7 +26,7 @@ session_start();
             <div class="col-md-3 align-self-center">
                 <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
-            <!-- Login gebruikersnaam placeholder -->
+            <!-- Login username placeholder -->
             <div class="col-md-5 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
@@ -34,7 +34,7 @@ session_start();
                 }
                 ?>
             </div>
-            <!-- Knoppen naar andere pagina's -->
+            <!-- Buttons to other pages -->
             <div class="col-md-4" id="buttoncontainerheader">
                 <a href=../index.php class="headerbutton">Activiteiten</a>
                 <?php
@@ -49,7 +49,7 @@ session_start();
                 }
                 ?>
                 <a href="contact.php" class="headerbutton">Contact</a>
-                <!-- Taal wissel knop hier -->
+                <!-- Language switch button here -->
                 <a href="login_EN.php">
                     <img src="../pictures/flags/UK_flag.jpg" id="langflag">
                 </a>
@@ -90,35 +90,35 @@ session_start();
                 $passErr = "Vul een wachtwoord in.";
             } else {
                 $pass = test_input($_POST["pass"]);    
-                //Optionally there could be extra strict password validation here.
             }
         }
 
         if(isset($_POST["login"]) && !empty($_POST["email"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) && !empty($_POST["pass"])) {
             
-            //Dit zorgt ervoor dat er een string wordt gemaakt van het JSON bestand
+            //Makes a string of the JSON file.
             $allUsers = file_get_contents("../datastores/users.json");
 
-        //Dit zorgt ervoor dat er een string wordt gemaakt van het JSON bestand
+        //Makes a string of the JSON file.
         $allUsers = file_get_contents("../datastores/users.json");
 
-        //Json_decode zet het json formaat(string vanuit file_get_contents) om in een array.
+        //Json_decode transfers the json format(string from file_get_contents) to an array.
         $json = json_decode($allUsers);
 
-        //Hier loopt hij door de array heen, checkt of de ingevulde waardes gelijk zijn aan een van de gebruikers in de datastore
+        //Runs through the array, checks if the defined values are equal to one of the users in the database.
         foreach ($json->people as $user) {
             if ($user->email == htmlspecialchars($_POST["email"]) && password_verify(htmlspecialchars($_POST["pass"]), $user->password)) {
-                //Hier zetten we nu de waardes in de sessie, hievoor moeten we eerst session_start() aanroepen
+                //Here we put values in the session, for this we first have to use session_start().
                 //echo $user->name . '<br>';
                 //echo $user->email . '<br>';
                 //echo $user->password . '<br>';
                 //echo $user->role . '<br>';
 
-                //Hier zetten we de waardes van de gebruiker in de sessie
+                //Here we put the values of the user in the session.
                 $_SESSION['name'] = $user->name;
                 $_SESSION['email'] = $user->email;
                 $_SESSION['role'] = $user->role;
 
+                //This piece of javascript adds a delay after logging in so that it's not too abrupt.
                 echo '<h1 id="redirect">U wordt ingelogd...</h1>';
                 echo '<script src="script.js"></script>';
             }
@@ -149,7 +149,6 @@ session_start();
                 </form>
             </div>
             <div class="col-md-4">
-                <!-- -->
             </div>
         </div>
     </div>
@@ -160,7 +159,7 @@ session_start();
         <div class="col-md-3">
             <p id="footertext">© NHL Stenden 2021</p>
         </div>
-        <!-- de rest van de collumns -->
+        <!-- The rest of the columns -->
         <div class="col-md-9">
         </div>
     </div>
