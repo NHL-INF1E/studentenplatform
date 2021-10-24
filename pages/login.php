@@ -24,7 +24,9 @@ session_start();
         <div class="row">
             <!-- Header logo -->
             <div class="col-md-3 align-self-center">
-                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                <a href="../index.php">
+                    <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                </a>    
             </div>
             <!-- Login username placeholder -->
             <div class="col-md-5 align-self-center">
@@ -138,11 +140,11 @@ session_start();
                     <p><span class="error">* verplicht veld</span></p>
 
                     <p class="paragraph">E-mailadres <span class="text-danger">*</span></p>
-                    <input type="text" class="inputBox" name="email">
+                    <input type="text" class="inputBox" name="email" placeholder="E-mailadres">
                     <p><span class="error"><?php echo $emailErr;?></span></p>
 
                     <p class="paragraph">Wachtwoord <span class="text-danger">*</span></p>
-                    <input type="password" class="inputBox" name="pass">
+                    <input type="password" class="inputBox" name="pass" placeholder="Wachtwoord">
                     <p><span class="error"><?php echo $passErr;?></span></p>
 
                     <p><input type="submit" id="login" name="login" value="Inloggen"></p>
