@@ -40,7 +40,7 @@ session_start();
                 <a href=contact_EN.php class="headerbutton active">Contact</a>
                 <!-- Taal wissel knop hier -->
                 <a href="contact.php">
-                    <img src="../pictures/flags/NL_flag.jpg" id="langflag">
+                    <img src="../pictures/flags/NL_flag.jpg" id="langflag" alt="languageflag">
                 </a>
             </div>
         </div>
@@ -125,20 +125,21 @@ session_start();
                 <p id="title">Contact</p>
                 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                     <!-- -->
-                    <p>
                     <div class="text-center">
                         <!-- -->
-                        <label for="name">Name:</label><?php echo $nameErr; ?><br> <!-- -->
+                        <label for="name">Name:</label><?php echo $nameErr; ?>
+                        <!-- -->
                         <input type="text" class="form-text" id="name" placeholder="Name" name="name"> <!-- -->
                     </div>
 
                     <div class="text-center">
-                        <label for="email">Email:</label><?php echo $emailErr; ?><br> <!-- -->
+                        <label for="email">Email:</label><?php echo $emailErr; ?>
+                        <!-- -->
                         <input type="text" class="form-text" id="email" placeholder="Email" name="email"> <!-- -->
                     </div>
 
                     <div class="text-center">
-                        <label for="subject">Subject:</label><?php echo $subjectErr; ?><br>
+                        <label for="subject">Subject:</label><?php echo $subjectErr; ?>
                         <!-- -->
                         <select name="subject" id="subject" class="form-text">
                             <option value="extra-activiteiten">Extra activities</option>
@@ -147,14 +148,14 @@ session_start();
                     </div>
 
                     <div class="text-center">
-                        <label class="float-left" for="message">Message:</label><?php echo $messageErr; ?><br> <!-- -->
+                        <label class="float-left" for="message">Message:</label><?php echo $messageErr; ?>
+                        <!-- -->
                         <textarea class="form-text" id="message" name="message" placeholder="Enter your message here"
                             rows="5"></textarea> <!-- -->
                     </div>
 
                     <input type="submit" class="verzenden" value="Submit"> <!-- -->
                     <?php echo $gelukt; ?>
-                    </p>
                 </form>
             </div>
             <div class="col-md-4">

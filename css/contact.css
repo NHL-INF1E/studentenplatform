@@ -2,9 +2,12 @@
     border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
     border-radius: 5px; /*Dit zorgt ervoor dat de hoeken afgerond zijn met een radius van 5px.*/
     width: 80%; /*Dit zorgt ervoor dat de breedte 95% is.*/
-    height: 45px;
     margin-bottom: 5%;
     padding: 10px;
+}
+
+input   {
+    height: 45px;
 }
 
 .rand   {
