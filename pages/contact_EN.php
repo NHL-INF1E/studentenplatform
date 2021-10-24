@@ -151,15 +151,9 @@ session_start();
                         <textarea class="form-text" id="message" name="message" placeholder="Enter your message here"
                             rows="5"></textarea> <!-- -->
                     </div>
+
                     <input type="submit" class="verzenden" value="Submit"> <!-- -->
                     <?php echo $gelukt; ?>
-                    <!-- -->
-                    <?php
-                                foreach($arrayContact as $value)
-                                {
-                                    echo $value . "<br>";
-                                }
-                                ?>
                     </p>
                 </form>
             </div>

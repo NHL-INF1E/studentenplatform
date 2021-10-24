@@ -15,6 +15,7 @@
 label   {
     float: left; /*Dit zorgt ervoor dat de text links is.*/
     margin-left: 10%; /*Dit zorgt ervoor dat de tekst op gelijke hoogte is met de input.*/
+    color: black;
 }
 
 .verzenden  {
@@ -23,6 +24,9 @@ label   {
     margin-bottom: 5%;
     background-color: #005AAA; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
     color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
+    font-weight: bold;
+    height: 35px;
+
 }
 
 #message    {

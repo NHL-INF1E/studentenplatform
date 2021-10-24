@@ -13,7 +13,8 @@ session_start();
     <link href="../css/headerfooter.css" rel=stylesheet>
     <link href="../css/contact.css" rel="stylesheet">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
 </head>
 
@@ -73,7 +74,7 @@ session_start();
 
                     if (empty($_POST["email"])) //Hier wordt gekeken of de E-mail ingevuld is.
                     {
-                        $emailErr = "<p class='error'>E-mail is verplicht</p>";//Als de email niet is ingevuld komt dit er te staan
+                        $emailErr = "<p class='error'>E-mailadres is verplicht</p>";//Als de email niet is ingevuld komt dit er te staan
                     }
 
                     if (empty($_POST["message"])) //Hier wordt gekeken of het bericht ingevuld is.
@@ -147,8 +148,8 @@ session_start();
                     </div>
 
                     <div class="text-center">
-                        <label for="email">E-mail:</label><?php echo $emailErr; ?><br> <!-- -->
-                        <input type="text" class="form-text" id="email" placeholder="E-mail" name="email"> <!-- -->
+                        <label for="email">E-mailadres:</label><?php echo $emailErr; ?><br> <!-- -->
+                        <input type="text" class="form-text" id="email" placeholder="E-mailadres" name="email"> <!-- -->
                     </div>
 
                     <div class="text-center">
@@ -162,9 +163,9 @@ session_start();
 
                     <div class="text-center">
                         <label class="float-left" for="message">Bericht:</label><?php echo $messageErr; ?><br> <!-- -->
-                        <textarea class="form-text" id="message" name="message" placeholder="Type hier je bericht"
-                            rows="5"></textarea> <!-- -->
+                        <textarea class="form-text" id="message" name="message" placeholder="Type hier je bericht" rows="5"></textarea> <!-- -->
                     </div>
+                    
                     <input type="submit" class="verzenden" value="Verzenden"> <!-- -->
                     <?php echo $gelukt; ?>
                     </p>
