@@ -7,7 +7,7 @@ require_once('../utilities/dataStoreUtil.php');
 ?>
 
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
