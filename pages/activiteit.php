@@ -170,7 +170,7 @@ require_once('../utilities/dataStoreUtil.php');
                 <div class="col-md-8">
                     <div class="right-content">
                         <div class="col-md-12 article-title">
-                            <h2 class="text-start"><b>Activities</b></h2>
+                            <h2 class="text-start"><b>Activiteiten</b></h2>
                         </div>
 
                         <div class="row">
