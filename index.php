@@ -7,7 +7,7 @@ $activities = getCategories($file);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -54,9 +54,17 @@ $activities = getCategories($file);
                 ?>
                 <a href=pages/contact.php class="headerbutton">Contact</a>
                 <!-- Taal wissel knop hier -->
-                <a href="index_EN.php">
-                    <img src="pictures/flags/UK_flag.jpg" id="langflag">
-                </a>
+				
+			
+				<script type="text/javascript" class="headerbutton">
+				function googleTranslateElementInit() {
+				new google.translate.TranslateElement({pageLanguage: 'nl'}, 'google_translate_element');
+				}
+				</script>
+
+				<script type="text/javascript" 
+				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+				</script>
             </div>
         </div>
     </div>
