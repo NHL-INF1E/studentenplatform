@@ -105,18 +105,44 @@ session_start();
         $color = $result["kleur"];
     }
     ?>
-    <section id="activityWrapper">
-        <form method="post" action="">
-            <input type="text" name="title" id="title" placeholder="title" value="<?= $title ?>">
-            <input type="text" name="image" id="image" placeholder="image.jpg" value="<?= $image ?>">
-            <textarea rows="4" cols="50" name="description" id="description" placeholder="description..."><?= $description ?></textarea>
-            <input type="text" name="color" id="color" placeholder="color" value="<?= $color ?>">
-            <input type="text" name="link" id="link" placeholder="index.php" value="<?= $link ?>">
-            <input type="submit" value="Opslaan" id="submit" name="submit">
-            <input type="submit" value="deletus" id="deletus" name="deletus">
-        </form>
-        <?= $error ?>
-    </section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+			
+				<div class="formContent">
+					<section id="activityWrapper">
+						<form class="form" method="post" action="">
+							<div>
+								<h2>Beheerder's paneel</h2>
+							</div>
+							<div>	
+								<input type="text" name="title" class="inputBox" id="title" placeholder="titel" value="<?= $title ?>">
+								<input type="text" name="image" class="inputBox" id="image" placeholder="foto.jpg" value="<?= $image ?>">
+							</div>
+							
+							<div>
+								<textarea name="description" class="inputBox" id="description" placeholder="beschrijving..."><?= $description ?></textarea>
+							</div>
+							
+							<div>
+								<input type="text" name="color" class="inputBox" id="color" placeholder="kleur" value="<?= $color ?>">
+								<input type="text" name="link" class="inputBox" id="link" placeholder="index.php" value="<?= $link ?>">
+							</div>
+							
+							<div>
+								<input type="submit" value="Opslaan" class="inputBox" id="submit" name="submit">
+								<input type="submit" value="deletus" class="inputBox" id="deletus" name="deletus">
+							</div>
+						</form>
+						<?= $error ?>
+					</section>
+				</div>
+			
+			</div>
+		</div>
+
+	</div>
+
 
     <!-- Footer basis -->
     <div id="footerbase" class="container-fluid mt-5">

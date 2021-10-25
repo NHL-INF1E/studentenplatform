@@ -11,3 +11,24 @@
 .contentWrapper{
     width: 100%;
 }
+
+.inputBox{
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 1%;
+} 
+
+/*.formContent{
+	border: 2px solid black;
+	margin: auto;
+}*/ 
+
+.form{
+	border: 2px solid black;
+	margin: 10%;
+}
+
+#description{
+	width: 90%;
+	height: 70px;
+}
