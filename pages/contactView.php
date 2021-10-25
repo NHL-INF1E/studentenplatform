@@ -7,11 +7,11 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
-    <title>Contact Viewing</title>
+    <title>Contacten Weergeven</title>
     <link href="../css/styles.css" rel=stylesheet>
     <link href="../css/headerfooter.css" rel=stylesheet>
     <link href="../css/admin.css" rel="stylesheet" type="text/css">
