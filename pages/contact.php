@@ -170,7 +170,8 @@ session_start();
                         <textarea class="form-text" id="message" name="message" placeholder="Type hier je bericht"
                             rows="5"></textarea> <!-- -->
                     </div>
-
+                    
+                    <button class="overzicht"><a href="contactView.php">Overzicht</a></button>
                     <input type="submit" class="verzenden" value="Verzenden"> <!-- -->
                     <?php echo $gelukt; ?>
                 </form>

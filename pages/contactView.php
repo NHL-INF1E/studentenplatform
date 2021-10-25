@@ -66,12 +66,28 @@ and open the template in the editor.
         include '../utilities/dataStoreUtil.php';
         $contacts = getContacts("../datastores/contacts.json");
         foreach ($contacts as $contact) {
-            echo "<div class='contactContainer'>";
-            echo $contact["name"];
-            echo $contact["email"];
-            echo $contact["subject"];
-            echo $contact["message"];
-            echo '</div>';
+        ?>
+            <div class='contactContainer'>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row outerContent">
+                            <div class="col-sm-3 innerContent">
+                                <?php echo $contact['name']; ?>
+                            </div>
+                            <div class="col-sm-3 innerContent">
+                                <?php echo $contact['email']; ?>
+                            </div>
+                            <div class="col-sm-3 innerContent">
+                                <?php echo $contact['subject']; ?>
+                            </div>
+                            <div class="col-sm-3 innerContent">
+                                <?php echo $contact['message']; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php
         }
         ?>
     </div>

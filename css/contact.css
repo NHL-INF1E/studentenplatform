@@ -32,6 +32,21 @@ label   {
 
 }
 
+.overzicht {
+    float: left; /*Dit zorgt ervoor dat de knop overzicht links is.*/
+    margin-left: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
+    margin-bottom: 5%;
+    background-color: #005AAA; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
+    color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
+    font-weight: bold;
+    height: 35px;
+}
+
+.overzicht a {
+    text-decoration: none;
+    color: white;
+}
+
 #message    {
     resize: none; /*Dit zorgt ervoor dat de textarea een vaste grootte heeft.*/
 }

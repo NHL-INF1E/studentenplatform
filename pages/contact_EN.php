@@ -156,6 +156,7 @@ session_start();
                             rows="5"></textarea> <!-- -->
                     </div>
 
+                    <button class="overzicht"><a href="contactView_EN.php">Contactlist</a></button>
                     <input type="submit" class="verzenden" value="Submit"> <!-- -->
                     <?php echo $gelukt; ?>
                 </form>
