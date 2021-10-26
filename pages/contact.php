@@ -24,12 +24,10 @@ session_start();
         <div class="row">
             <!-- Header logo -->
             <div class="col-md-3 align-self-center">
-                <a href="../index.php">
-                    <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
-                </a> 
+                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
             <!-- Login gebruikersnaam placeholder -->
-            <div class="col-md-5 align-self-center">
+            <div class="col-md-4 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
                     echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
@@ -37,13 +35,14 @@ session_start();
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-4" id="buttoncontainerheader">
+            <div class="col-md-5" >
+                <div id="buttoncontainerheader">
                 <a href=../index.php class="headerbutton">Activiteiten</a>
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                    echo '<a href="utilities/logout.php" class="headerbutton">Uitloggen</a>';
                 } else {
-                    echo '<a href="login.php" class="headerbutton">Inloggen</a>';
+                echo '<a href="login.php" class="headerbutton">Inloggen</a>';
                 }
                 
                 if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
@@ -51,13 +50,25 @@ session_start();
                 }
                 ?>
                 <a href=contact.php class="headerbutton active">Contact</a>
-                <!-- Taal wissel knop hier -->
-                <a href="contact_EN.php">
-                    <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="languageflag">
-                </a>
+                </div>
+            <!-- Taal wissel knop hier -->
+			    <div id="google_translate_element"></div>
+				<script type="text/javascript">
+				function googleTranslateElementInit() {
+				new google.translate.TranslateElement({
+                pageLanguage: 'nl-nl', includedLanguages: 'en, nl'
+                }, 
+                'google_translate_element');
+				}
+				</script>
+
+				<script type="text/javascript" 
+				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+				</script>
             </div>
         </div>
     </div>
+    <!-- header end -->
 
     <?php           
             $nameErr = $emailErr = $subjectErr = $messageErr = ""; //Hier krijgen de error variabelen een definitie.

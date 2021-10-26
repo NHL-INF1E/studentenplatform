@@ -31,7 +31,7 @@ $activities = getCategories($file);
                 <img src="pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
             <!-- Login gebruikersnaam placeholder -->
-            <div class="col-md-5 align-self-center">
+            <div class="col-md-4 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
                     echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
@@ -39,7 +39,8 @@ $activities = getCategories($file);
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-4" id="buttoncontainerheader">
+            <div class="col-md-5" >
+                <div id="buttoncontainerheader">
                 <a href=index.php class="headerbutton active">Activiteiten</a>
                 <?php
                 if (isset($_SESSION['name'])) {
@@ -53,12 +54,15 @@ $activities = getCategories($file);
                 }
                 ?>
                 <a href=pages/contact.php class="headerbutton">Contact</a>
-                <!-- Taal wissel knop hier -->
-				
-			
-				<script type="text/javascript" class="headerbutton">
+                </div>
+            <!-- Taal wissel knop hier -->
+			    <div id="google_translate_element"></div>
+				<script type="text/javascript">
 				function googleTranslateElementInit() {
-				new google.translate.TranslateElement({pageLanguage: 'nl'}, 'google_translate_element');
+				new google.translate.TranslateElement({
+                pageLanguage: 'nl-nl', includedLanguages: 'en, nl'
+                }, 
+                'google_translate_element');
 				}
 				</script>
 
