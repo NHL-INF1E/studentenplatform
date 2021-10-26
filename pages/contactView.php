@@ -63,15 +63,36 @@ and open the template in the editor.
 
     <div class="contentContainer">
         <?php
+        //hier word er een benodigde bestand meegenomen 
         include '../utilities/dataStoreUtil.php';
+        //hier word een functie uit json opgehaald
         $contacts = getContacts("../datastores/contacts.json");
+        //hier word er door het bestand heen geloopt
         foreach ($contacts as $contact) {
-            echo "<div class='contactContainer'>";
-            echo $contact["name"];
-            echo $contact["email"];
-            echo $contact["subject"];
-            echo $contact["message"];
-            echo '</div>';
+        ?>
+            <div class="container contactContainer">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row outerContent">
+                            <div class="col-sm-4 innerContent">
+                                <?php echo 'Naam: '. $contact["name"]; ?>
+                            </div>
+                            <div class="col-sm-4 innerContent">
+                                <?php echo 'E-mail: '. $contact["email"]; ?>
+                            </div>
+                            <div class="col-sm-4 innerContent">
+                                <?php echo 'Onderwerp: '. $contact["subject"]; ?>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 innerContent">
+                                <?php echo 'Bericht: '. $contact["message"]; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php
         }
         ?>
     </div>

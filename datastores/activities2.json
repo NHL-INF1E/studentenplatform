@@ -9,32 +9,32 @@
         "activity": {
             "voetbal": {
                 "activityName": "voetbal",
-                "activityCount": 37,
+                "activityCount": 38,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "tennis ja"
             },
             "tennis": {
                 "activityName": "tennis",
-                "activityCount": 29,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
+                "activityCount": 30,
+                "activityImage": "..\/pictures\/stock\/tennis.jpg",
                 "activityDesc": "tennis ja"
             },
             "roeien": {
                 "activityName": "roeien",
-                "activityCount": 24,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
+                "activityCount": 25,
+                "activityImage": "..\/pictures\/stock\/roeien.jpg",
                 "activityDesc": "rowing ja"
             },
             "boogschieten": {
                 "activityName": "boogschieten",
                 "activityCount": 25,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
+                "activityImage": "..\/pictures\/stock\/boogschieten.jpg",
                 "activityDesc": "archery ja"
             },
             "e-sports": {
                 "activityName": "e-sports",
                 "activityCount": 47,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
+                "activityImage": "..\/pictures\/stock\/e-sports.jpg",
                 "activityDesc": "e-sports ja"
             }
         }

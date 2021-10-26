@@ -110,12 +110,7 @@ session_start();
                         "name" => $name,
                         "email" => $email,
                         "subject" => $subject,
-                        "message" => $message,
-                        "activity" => array (
-                            "soccer" => array (
-                                "test" => "test"
-                            )
-                        )
+                        "message" => $message
                     );
 
                     //Hier wordt de nieuwe array toegevoegd aan de array van het json bestand.
@@ -171,6 +166,11 @@ session_start();
                             rows="5"></textarea> <!-- -->
                     </div>
 
+                    <?php
+                        if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
+                            echo '<button class="overzicht"><a href="contactView.php">Overzicht</a></button>';
+                        }
+                    ?>
                     <input type="submit" class="verzenden" value="Verzenden"> <!-- -->
                     <?php echo $gelukt; ?>
                 </form>
