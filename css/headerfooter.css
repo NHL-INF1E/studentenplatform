@@ -10,6 +10,7 @@
 }
 #buttoncontainerheader {
   line-height: 120px;
+  float: left;
 }
 
 .headerbutton {
@@ -55,10 +56,19 @@
   color: deepskyblue;
 }
 
-#translatebutton {
+#google_translate_element select{
+  background-color: #005aaa;
   text-align: left;
   color: white;
-  float: center;
   text-decoration: none;
   font-weight: bold;
+  float: center;
+  margin-top: 51px;
+}
+.goog-logo-link{
+  display:none !important;
+}
+
+.goog-te-gadget{
+  color:transparent !important;
 }
