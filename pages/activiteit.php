@@ -235,7 +235,7 @@ require_once('../utilities/dataStoreUtil.php');
                                                     echo '
                                                     <div class="col-sm-12 text-center">
                                                         <form method="POST" action="">
-                                                            <button type="submit" name="like" class="border-0" value=' . $item["activityCount"] + 1 . '><img class="img-fluid log-check4" src="../pictures/stock/icons8-thumbs-up-64.png" alt="meedoen"></button>
+                                                            <button type="submit" name="like" class="border-0" value=' . is_int($item["activityCount"] + 1) . '><img class="img-fluid log-check4" src="../pictures/stock/icons8-thumbs-up-64.png" alt="meedoen"></button>
                                                         </form>
                                                     </div>
                                                     ';
