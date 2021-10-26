@@ -7,33 +7,33 @@
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "soccer": {
+            "Voetbal": {
                 "activityName": "Voetbal",
                 "activityCount": 37,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "tennis ja"
             },
-            "tennis": {
+            "Tennis": {
                 "activityName": "Tennis",
-                "activityCount": 27,
+                "activityCount": 30,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "tennis ja"
             },
-            "rowing": {
+            "Roeien": {
                 "activityName": "Roeien",
                 "activityCount": 24,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "rowing ja"
             },
-            "archery": {
+            "Boogschieten": {
                 "activityName": "Boogschieten",
-                "activityCount": 25,
+                "activityCount": 26,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "archery ja"
             },
-            "e-sports": {
+            "E-sports": {
                 "activityName": "E-sports",
-                "activityCount": 47,
+                "activityCount": 48,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "e-sports ja"
             }
