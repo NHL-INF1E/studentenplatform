@@ -29,6 +29,7 @@
 #langflag {
   width: 20px;
   height: 15px;
+  margin-top: 54px;
 }
 
 #headerbase {
@@ -54,21 +55,4 @@
 
 .active {
   color: deepskyblue;
-}
-
-#google_translate_element select{
-  background-color: #005aaa;
-  text-align: left;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  float: center;
-  margin-top: 51px;
-}
-.goog-logo-link{
-  display:none !important;
-}
-
-.goog-te-gadget{
-  color:transparent !important;
 }
