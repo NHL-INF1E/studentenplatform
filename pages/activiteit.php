@@ -40,36 +40,36 @@ require_once('../utilities/dataStoreUtil.php');
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-5" >
+            <div class="col-md-5">
                 <div id="buttoncontainerheader">
-                <a href=../index.php class="headerbutton active">Activiteiten</a>
-                <?php
-                if (isset($_SESSION['name'])) {
-                    echo '<a href="utilities/logout.php" class="headerbutton">Uitloggen</a>';
-                } else {
-                echo '<a href="login.php" class="headerbutton">Inloggen</a>';
-                }
-                
-                if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
-                    echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
-                }
-                ?>
-                <a href=contact.php class="headerbutton">Contact</a>
-                </div>
-            <!-- Taal wissel knop hier -->
-			    <div id="google_translate_element"></div>
-				<script type="text/javascript">
-				function googleTranslateElementInit() {
-				new google.translate.TranslateElement({
-                pageLanguage: 'nl-nl', includedLanguages: 'en, nl'
-                }, 
-                'google_translate_element');
-				}
-				</script>
+                    <a href=../index.php class="headerbutton active">Activiteiten</a>
+                    <?php
+                    if (isset($_SESSION['name'])) {
+                        echo '<a href="utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                    } else {
+                        echo '<a href="login.php" class="headerbutton">Inloggen</a>';
+                    }
 
-				<script type="text/javascript" 
-				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-				</script>
+                    if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
+                        echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
+                    }
+                    ?>
+                    <a href=contact.php class="headerbutton">Contact</a>
+                </div>
+                <!-- Taal wissel knop hier -->
+                <div id="google_translate_element"></div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({
+                                pageLanguage: 'nl-nl',
+                                includedLanguages: 'en, nl'
+                            },
+                            'google_translate_element');
+                    }
+                </script>
+
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+                </script>
             </div>
         </div>
     </div>
@@ -91,7 +91,7 @@ require_once('../utilities/dataStoreUtil.php');
                 //Loop door alle activiteiten heen van $getActivity (de kozen categorie, sport/art/film etc.)
                 foreach ($getActivity['activity'] as $activity) {
                     //Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
-                    if ($activity['activityName'] == $selectedActivity) {
+                    if ($activity['catName'] == $selectedActivity) {
                         //Tel activiteit deelnemers op met +1
                         $variableCount = $activity['activityCount'] + 1;
                         //Zet de geupdate value in een array 'activityCount'
@@ -122,7 +122,7 @@ require_once('../utilities/dataStoreUtil.php');
                         if (isset($_POST['activity'])) {
                             $_SESSION['submittedActivity'] = $_POST['activity'];
                             foreach ($getActivity['activity'] as $key => $item) {
-                                if ($_POST['activity'] == $item['activityName']) {
+                                if ($_POST['activity'] == $item['catName']) {
                                     echo '
                                     <div class="col-md-12 text-end article-img">
                                         <img class="img-fluid" alt=' . $item['activityName'] . ' src=' . $item['activityImage'] . '>
@@ -144,7 +144,7 @@ require_once('../utilities/dataStoreUtil.php');
                             //Check if activity was selected or just the category, based on that echo data
                             if (isset($_POST['activity'])) {
                                 foreach ($getActivity['activity'] as $key => $item) {
-                                    if ($_POST['activity'] == $item['activityName']) {
+                                    if ($_POST['activity'] == $item['catName']) {
                                         echo '
                                         <h2 class="text-center"> 
                                             <b class="text-capitalize"> ' . $item["activityName"] . '</b>
@@ -200,18 +200,18 @@ require_once('../utilities/dataStoreUtil.php');
                                                     $clicked = true;
                                                     $test = $_POST['activity'];
 
-                                                    if ($test === $item['activityName']) {
+                                                    if ($test === $item['catName']) {
                                                         echo '
-                                                        <input type="submit" class="activity-button text-capitalize fw-bold activeActivity" name="activity" value=' . $item['activityName'] . '> <i class="bi bi-chevron-down"></i>
+                                                        <button type="submit" class="activity-button text-capitalize fw-bold activeActivity" name="activity" value=' . $item['catName'] . '>' . $item['activityName'] . '</button> <i class="bi bi-chevron-down"></i>
                                                         ';
                                                     } else {
                                                         echo '
-                                                        <input type="submit" class="activity-button text-capitalize fw-bold" name="activity" value=' . $item['activityName'] . '> <i class="bi bi-chevron-right"></i>
+                                                        <button type="submit" class="activity-button text-capitalize fw-bold" name="activity" value=' . $item['catName'] . '>' . $item['activityName'] . '</button> <i class="bi bi-chevron-right"></i>
                                                         ';
                                                     }
                                                 } else if (!$clicked) {
                                                     echo '
-                                                    <input type="submit" class="activity-button text-capitalize fw-bold" name="activity" value=' . $item['activityName'] . '> <i class="bi bi-chevron-right"></i>
+                                                    <button type="submit" class="activity-button text-capitalize fw-bold" name="activity" value=' . $item['catName'] . '>' . $item['activityName'] . '</button> <i class="bi bi-chevron-right"></i>
                                                     ';
                                                 }
                                                 ?>
@@ -232,7 +232,7 @@ require_once('../utilities/dataStoreUtil.php');
                                     */
                                     if (isset($_POST["activity"])) {
                                         foreach ($getActivity['activity'] as $key => $item) {
-                                            if ($_POST['activity'] == $item['activityName']) {
+                                            if ($_POST['activity'] == $item['catName']) {
                                                 //Als de sessie niet leeg is(oftwel er is iemand ingelogd)
                                                 if (!empty($_SESSION['name'])) {
 
