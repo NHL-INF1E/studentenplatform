@@ -31,7 +31,7 @@ $activities = getCategories($file);
                 <img src="pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
             <!-- Login gebruikersnaam placeholder -->
-            <div class="col-md-5 align-self-center">
+            <div class="col-md-4 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
                     echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
@@ -39,7 +39,8 @@ $activities = getCategories($file);
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-4" id="buttoncontainerheader">
+            <div class="col-md-5" >
+                <div id="buttoncontainerheader">
                 <a href=index.php class="headerbutton active">Activiteiten</a>
                 <?php
                 if (isset($_SESSION['name'])) {
@@ -53,21 +54,47 @@ $activities = getCategories($file);
                 }
                 ?>
                 <a href=pages/contact.php class="headerbutton">Contact</a>
-                <!-- Taal wissel knop hier -->
-				
-			
-				<script type="text/javascript" class="headerbutton">
-				function googleTranslateElementInit() {
-				new google.translate.TranslateElement({pageLanguage: 'nl'}, 'google_translate_element');
-				}
-				</script>
+                </div>
+            <!-- Taal wissel knop hier -->
+                <div id="google_translate_element" style="display: none"></div>
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({ 
+                        pageLanguage: 'nl', 
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+                        autoDisplay: false 
+                        }, 
+                    'google_translate_element');
+                }
+                </script>
+                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+                    type="text/javascript"></script>
+                <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                <script>
+                function translateLanguage(lang) {
 
-				<script type="text/javascript" 
-				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-				</script>
+                    var $frame = $('.goog-te-menu-frame:first');
+                    if (!$frame.size()) {
+                        alert("Error: Could not find Google translate frame.");
+                        return false;
+                }
+                    $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                    return false;
+                }
+                </script>
+                <?php
+                //if (isset($[''])) {
+                //    echo '<a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
+                //    <img src="pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>';
+                //} else {
+                //    echo '<a href="javascript:void(0)"><span></span>
+                //    <img src="pictures/flags/NL_flag.jpg" id="langflag" alt="Nederlands"></a>';   
+                //}
+                ?>
             </div>
         </div>
     </div>
+    <!-- Header end -->
 
     <!-- content -->
     <div class="container">

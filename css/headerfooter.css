@@ -10,6 +10,7 @@
 }
 #buttoncontainerheader {
   line-height: 120px;
+  float: left;
 }
 
 .headerbutton {
@@ -28,6 +29,7 @@
 #langflag {
   width: 20px;
   height: 15px;
+  margin-top: 54px;
 }
 
 #headerbase {
@@ -53,12 +55,4 @@
 
 .active {
   color: deepskyblue;
-}
-
-#translatebutton {
-  text-align: left;
-  color: white;
-  float: center;
-  text-decoration: none;
-  font-weight: bold;
 }

@@ -7,35 +7,94 @@
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "soccer": {
+            "voetbal": {
+                "catName": "voetbal",
                 "activityName": "Voetbal",
-                "activityCount": 37,
+                "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "tennis ja"
+                "activityDesc": "Voetbal is een wereldwijd populaire balsport waarbij twee ploegen van elf spelers moeten proberen de bal in het doel van de tegenstander te krijgen."
             },
             "tennis": {
+                "catName": "tennis",
                 "activityName": "Tennis",
-                "activityCount": 27,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "tennis ja"
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/tennis.jpg",
+                "activityDesc": "Tennis is een balsport voor twee spelers (enkelspel) of paren (dubbelspel), waarbij een bal van gemiddeld 67 mm diameter (meestal geel met witte lijn) met een racket over een net gespeeld moet worden."
             },
-            "rowing": {
+            "roeien": {
+                "catName": "roeien",
                 "activityName": "Roeien",
-                "activityCount": 24,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "rowing ja"
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/roeien.jpg",
+                "activityDesc": "Roeien is een sport waarbij een roeiboot vooruit wordt gestuwd door met roeiriemen door het water te bewegen."
             },
-            "archery": {
+            "boogschieten": {
+                "catName": "boogschieten",
                 "activityName": "Boogschieten",
-                "activityCount": 25,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "archery ja"
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/boogschieten.jpg",
+                "activityDesc": "Boogschieten is een sport waarbij pijlen worden weggeschoten naar een doel met behulp van een boog."
             },
             "e-sports": {
+                "catName": "e-sports",
                 "activityName": "E-sports",
-                "activityCount": 47,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "e-sports ja"
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/e-sports.jpg",
+                "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
+            }
+        }
+    },
+
+    "beeldendekunst": {
+        "title": "Beeldende kunst",
+        "color": "roze",
+        "link": "pages\/activiteit.php?cat=beeldendekunst",
+        "description": "<p>Beeldende kunst is de vorm van kunst waarbij de afbeelding, of het visuele, voorop staat. De afbeelding wordt gerealiseerd, of uitgebeeld, in de vorm van een kunstobject. Een kunstobject kan een platte vorm aannemen, bijvoorbeeld een schilderij, of een ruimtelijke vorm, bijvoorbeeld een beeldhouwwerk.<\/p> ",
+        "homeImage": "pictures\/stock\/beeldendekunst.jpg",
+        "image": "..\/pictures\/stock\/beeldendekunst.jpg",
+        "activity": {
+            "schilderen": {
+                "catName": "schilderen",
+                "activityName": "Schilderen",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/schilderen.jpg",
+                "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (geëmulgeerde) pigmenten."
+            }
+        }
+    },
+
+    "muziekendans": {
+        "title": "Muziek en dans",
+        "color": "blauw",
+        "link": "pages\/activiteit.php?cat=muziekendans",
+        "description": "<p>Dans (van het Franse danse) is een sport, kunstvorm en een sociaal gebeuren dat meestal op beweging duidt van het lichaam, vaak in combinatie met muziek. Het wordt gebruikt als een vorm van emotionele expressie, sociale interactie of in een spirituele of uitvoerende vorm.<\/p> ",
+        "homeImage": "pictures\/stock\/dans.jpeg",
+        "image": "..\/pictures\/stock\/dans.jpeg",
+        "activity": {
+            "dansen": {
+                "catName": "dansen",
+                "activityName": "Dansen",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/dans.jpeg",
+                "activityDesc": "Dans (van het Franse danse) is een sport, kunstvorm en een sociaal gebeuren dat meestal op beweging duidt van het lichaam, vaak in combinatie met muziek"
+            }
+        }
+    },
+
+    "film": {
+        "title": "Film",
+        "color": "rood",
+        "link": "pages\/activiteit.php?cat=film",
+        "description": "<p>Een film, rolprent of video is een serie opeenvolgend getoonde, stilstaande beelden. Door de snelheid waarmee de beelden elkaar opvolgen en de nawerking van elk beeld op het netvlies lijken ze een vloeiende en continue beweging te vormen. Vaak is er ook geluid bij.<\/p> ",
+        "homeImage": "pictures\/stock\/film2.jpg",
+        "image": "..\/pictures\/stock\/film2.jpg",
+        "activity": {
+            "filmkijken": {
+                "catName": "filmkijken",
+                "activityName": "Film kijken",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/film2.jpg",
+                "activityDesc": "Een film, rolprent of video is een serie opeenvolgend getoonde, stilstaande beelden."
             }
         }
     }

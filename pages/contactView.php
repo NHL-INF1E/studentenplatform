@@ -26,12 +26,10 @@ and open the template in the editor.
         <div class="row">
             <!-- Header logo -->
             <div class="col-md-3 align-self-center">
-                <a href="../index.php">
-                    <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
-                </a>             
+                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
             </div>
             <!-- Login gebruikersnaam placeholder -->
-            <div class="col-md-5 align-self-center">
+            <div class="col-md-4 align-self-center">
                 <?php
                 if (isset($_SESSION['name'])) {
                     echo '<p id="usernameheader">Welkom, <span class="blue text-capitalize">' . $_SESSION['name'] . '</span></p>';
@@ -39,49 +37,67 @@ and open the template in the editor.
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-4" id="buttoncontainerheader">
-                <a href="../index.php" class="headerbutton">Activiteiten</a>
+            <div class="col-md-5" >
+                <div id="buttoncontainerheader">
+                <a href=../index.php class="headerbutton">Activiteiten</a>
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                    echo '<a href="utilities/logout.php" class="headerbutton">Uitloggen</a>';
                 } else {
-                    echo '<a href="login.php" class="headerbutton">Inloggen</a>';
+                echo '<a href="login.php" class="headerbutton active">Inloggen</a>';
                 }
                 
                 if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
-                    echo '<a href="adminPanel.php" class="headerbutton active">Admin paneel</a>';
+                    echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
                 }
                 ?>
-                <a href="contact.php" class="headerbutton">Contact</a>
-                <!-- Taal wissel knop hier -->
-                <a href="contactview_EN.php">
-                    <img src="../pictures/flags/UK_flag.jpg" id="langflag">
-                </a>
+                <a href=contact.php class="headerbutton">Contact</a>
+                </div>
+            <!-- Taal wissel knop hier -->
+			    <div id="google_translate_element"></div>
+				<script type="text/javascript">
+				function googleTranslateElementInit() {
+				new google.translate.TranslateElement({
+                pageLanguage: 'nl-nl', includedLanguages: 'en, nl'
+                }, 
+                'google_translate_element');
+				}
+				</script>
+
+				<script type="text/javascript" 
+				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+				</script>
             </div>
         </div>
     </div>
+    <!-- header end -->
 
     <div class="contentContainer">
         <?php
+        //hier word er een benodigde bestand meegenomen 
         include '../utilities/dataStoreUtil.php';
+        //hier word een functie uit json opgehaald
         $contacts = getContacts("../datastores/contacts.json");
+        //hier word er door het bestand heen geloopt
         foreach ($contacts as $contact) {
         ?>
-            <div class='contactContainer'>
+            <div class="container contactContainer">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row outerContent">
-                            <div class="col-sm-3 innerContent">
-                                <?php echo $contact['name']; ?>
+                            <div class="col-sm-4 innerContent">
+                                <?php echo 'Naam: '. $contact["name"]; ?>
                             </div>
-                            <div class="col-sm-3 innerContent">
-                                <?php echo $contact['email']; ?>
+                            <div class="col-sm-4 innerContent">
+                                <?php echo 'E-mail: '. $contact["email"]; ?>
                             </div>
-                            <div class="col-sm-3 innerContent">
-                                <?php echo $contact['subject']; ?>
+                            <div class="col-sm-4 innerContent">
+                                <?php echo 'Onderwerp: '. $contact["subject"]; ?>
                             </div>
-                            <div class="col-sm-3 innerContent">
-                                <?php echo $contact['message']; ?>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 innerContent">
+                                <?php echo 'Bericht: '. $contact["message"]; ?>
                             </div>
                         </div>
                     </div>
