@@ -56,7 +56,6 @@ require_once('../utilities/dataStoreUtil.php');
                     ?>
                     <a href=contact.php class="headerbutton">Contact</a>
                 </div>
-                <!-- Taal wissel knop hier -->
             <!-- Taal wissel knop hier -->
             <div id="google_translate_element" style="display: none"></div>
                 <script type="text/javascript">
