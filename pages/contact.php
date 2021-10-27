@@ -52,19 +52,34 @@ session_start();
                 <a href=contact.php class="headerbutton active">Contact</a>
                 </div>
             <!-- Taal wissel knop hier -->
-			    <div id="google_translate_element"></div>
-				<script type="text/javascript">
-				function googleTranslateElementInit() {
-				new google.translate.TranslateElement({
-                pageLanguage: 'nl-nl', includedLanguages: 'en, nl'
-                }, 
-                'google_translate_element');
-				}
-				</script>
+            <div id="google_translate_element" style="display: none"></div>
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({ 
+                        pageLanguage: 'nl', 
+                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+                        autoDisplay: false 
+                        }, 
+                    'google_translate_element');
+                }
+                </script>
+                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+                    type="text/javascript"></script>
+                <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                <script>
+                function translateLanguage(lang) {
 
-				<script type="text/javascript" 
-				src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-				</script>
+                    var $frame = $('.goog-te-menu-frame:first');
+                    if (!$frame.size()) {
+                        alert("Error: Could not find Google translate frame.");
+                        return false;
+                }
+                    $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                    return false;
+                }
+                </script>
+                <a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
+                <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>
             </div>
         </div>
     </div>

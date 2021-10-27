@@ -82,15 +82,8 @@ $activities = getCategories($file);
                     return false;
                 }
                 </script>
-                <?php
-                //if (isset($[''])) {
-                //    echo '<a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
-                //    <img src="pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>';
-                //} else {
-                //    echo '<a href="javascript:void(0)"><span></span>
-                //    <img src="pictures/flags/NL_flag.jpg" id="langflag" alt="Nederlands"></a>';   
-                //}
-                ?>
+                <a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
+                <img src="pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>
             </div>
         </div>
     </div>
