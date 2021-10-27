@@ -54,3 +54,11 @@
 .active {
   color: deepskyblue;
 }
+
+#translatebutton {
+  text-align: left;
+  color: white;
+  float: center;
+  text-decoration: none;
+  font-weight: bold;
+}

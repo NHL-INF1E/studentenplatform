@@ -1,38 +1,38 @@
 {
     "sport": {
-        "title": "Sports",
+        "title": "Sport",
         "color": "groen",
         "link": "pages\/activiteit.php?cat=sport",
-        "description": "<p>If you're the athletic type who enjoys playing sports in teams, this might just be the category for you. <\/p><p> You will be making contacts with both Dutch and international students as you play sports such as football, tennis or rowing.<\/p> <p>If you're more the strategic type, there are also sports such as e-sports and archery available.<\/p> ",
+        "description": "<p>Als jij het atletische type bent, dat graag in teamverband sport? Dan is dit de categorie voor jou.<\/p><p>Bij het sporten zoals voetbal, tennis of roeien leg je contact met zowel Nederlandse als internationale studenten.<\/p><p>Als je meer het Strategisch type bent, zijn er ook sporten zoals E-sports en Boogschieten beschikbaar.<\/p> ",
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
             "soccer": {
-                "activityName": "soccer",
-                "activityCount": 38,
+                "activityName": "Voetbal",
+                "activityCount": 37,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "tennis ja"
             },
             "tennis": {
-                "activityName": "tennis",
+                "activityName": "Tennis",
                 "activityCount": 27,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "tennis ja"
             },
             "rowing": {
-                "activityName": "rowing",
+                "activityName": "Roeien",
                 "activityCount": 24,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "rowing ja"
             },
             "archery": {
-                "activityName": "archery",
+                "activityName": "Boogschieten",
                 "activityCount": 25,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "archery ja"
             },
             "e-sports": {
-                "activityName": "e-sports",
+                "activityName": "E-sports",
                 "activityCount": 47,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "e-sports ja"
