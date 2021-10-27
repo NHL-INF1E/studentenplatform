@@ -250,11 +250,10 @@ require_once('../utilities/dataStoreUtil.php');
                                         foreach ($getActivity['activity'] as $key => $item) {
                                             if ($_POST['activity'] == $item['catName']) {
                                                 //Als de sessie niet leeg is(oftwel er is iemand ingelogd)
-                                                if (!empty($_SESSION['name'])) {
-
+                                                if (!empty($_SESSION['name']) && $_SESSION['role'] != 'admin') {
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
-                                                        <p>Are you interested in this activity?</p>
+                                                        <p>Wil je meedoen aan deze activiteit?</p>
                                                     </div>
                                                     ';
 
@@ -268,13 +267,13 @@ require_once('../utilities/dataStoreUtil.php');
 
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
-                                                        <p> ' . $item["activityCount"] . ' said yes</p>
+                                                        <p> ' . $item["activityCount"] . ' zeiden ja.</p>
                                                     </div>
                                                     ';
                                                 } else {
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check1 fw-bold">
-                                                        Login to sign up for an activity
+                                                        Je moet ingelogd zijn als student om je aan te melden voor een activiteit
                                                     </div>
                                                     ';
 
@@ -288,7 +287,7 @@ require_once('../utilities/dataStoreUtil.php');
 
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
-                                                        <p> ' . $item["activityCount"] . ' said yes</p>
+                                                        <p> ' . $item["activityCount"] . ' zeiden ja.</p>
                                                     </div>
                                                     ';
                                                 }
