@@ -55,35 +55,33 @@ $activities = getCategories($file);
                 ?>
                 <a href=pages/contact.php class="headerbutton">Contact</a>
                 </div>
-            <!-- Taal wissel knop hier -->
-                <div id="google_translate_element" style="display: none"></div>
+
+            <!-- Language switch -->
+                <!-- Dropdown menu -->
+                <div id="google_translate_element"></div>
+
+                <!-- Code provided by Google -->
                 <script type="text/javascript">
                 function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({ 
-                        pageLanguage: 'nl', 
-                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
-                        autoDisplay: false 
-                        }, 
-                    'google_translate_element');
+                new google.translate.TranslateElement({pageLanguage: 'nl', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
                 }
                 </script>
-                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-                    type="text/javascript"></script>
-                <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-                <script>
-                function translateLanguage(lang) {
 
-                    var $frame = $('.goog-te-menu-frame:first');
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+                <!-- Flag click handler -->
+                <!--<script type="text/javascript">
+                    $('.translation-links a').click(function() {
+                        var lang = $(this).data('lang');
+                        var $frame = $('.goog-te-menu-frame:first');
                     if (!$frame.size()) {
                         alert("Error: Could not find Google translate frame.");
                         return false;
-                }
-                    $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                    }
+                    $frame.contents().find('.goog-te-menu2-item span.text:contains('+lang+')').get(0).click();
                     return false;
-                }
-                </script>
-                <a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
-                <img src="pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>
+                    });
+                </script>-->
             </div>
         </div>
     </div>
