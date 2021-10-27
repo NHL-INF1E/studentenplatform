@@ -44,7 +44,6 @@
             }
         }
     },
-
     "beeldendekunst": {
         "title": "Beeldende kunst",
         "color": "roze",
@@ -56,13 +55,12 @@
             "schilderen": {
                 "catName": "schilderen",
                 "activityName": "Schilderen",
-                "activityCount": 0,
+                "activityCount": 1,
                 "activityImage": "..\/pictures\/stock\/schilderen.jpg",
-                "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (geëmulgeerde) pigmenten."
+                "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (ge\u00ebmulgeerde) pigmenten."
             }
         }
     },
-
     "muziekendans": {
         "title": "Muziek en dans",
         "color": "blauw",
@@ -80,7 +78,6 @@
             }
         }
     },
-
     "film": {
         "title": "Film",
         "color": "rood",
