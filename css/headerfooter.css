@@ -31,10 +31,9 @@
   color: deepskyblue;
 }
 
-.langflag {
+#langflag {
   width: 20px;
   height: 15px;
-  /* margin-top: 54px; */
 }
 
 #headerbase {
