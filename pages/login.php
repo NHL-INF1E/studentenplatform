@@ -16,7 +16,32 @@ session_start();
     <link href="../css/login.css" rel="stylesheet">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css"></head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                    pageLanguage: 'nl',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                },
+                'google_translate_element');
+        }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" type="text/javascript"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        function translateLanguage(lang) {
+
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        }
+    </script>
+</head>
 
 <body>
     <!-- header base -->
@@ -35,51 +60,30 @@ session_start();
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-5" >
+            <div class="col-md-5 headerKnoppenContainer">
                 <div id="buttoncontainerheader">
-                <a href=../index.php class="headerbutton">Activiteiten</a>
-                <?php
-                if (isset($_SESSION['name'])) {
-                    echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
-                } else {
-                echo '<a href="login.php" class="headerbutton active">Inloggen</a>';
-                }
-                
-                if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
-                    echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
-                }
-                ?>
-                <a href=contact.php class="headerbutton">Contact</a>
-                </div>
-            <!-- Taal wissel knop hier -->
-            <div id="google_translate_element" style="display: none"></div>
-                <script type="text/javascript">
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({ 
-                        pageLanguage: 'nl', 
-                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
-                        autoDisplay: false 
-                        }, 
-                    'google_translate_element');
-                }
-                </script>
-                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-                    type="text/javascript"></script>
-                <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-                <script>
-                function translateLanguage(lang) {
+                    <a href=../index.php class="headerbutton">Activiteiten</a>
+                    <?php
+                    if (isset($_SESSION['name'])) {
+                        echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                    } else {
+                        echo '<a href="login.php" class="headerbutton active">Inloggen</a>';
+                    }
 
-                    var $frame = $('.goog-te-menu-frame:first');
-                    if (!$frame.size()) {
-                        alert("Error: Could not find Google translate frame.");
-                        return false;
-                }
-                    $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-                    return false;
-                }
-                </script>
-                <a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
-                <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>
+                    if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
+                        echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
+                    }
+                    ?>
+                    <a href=contact.php class="headerbutton">Contact</a>
+
+                    <!-- Taal wissel knop hier -->
+                    <div id="google_translate_element" style="display: none">
+                    </div>
+                    <a href="javascript:;" id="English" onclick="translateLanguage(this.id);">
+                        <span></span>
+                        <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -113,18 +117,18 @@ session_start();
         }
     }
 
-        if($_SERVER["REQUEST_METHOD"] == "POST") {
-            if(empty($_POST["pass"])) {
-                $passErr = "Vul een wachtwoord in.";
-            } else {
-                $pass = test_input($_POST["pass"]);    
-            }
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($_POST["pass"])) {
+            $passErr = "Vul een wachtwoord in.";
+        } else {
+            $pass = test_input($_POST["pass"]);
         }
+    }
 
-        if(isset($_POST["login"]) && !empty($_POST["email"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) && !empty($_POST["pass"])) {
-            
-            //Makes a string of the JSON file.
-            $allUsers = file_get_contents("../datastores/users.json");
+    if (isset($_POST["login"]) && !empty($_POST["email"]) && filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) && !empty($_POST["pass"])) {
+
+        //Makes a string of the JSON file.
+        $allUsers = file_get_contents("../datastores/users.json");
 
         //Makes a string of the JSON file.
         $allUsers = file_get_contents("../datastores/users.json");
@@ -167,11 +171,11 @@ session_start();
 
                     <p class="paragraph">E-mailadres <span class="text-danger">*</span></p>
                     <input type="text" class="inputBox" name="email" placeholder="E-mailadres">
-                    <p><span class="error"><?php echo $emailErr;?></span></p>
+                    <p><span class="error"><?php echo $emailErr; ?></span></p>
 
                     <p class="paragraph">Wachtwoord <span class="text-danger">*</span></p>
                     <input type="password" class="inputBox" name="pass" placeholder="Wachtwoord">
-                    <p><span class="error"><?php echo $passErr;?></span></p>
+                    <p><span class="error"><?php echo $passErr; ?></span></p>
 
                     <p><input type="submit" id="login" name="login" value="Inloggen"></p>
                 </form>
