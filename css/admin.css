@@ -25,6 +25,10 @@
     outline: 1px solid #D0D3D4;
 }
 
+.contentContainer {
+    overflow: auto;
+}
+
 .contactContainer{
     width: 90%;
     margin: 0 auto;
