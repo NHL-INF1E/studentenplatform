@@ -42,7 +42,7 @@ and open the template in the editor.
                 <a href=../index.php class="headerbutton">Activiteiten</a>
                 <?php
                 if (isset($_SESSION['name'])) {
-                    echo '<a href="utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                    echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
                 } else {
                 echo '<a href="login.php" class="headerbutton active">Inloggen</a>';
                 }

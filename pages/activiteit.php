@@ -45,7 +45,7 @@ require_once('../utilities/dataStoreUtil.php');
                     <a href=../index.php class="headerbutton active">Activiteiten</a>
                     <?php
                     if (isset($_SESSION['name'])) {
-                        echo '<a href="utilities/logout.php" class="headerbutton">Uitloggen</a>';
+                        echo '<a href="../utilities/logout.php" class="headerbutton">Uitloggen</a>';
                     } else {
                         echo '<a href="login.php" class="headerbutton">Inloggen</a>';
                     }
