@@ -59,7 +59,8 @@ session_start();
 
     <?php
     include "../utilities/dataStoreUtil.php";
-    $_SESSION["activityID"] = -1;
+    $_SESSION["categoryID"] = "sport";
+    $_SESSION["activityID"] = "soccer";
     $error = "";
 
     if (isset($_POST["deletus"])) {
@@ -93,16 +94,16 @@ session_start();
     $link = "";
     $color = "";
 
-    //todo make it so that when activityID has a value, the corresponding Activity gets loaded into the form.
-    if ($_SESSION["activityID"] >= 0) {
-        $ID = $_SESSION["activityID"];
-        $currentActivity = getActivity($ID, "../datastores/activities.json");
-        $result = $currentActivity;
-        $title = $result["title"];
-        $description = $result["beschrijving"];
-        $image = $result["image"];
-        $link = $result["link"];
-        $color = $result["kleur"];
+    if (isset($_SESSION["activityID"]) && strlen($_SESSION["activityID"]) > 0) {
+        getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
+//        $ID = $_SESSION["activityID"];
+//        $currentActivity = getActivity($ID, "../datastores/activities.json");
+//        $result = $currentActivity;
+//        $title = $result["title"];
+//        $description = $result["beschrijving"];
+//        $image = $result["image"];
+//        $link = $result["link"];
+//        $color = $result["kleur"];
     }
     ?>
     <section id="activityWrapper">

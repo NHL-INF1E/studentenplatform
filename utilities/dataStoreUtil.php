@@ -8,9 +8,19 @@ function getCategories($filepathActivities) {
     }
 }
 
-function getActivity($ID, $filepathActivities){
+function getActivity($categoryID, $ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    return ($activities[$ID]);
+    return ($activities[$categoryID]["activity"][$ID]);
+}
+
+function getActivities($filepathActivities){
+    if(!($activities = file_get_contents($filepathActivities))){
+        throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
+    }else{
+        $activitiesArray = json_decode($activities, true);
+        $result = $activitiesArray;
+        return $result;
+    }
 }
 
 function removeActivity($ID, $filepathActivities){
@@ -34,16 +44,6 @@ function addActivity($content, $filepathID, $filepathActivities){
     $newActivity = array(getID($filepathID) => $content);
     array_push($activities, $newActivity);
     file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
-}
-
-function getActivities($filepathActivities){
-    if(!($activities = file_get_contents($filepathActivities))){
-        throw new RuntimeException("filepath " . $filepathActivities . " incorrect");
-    }else{
-        $activitiesArray = json_decode($activities, true);
-        $result = $activitiesArray;
-        return $result;
-    }
 }
 
 function getContacts($filepathContacts){
