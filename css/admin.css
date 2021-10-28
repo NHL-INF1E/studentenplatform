@@ -1,11 +1,51 @@
 #activityWrapper{
     width: 50%;
-    margin: auto;
+    margin: 0 auto;
+}
+
+.contentContainer {
+    overflow: auto;
+    height: 80vh;
+}
+
+.contentContainer::-webkit-scrollbar {
+    width: 8px;
+    background-color: #ECF0F1;
+    border-radius: 10px;
+}
+
+.contentContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px lightgrey;
+    border-radius: 10px;
+}
+
+.contentContainer::-webkit-scrollbar-thumb {
+    background-color: #D0D3D4;
+    border-radius: 10px;
+    outline: 1px solid #D0D3D4;
+}
+
+.contentContainer {
+    overflow: auto;
 }
 
 .contactContainer{
-    width: 50%;
-    float: left;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #ECF0F1;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: grey;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contactContainer:hover {
+    background-color: #D0D3D4;
+}
+
+.innerContent {
+    margin-bottom: 5px;
 }
 
 .contentWrapper{
