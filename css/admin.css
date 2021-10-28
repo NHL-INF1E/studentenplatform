@@ -56,19 +56,22 @@
 	border: 1px solid black;
 	border-radius: 5px;
 	margin: 1%;
+	height: 45px;
+	
 } 
 
-/*.formContent{
-	border: 2px solid black;
-	margin: auto;
-}*/ 
 
 .form{
 	border: 2px solid black;
 	margin: 10%;
+	padding: 1%;
+}
+
+.knop{
+	margin: 1%;
 }
 
 #description{
 	width: 90%;
-	height: 70px;
+	height: 120px;
 }
