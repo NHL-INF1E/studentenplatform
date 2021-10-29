@@ -79,6 +79,7 @@ $activities = getCategories($file);
                         return false;
                 }
                     $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+                    
                     return false;
                 }
                 </script>
