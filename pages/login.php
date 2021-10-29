@@ -164,7 +164,7 @@ session_start();
                 echo '<h1 id="redirect">U wordt ingelogd...</h1>';
                 echo '<script src="script.js"></script>';
             } else {
-                $emailErr = "Verkeerde inloggegevens";
+                $passErr = "Verkeerde inloggegevens";
             }
         }
     }
