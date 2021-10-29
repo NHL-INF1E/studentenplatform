@@ -7,13 +7,6 @@
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "voetbal": {
-                "catName": "voetbal",
-                "activityName": "Voetbal",
-                "activityCount": 0,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "Voetbal is een wereldwijd populaire balsport waarbij twee ploegen van elf spelers moeten proberen de bal in het doel van de tegenstander te krijgen."
-            },
             "tennis": {
                 "catName": "tennis",
                 "activityName": "Tennis",
@@ -41,6 +34,13 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/e-sports.jpg",
                 "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
+            },
+            "Voetbal": {
+                "arrName": "Voetbal",
+                "activityName": "Voetbal",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
+                "activityDescription": "memes?"
             }
         }
     },

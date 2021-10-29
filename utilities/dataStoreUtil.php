@@ -23,26 +23,21 @@ function getActivities($filepathActivities){
     }
 }
 
-function removeActivity($ID, $filepathActivities){
+function removeActivity($categoryID, $ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    unset($activities[$ID]);
-    file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
-    
+    unset($activities[$categoryID]["activity"][$ID]);
+    $jsonString = json_encode($activities, JSON_PRETTY_PRINT);
+    file_put_contents($filepathActivities, $jsonString);
 }
 
-function editActivity($ID, $content, $filepathActivities){
-    $activities = getActivities($filepathActivities);
-    $changedActivity = array($ID => array($ID => $content));
-    
-    $result = (array_replace($activities, $changedActivity));
-    file_put_contents($filepathActivities, json_encode($result, JSON_PRETTY_PRINT));
+function editActivity($ID, $content, $category, $filepathActivities){
+    removeActivity($category, $ID, $filepathActivities);
+    addActivity($content, $category, $filepathActivities);
 }
 
-function addActivity($content, $filepathID, $filepathActivities){
+function addActivity($content, $category, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    
-    $newActivity = array(getID($filepathID) => $content);
-    array_push($activities, $newActivity);
+    $activities[$category]["activity"] += $content;
     file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
 }
 

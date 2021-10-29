@@ -89,30 +89,38 @@ session_start();
     <?php
     include "../utilities/dataStoreUtil.php";
     $_SESSION["categoryID"] = "sport";
-    $_SESSION["activityID"] = "soccer";
+    $_SESSION["activityID"] = "voetbal";
     $error = "";
 
     if (isset($_POST["deletus"])) {
-        removeActivity($_SESSION["activityID"], "../datastores/activities.json");
+        removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
     }
 
     if (isset($_POST["submit"])) {
-        if (empty($_POST["title"]) || empty($_POST["image"]) || empty($_POST["description"]) || empty($_POST["color"]) || empty($_POST["link"])) {
+        if (empty($_POST["title"]) || empty($_POST["image"]) || empty($_POST["description"]) || ($_POST["category"] == "noCategory")) {
             $error = "all fields must be filled out";
         } else {
-            $result = array(
-                "title" => $_POST['title'],
-                "beschrijving" => $_POST['description'],
-                "image" => $_POST["image"],
-                "link" => $_POST["link"],
-                "kleur" => $_POST["color"]
-            );
-            $ID = $_SESSION["activityID"];
-            if ($ID < 0) {
-                addActivity($result, "../datastores/id.txt", "../datastores/activities.json");
+            $title = $_POST["title"];
+            $image = $_POST["image"];
+            $description = $_POST["description"];
+            $category = $_POST["category"];
+            
+            $content = array($title => array(
+                "arrName" =>$title, 
+                "activityName" => ucfirst($title), 
+                "activityCount" => 0, 
+                "activityImage" => $image, 
+                "activityDescription" => $description));
+            
+            if (empty($_SESSION["activityID"])) {
+                
+                if(!(empty(getActivity($category, $title, "../datastores/activities2.json")))){
+                    $error = "Er is al een Activiteit onder die naam";
+                }else{
+                    addActivity($content, $category, "../datastores/activities2.json");
+                }
             } else {
-                editActivity($ID, $result, "../datastores/activities.json");
-                $_SESSION["activityID"] = -1;
+                editActivity($_SESSION["activityID"], $content, $_SESSION["categoryID"], "../datastores/activities2.json");
             }
         }
     }
@@ -120,19 +128,16 @@ session_start();
     $title = "";
     $description = "";
     $image = "";
-    $link = "";
-    $color = "";
+    $category = "";
+    $category = "";
 
     if (isset($_SESSION["activityID"]) && strlen($_SESSION["activityID"]) > 0) {
-        getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
-//        $ID = $_SESSION["activityID"];
-//        $currentActivity = getActivity($ID, "../datastores/activities.json");
-//        $result = $currentActivity;
-//        $title = $result["title"];
-//        $description = $result["beschrijving"];
-//        $image = $result["image"];
-//        $link = $result["link"];
-//        $color = $result["kleur"];
+        $currentActivity = getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
+        $title = $currentActivity["activityName"];
+        $category = $_SESSION["categoryID"];
+        $image = $currentActivity["activityImage"];
+        $description = $currentActivity["activityDesc"];
+        
     }
     ?>
 	<div class="container">
@@ -155,8 +160,17 @@ session_start();
 							</div>
 							
 							<div>
-								<input type="text" name="color" class="inputBox" id="color" placeholder="kleur" value="<?= $color ?>">
-								<input type="text" name="link" class="inputBox" id="link" placeholder="index.php" value="<?= $link ?>">
+                                                            <select name="category" id="category">
+                                                                <?php
+                                                                if(strlen($_SESSION["activityID"]) == 0) {
+                                                                    echo "<option value='noCategory'>Selecteer een Categorie</option>";
+                                                                }
+                                                                ?>
+                                                                <option value="sport"<?php if($category == "sport"){echo " selected";} ?>>Sport</option>
+                                                                <option value="beeldendekunst"<?php if($category == "beeldendekunst"){echo " selected";} ?>>Beeldende Kunst</option>
+                                                                <option value="muziekendans"<?php if($category == "muziekendans"){echo " selected";} ?>>Muziek en Dans</option>
+                                                                <option value="film"<?php if($category == "film"){echo " selected";} ?>>Film</option>
+                                                            </select>
 							</div>
 							
 							<div>
