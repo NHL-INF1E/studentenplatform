@@ -105,9 +105,17 @@ session_start();
     
     //delete button afhandeling
     if (isset($_POST["deletus"])) {
-        //verwijderd een activity met de gegeven category en activity ID
+        //verwijdert een activity met de gegeven category en activity ID
         removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
     }
+    
+    $_SESSION["activityID"] = "";
+    $_SESSION["categoryID"] = "";
+    if(isset($_POST["edit"])){
+        $_SESSION["activityID"] = $_POST["activityID"];
+        $_SESSION["categoryID"] = $_POST["categoryID"];
+    }
+    
 
     //opslaan button afhandeling
     if (isset($_POST["submit"])) {
