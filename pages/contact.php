@@ -80,7 +80,7 @@ session_start();
                     }
 
                     if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
-                        echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
+                        echo '<a href="adminPanel.php" class="headerbutton">Activiteit Toevoegen</a>';
                     }
                     ?>
                     <a href=contact.php class="headerbutton active">Contact</a>

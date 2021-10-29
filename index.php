@@ -84,7 +84,7 @@ $activities = getCategories($file);
                     }
 
                     if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
-                        echo '<a href="pages/adminPanel.php" class="headerbutton">Admin paneel</a>';
+                        echo '<a href="pages/adminPanel.php" class="headerbutton">Activiteit Toevoegen</a>';
                     }
                     ?>
                     <a href=pages/contact.php class="headerbutton">Contact</a>

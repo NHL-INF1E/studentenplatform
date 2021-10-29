@@ -83,7 +83,7 @@ and open the template in the editor.
                     }
 
                     if (isset($_SESSION['name']) && $_SESSION['role'] == 'admin') {
-                        echo '<a href="adminPanel.php" class="headerbutton">Admin paneel</a>';
+                        echo '<a href="adminPanel.php" class="headerbutton">Activiteit Toevoegen</a>';
                     }
                     ?>
                     <a href=contact.php class="headerbutton">Contact</a>
