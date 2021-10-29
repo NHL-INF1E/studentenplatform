@@ -7,20 +7,6 @@
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "boogschieten": {
-                "catName": "boogschieten",
-                "activityName": "Boogschieten",
-                "activityCount": 4,
-                "activityImage": "..\/pictures\/stock\/boogschieten.jpg",
-                "activityDesc": "Boogschieten is een sport waarbij pijlen worden weggeschoten naar een doel met behulp van een boog."
-            },
-            "e-sports": {
-                "catName": "e-sports",
-                "activityName": "E-sports",
-                "activityCount": 3,
-                "activityImage": "..\/pictures\/stock\/e-sports.jpg",
-                "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
-            },
             "voetbal": {
                 "catName": "voetbal",
                 "activityName": "Voetbal",
@@ -41,6 +27,34 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/roeien.jpg",
                 "activityDesc": "Roeien is een sport waarbij een roeiboot vooruit wordt gestuwd door met roeiriemen door het water te bewegen."
+            },
+            "boogschieten": {
+                "catName": "boogschieten",
+                "activityName": "Boogschieten",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/boogschieten.jpg",
+                "activityDesc": "test"
+            },
+            "e-sports": {
+                "catName": "e-sports",
+                "activityName": "E-sports",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/e-sports.jpg",
+                "activityDesc": "videogames"
+            },
+            "fietsen": {
+                "catName": "fietsen",
+                "activityName": "Fietsen",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/basketball.jpg",
+                "activityDesc": "lol"
+            },
+            "honden uitlaten": {
+                "catName": "hondenuitlaten",
+                "activityName": "Honden uitlaten",
+                "activityCount": 0,
+                "activityImage": "..\\\/pictures\\\/stock\\\/beeldendekunst.jpg",
+                "activityDesc": "waf"
             }
         }
     },

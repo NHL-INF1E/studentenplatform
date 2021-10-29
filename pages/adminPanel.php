@@ -123,7 +123,7 @@ session_start();
             $category = $_POST["category"];
             
             $content = array($title => array(
-                "catName" =>$title, 
+                "catName" => str_replace(" ", "", $title), 
                 "activityName" => ucfirst($title), 
                 "activityCount" => 0, 
                 "activityImage" => $image, 
@@ -136,6 +136,7 @@ session_start();
                     $error = "Er is al een Activiteit onder die naam";
                 }else{
                     addActivity($content, $category, "../datastores/activities2.json");
+                    echo 'Activiteit ' . $title . " aangemaakt";
                 }
             } else {
                 editActivity($_SESSION["activityID"], $content, $_SESSION["categoryID"], $category, "../datastores/activities2.json");
@@ -157,7 +158,7 @@ session_start();
     $image = "";
     $category = "";
 
-    //wanneer er een activity bewerkt wordt, worde de oude waarden in de form inout velden ingevuld
+    //wanneer er een activity bewerkt wordt, worde de oude waarden in de form input velden ingevuld
     if (!(empty($_SESSION["activityID"]))) {
         $currentActivity = getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
         $title = $currentActivity["catName"];
