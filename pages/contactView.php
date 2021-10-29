@@ -59,7 +59,9 @@ and open the template in the editor.
         <div class="row">
             <!-- Header logo -->
             <div class="col-md-3 align-self-center">
-                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                <a href=../index.php>
+                    <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                </a>
             </div>
             <!-- Login gebruikersnaam placeholder -->
             <div class="col-md-4 align-self-center">

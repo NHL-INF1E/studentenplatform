@@ -58,7 +58,9 @@ session_start();
         <div class="row">
             <!-- Header logo -->
             <div class="col-md-3 align-self-center">
-                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                <a href=../index.php>
+                    <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                </a>
             </div>
             <!-- Login gebruikersnaam placeholder -->
             <div class="col-md-4 align-self-center">
@@ -164,7 +166,7 @@ session_start();
                 echo '<h1 id="redirect">U wordt ingelogd...</h1>';
                 echo '<script src="script.js"></script>';
             } else {
-                $emailErr = "Verkeerde inloggegevens";
+                $passErr = "Verkeerde inloggegevens";
             }
         }
     }
