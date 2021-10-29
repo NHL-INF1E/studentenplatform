@@ -58,6 +58,13 @@
                 "activityCount": 1,
                 "activityImage": "..\/pictures\/stock\/schilderen.jpg",
                 "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (ge\u00ebmulgeerde) pigmenten."
+            },
+            "Boetseren": {
+                "catName": "Boetseren",
+                "activityName": "Boetseren",
+                "activityCount": 0,
+                "activityImage": "foto",
+                "activityDesc": "boetseren"
             }
         }
     },

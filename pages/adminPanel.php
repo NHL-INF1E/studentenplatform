@@ -140,7 +140,7 @@ session_start();
             //als activityID niet empty is dan zijn we een activity aan het bewerken in plaats van een nieuwe aan het maken
             if (empty($_SESSION["activityID"])) {
                 //checkt of er niet al een activity onder dezelfde naam bestaat
-                if(!(empty(getActivity($category, $title, "../datastores/activities2.json")))){
+                if(!(is_null(getActivity($category, $title, "../datastores/activities2.json")))){
                     $error = "Er is al een Activiteit onder die naam";
                 }else{
                     addActivity($content, $category, "../datastores/activities2.json");
