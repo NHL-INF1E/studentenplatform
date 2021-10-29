@@ -48,26 +48,3 @@ function getContacts($filepathContacts){
         return json_decode($contacts, true);
     }
 }
-
-function getID($filepath){
-    $file = fopen($filepath, "r+");
-    
-    if(!$file){
-        throw new RuntimeException("could not open " . $filepath);
-    }else{
-        $ID = fread($file, filesize($filepath));
-        updateID($ID, $filepath, $file);
-        fclose($file);
-        return $ID;
-    }
-}
-
-function updateID($ID, $filepath, $file){
-    if(!$file){
-        throw new RuntimeException("could not open " . $filepath);
-    }else{
-        $ID++;
-        file_put_contents($filepath, $ID);
-    }
-}
-

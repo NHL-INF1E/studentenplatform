@@ -95,19 +95,26 @@ session_start();
     <!-- header end -->
 
     <?php
+    //functies voor het werken met activities.json, de datastore
     include "../utilities/dataStoreUtil.php";
-    $_SESSION["categoryID"] = "sport";
-    $_SESSION["activityID"] = "voetbal";
+    
+    //deze error wordt gevuld wanneer er iets mis gaat en onderaan de pagina geprint
     $error = "";
-
+    
+    //delete button afhandeling
     if (isset($_POST["deletus"])) {
+        //verwijderd een activity met de gegeven category en activity ID
         removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
     }
 
+    //opslaan button afhandeling
     if (isset($_POST["submit"])) {
+        
+        //checkt of er geen velden leeg gelaten zijn
         if (empty($_POST["title"]) || empty($_POST["image"]) || empty($_POST["description"]) || ($_POST["category"] == "noCategory")) {
             $error = "all fields must be filled out";
         } else {
+            //maakt een array van de values van de form velden
             $title = $_POST["title"];
             $image = $_POST["image"];
             $description = $_POST["description"];
@@ -120,8 +127,9 @@ session_start();
                 "activityImage" => $image, 
                 "activityDescription" => $description));
             
+            //als activityID niet empty is dan zijn we een activity aan het bewerken in plaats van een nieuwe aan het maken
             if (empty($_SESSION["activityID"])) {
-                
+                //checkt of er niet al een activity onder dezelfde naam bestaat
                 if(!(empty(getActivity($category, $title, "../datastores/activities2.json")))){
                     $error = "Er is al een Activiteit onder die naam";
                 }else{
@@ -132,14 +140,14 @@ session_start();
             }
         }
     }
-    //the values are empty when adding an activity
+    //the value van de form input velden, deze zijn leeg wanneer je een nieuwe activity aanmaakt
     $title = "";
     $description = "";
     $image = "";
     $category = "";
-    $category = "";
 
-    if (isset($_SESSION["activityID"]) && strlen($_SESSION["activityID"]) > 0) {
+    //wanneer er een activity bewerkt wordt, worde de oude waarden in de form inout velden ingevuld
+    if (!(empty($_SESSION["activityID"]))) {
         $currentActivity = getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
         $title = $currentActivity["activityName"];
         $category = $_SESSION["categoryID"];
@@ -170,7 +178,8 @@ session_start();
 							<div>
                                                             <select name="category" id="category">
                                                                 <?php
-                                                                if(strlen($_SESSION["activityID"]) == 0) {
+                                                                //placeholder optie voor categorie wanneer er geen activity bewerkt wordt
+                                                                if(empty($_SESSION["activityID"])) {
                                                                     echo "<option value='noCategory'>Selecteer een Categorie</option>";
                                                                 }
                                                                 ?>

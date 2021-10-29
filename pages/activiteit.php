@@ -110,9 +110,10 @@ require_once('../utilities/dataStoreUtil.php');
         <?php
         // if $_GET request 'cat' is set
         if (isset($_GET['cat'])) {
+            echo "cat is set";
 
-            //Activate function if GET isset true (get data for selected activity)
-            $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
+//            //Activate function if GET isset true (get data for selected activity)
+//            $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
 
             //Like button function
             if (isset($_POST['like'])) {
