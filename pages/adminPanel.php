@@ -123,11 +123,11 @@ session_start();
             $category = $_POST["category"];
             
             $content = array($title => array(
-                "arrName" =>$title, 
+                "catName" =>$title, 
                 "activityName" => ucfirst($title), 
                 "activityCount" => 0, 
                 "activityImage" => $image, 
-                "activityDescription" => $description));
+                "activityDesc" => $description));
             
             //als activityID niet empty is dan zijn we een activity aan het bewerken in plaats van een nieuwe aan het maken
             if (empty($_SESSION["activityID"])) {
