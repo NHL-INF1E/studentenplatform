@@ -109,14 +109,6 @@ session_start();
         removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
     }
     
-    $_SESSION["activityID"] = "";
-    $_SESSION["categoryID"] = "";
-    if(isset($_POST["edit"])){
-        $_SESSION["activityID"] = $_POST["activityID"];
-        $_SESSION["categoryID"] = $_POST["categoryID"];
-    }
-    
-
     //opslaan button afhandeling
     if (isset($_POST["submit"])) {
         
@@ -150,6 +142,15 @@ session_start();
             }
         }
     }
+    
+    $_SESSION["activityID"] = "";
+    $_SESSION["categoryID"] = "";
+    if(isset($_POST["edit"])){
+        $_SESSION["activityID"] = $_POST["activityID"];
+        $_SESSION["categoryID"] = $_POST["categoryID"];
+    }
+    
+
     //the value van de form input velden, deze zijn leeg wanneer je een nieuwe activity aanmaakt
     $title = "";
     $description = "";

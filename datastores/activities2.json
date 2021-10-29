@@ -7,13 +7,6 @@
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "tennis": {
-                "catName": "tennis",
-                "activityName": "Tennis",
-                "activityCount": 1,
-                "activityImage": "..\/pictures\/stock\/tennis.jpg",
-                "activityDesc": "Tennis is een balsport voor twee spelers (enkelspel) of paren (dubbelspel), waarbij een bal van gemiddeld 67 mm diameter (meestal geel met witte lijn) met een racket over een net gespeeld moet worden."
-            },
             "roeien": {
                 "catName": "roeien",
                 "activityName": "Roeien",
