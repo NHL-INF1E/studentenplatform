@@ -317,7 +317,7 @@ require_once('../utilities/dataStoreUtil.php');
                             </div>
                         </div>
                         <?php
-                        if ($_SESSION['role'] == 'admin' && isset($_SESSION['submittedActivity'])) {
+                        if ($_SESSION['role'] == 'admin' && !empty($_SESSION['submittedActivity'])) {
                             echo $_SESSION['submittedActivity'];
                             echo '<form action="adminPanel.php" method="post">';
                             echo '<input type="hidden" id="categoryID" name="categoryID" value="' . $_GET["cat"] . '">';
