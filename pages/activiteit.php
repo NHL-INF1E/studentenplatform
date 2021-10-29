@@ -110,6 +110,7 @@ require_once('../utilities/dataStoreUtil.php');
     <!-- content -->
     <div class="container">
         <?php
+        $_SESSION['submittedActivity'] = "";
         // if $_GET request 'cat' is set
         if (isset($_GET['cat'])) {
 
@@ -315,6 +316,16 @@ require_once('../utilities/dataStoreUtil.php');
                                 </p>
                             </div>
                         </div>
+                        <?php
+                        if ($_SESSION['role'] == 'admin' && isset($_SESSION['submittedActivity'])) {
+                            echo $_SESSION['submittedActivity'];
+                            echo '<form action="adminPanel.php" method="post">';
+                            echo '<input type="hidden" id="categoryID" name="categoryID" value="' . $_GET["cat"] . '">';
+                            echo '<input type="hidden" id="activityID" name="activityID" value="' . $_SESSION['submittedActivity'] . '">';
+                            echo'<input type="submit" name="edit" id="edit" value="Wijzig">';
+                            echo'</form>';
+                        }
+                        ?>
                     </div>
                 </div>
             </div>

@@ -102,6 +102,12 @@ session_start();
     
     //deze error wordt gevuld wanneer er iets mis gaat en onderaan de pagina geprint
     $error = "";
+    $_SESSION["activityID"] = "";
+    $_SESSION["categoryID"] = "";
+    if(isset($_POST["edit"])){
+        $_SESSION["activityID"] = $_POST["activityID"];
+        $_SESSION["categoryID"] = $_POST["categoryID"];
+    }
     
     //delete button afhandeling
     if (isset($_POST["deletus"])) {
