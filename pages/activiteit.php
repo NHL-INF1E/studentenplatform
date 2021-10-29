@@ -110,17 +110,17 @@ require_once('../utilities/dataStoreUtil.php');
         <?php
         // if $_GET request 'cat' is set
         if (isset($_GET['cat'])) {
-            echo "cat is set";
 
-//            //Activate function if GET isset true (get data for selected activity)
-//            $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
+            //Activate function if GET isset true (get data for selected activity)
+            $activities = getActivities('../datastores/activities2.json');
+            $category = $activities[$_GET['cat']];
 
             //Like button function
             if (isset($_POST['like'])) {
                 $selectedActivity = $_SESSION['submittedActivity'];
 
                 //Loop door alle activiteiten heen van $getActivity (de kozen categorie, sport/art/film etc.)
-                foreach ($getActivity['activity'] as $activity) {
+                foreach ($category['activity'] as $activity) {
                     //Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
                     if ($activity['catName'] == $selectedActivity) {
                         //Tel activiteit deelnemers op met +1
@@ -131,12 +131,12 @@ require_once('../utilities/dataStoreUtil.php');
                 }
 
                 //Replace oude activityCount met de nieuwe activityCount en zet dit in $getActivity neer
-                $countReplace = array_replace($getActivity['activity'][$selectedActivity], $updatedValueCountArr);
-                $getActivity['activity'][$selectedActivity] = $countReplace;
+                $countReplace = array_replace($category['activity'][$selectedActivity], $updatedValueCountArr);
+                $category['activity'][$selectedActivity] = $countReplace;
 
                 //Hier wordt de oude volledige json lijst opgehaald en vervangen door de nieuwe value's
                 $oldJson = getActivities('../datastores/activities2.json');
-                $oldJson[$_GET['cat']] = $getActivity;
+                $oldJson[$_GET['cat']] = $category;
 
                 //Hier wordt de array omgezet in een JSON object, in json `pretty` formaat
                 $newJson = json_encode($oldJson, JSON_PRETTY_PRINT);
@@ -152,7 +152,7 @@ require_once('../utilities/dataStoreUtil.php');
                         //Check if activity was selected or just the category, based on that echo data
                         if (isset($_POST['activity'])) {
                             $_SESSION['submittedActivity'] = $_POST['activity'];
-                            foreach ($getActivity['activity'] as $key => $item) {
+                            foreach ($category['activity'] as $key => $item) {
                                 if ($_POST['activity'] == $item['catName']) {
                                     echo '
                                     <div class="col-md-12 text-end article-img">
@@ -164,7 +164,7 @@ require_once('../utilities/dataStoreUtil.php');
                         } else {
                             echo '
                             <div class="col-md-12 text-end article-img">
-                                <img class="img-fluid" alt=' . $getActivity['title'] . ' src=' . $getActivity['image'] . '>
+                                <img class="img-fluid" alt=' . $category['title'] . ' src=' . $category['image'] . '>
                             </div>
                             ';
                         }
@@ -174,7 +174,7 @@ require_once('../utilities/dataStoreUtil.php');
                             <?php
                             //Check if activity was selected or just the category, based on that echo data
                             if (isset($_POST['activity'])) {
-                                foreach ($getActivity['activity'] as $key => $item) {
+                                foreach ($category['activity'] as $key => $item) {
                                     if ($_POST['activity'] == $item['catName']) {
                                         echo '
                                         <h2 class="text-center"> 
@@ -192,13 +192,13 @@ require_once('../utilities/dataStoreUtil.php');
                             } else {
                                 echo '
                                 <h2 class="text-center"> 
-                                    <b class="text-capitalize"> ' . $getActivity["title"] . '</b>
+                                    <b class="text-capitalize"> ' . $category["title"] . '</b>
                                 </h2>
                                 ';
 
                                 echo '
                                 <div class="col-md-12 article-text">
-                                    <p>' . $getActivity["description"] . '</p>
+                                    <p>' . $category["description"] . '</p>
                                 </div>
                                 ';
                             }
@@ -222,7 +222,7 @@ require_once('../utilities/dataStoreUtil.php');
                                     <form method="POST">
                                         <?php
                                         //loop through the array of the json file
-                                        foreach ($getActivity['activity'] as $key => $item) {
+                                        foreach ($category['activity'] as $key => $item) {
                                         ?>
                                             <li>
                                                 <?php
@@ -262,7 +262,7 @@ require_once('../utilities/dataStoreUtil.php');
                                     if it has been clicked value in html will be echoed
                                     */
                                     if (isset($_POST["activity"])) {
-                                        foreach ($getActivity['activity'] as $key => $item) {
+                                        foreach ($category['activity'] as $key => $item) {
                                             if ($_POST['activity'] == $item['catName']) {
                                                 //Als de sessie niet leeg is(oftwel er is iemand ingelogd)
                                                 if (!empty($_SESSION['name']) && $_SESSION['role'] != 'admin') {
