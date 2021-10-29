@@ -7,13 +7,6 @@
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "roeien": {
-                "catName": "roeien",
-                "activityName": "Roeien",
-                "activityCount": 0,
-                "activityImage": "..\/pictures\/stock\/roeien.jpg",
-                "activityDesc": "Roeien is een sport waarbij een roeiboot vooruit wordt gestuwd door met roeiriemen door het water te bewegen."
-            },
             "boogschieten": {
                 "catName": "boogschieten",
                 "activityName": "Boogschieten",
@@ -41,6 +34,13 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/tennis.jpg",
                 "activityDesc": "test"
+            },
+            "roeien": {
+                "catName": "roeien",
+                "activityName": "Roeien",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/roeien.jpg",
+                "activityDesc": "Roeien is een sport waarbij een roeiboot vooruit wordt gestuwd door met roeiriemen door het water te bewegen."
             }
         }
     },

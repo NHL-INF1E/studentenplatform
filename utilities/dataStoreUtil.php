@@ -34,9 +34,9 @@ function removeActivity($categoryID, $ID, $filepathActivities){
     file_put_contents($filepathActivities, $jsonString);
 }
 
-function editActivity($ID, $content, $category, $filepathActivities){
-    removeActivity($category, $ID, $filepathActivities);
-    addActivity($content, $category, $filepathActivities);
+function editActivity($ID, $content, $oldCategory, $newCategory, $filepathActivities){
+    removeActivity($oldCategory, $ID, $filepathActivities);
+    addActivity($content, $newCategory, $filepathActivities);
 }
 
 function addActivity($content, $category, $filepathActivities){

@@ -138,7 +138,7 @@ session_start();
                     addActivity($content, $category, "../datastores/activities2.json");
                 }
             } else {
-                editActivity($_SESSION["activityID"], $content, $_SESSION["categoryID"], "../datastores/activities2.json");
+                editActivity($_SESSION["activityID"], $content, $_SESSION["categoryID"], $category, "../datastores/activities2.json");
             }
         }
     }
