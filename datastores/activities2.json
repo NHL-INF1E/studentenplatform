@@ -36,7 +36,7 @@
                 "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
             },
             "Voetbal": {
-                "arrName": "Voetbal",
+                "catName": "Voetbal",
                 "activityName": "Voetbal",
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
