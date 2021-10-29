@@ -165,6 +165,7 @@ session_start();
                 //This piece of javascript adds a delay after logging in so that it's not too abrupt.
                 echo '<h1 id="redirect">U wordt ingelogd...</h1>';
                 echo '<script src="script.js"></script>';
+                exit;
             } else {
                 $passErr = "Verkeerde inloggegevens";
             }
