@@ -102,6 +102,13 @@ session_start();
     
     //deze error wordt gevuld wanneer er iets mis gaat en onderaan de pagina geprint
     $error = "";
+    
+    //delete button afhandeling
+    if (isset($_POST["deletus"])) {
+        //verwijdert een activity met de gegeven category en activity ID
+        removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
+    }
+    
     $_SESSION["activityID"] = "";
     $_SESSION["categoryID"] = "";
     if(isset($_POST["edit"])){
@@ -109,11 +116,6 @@ session_start();
         $_SESSION["categoryID"] = $_POST["categoryID"];
     }
     
-    //delete button afhandeling
-    if (isset($_POST["deletus"])) {
-        //verwijderd een activity met de gegeven category en activity ID
-        removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
-    }
 
     //opslaan button afhandeling
     if (isset($_POST["submit"])) {
