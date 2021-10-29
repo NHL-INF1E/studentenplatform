@@ -159,7 +159,7 @@ session_start();
     //wanneer er een activity bewerkt wordt, worde de oude waarden in de form inout velden ingevuld
     if (!(empty($_SESSION["activityID"]))) {
         $currentActivity = getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
-        $title = $currentActivity["activityName"];
+        $title = $currentActivity["catName"];
         $category = $_SESSION["categoryID"];
         $image = $currentActivity["activityImage"];
         $description = $currentActivity["activityDesc"];

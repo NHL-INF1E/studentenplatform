@@ -35,12 +35,19 @@
                 "activityImage": "..\/pictures\/stock\/e-sports.jpg",
                 "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
             },
-            "Voetbal": {
-                "catName": "Voetbal",
+            "voetbal": {
+                "catName": "voetbal",
                 "activityName": "Voetbal",
                 "activityCount": 2,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "memes?"
+            },
+            "tennis": {
+                "catName": "tennis",
+                "activityName": "Tennis",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/tennis.jpg",
+                "activityDesc": "test"
             }
         }
     },
@@ -59,8 +66,8 @@
                 "activityImage": "..\/pictures\/stock\/schilderen.jpg",
                 "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (ge\u00ebmulgeerde) pigmenten."
             },
-            "Boetseren": {
-                "catName": "Boetseren",
+            "boetseren": {
+                "catName": "boetseren",
                 "activityName": "Boetseren",
                 "activityCount": 0,
                 "activityImage": "foto",
