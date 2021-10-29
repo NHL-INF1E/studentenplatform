@@ -203,8 +203,13 @@ session_start();
 							</div>
 							
 							<div>
-								<input class="knop" type="submit" value="Opslaan" class="inputBox" id="submit" name="submit">
-								<input class="knop" type="submit" value="deletus" class="inputBox" id="deletus" name="deletus">
+                                                            <input class="knop" type="submit" value="Opslaan" class="inputBox" id="submit" name="submit">
+                                                            <?php
+                                                                //delete button niet nodig bij het aanmaken van een activiteit
+                                                                if(!empty($_SESSION["activityID"])) {
+                                                                    echo'<input class="knop" type="submit" value="Verwijderen" class="inputBox" id="deletus" name="deletus">';
+                                                                }
+                                                                ?>
 							</div>
 						</form>
 						<?= $error ?>
