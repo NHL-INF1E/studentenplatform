@@ -10,7 +10,7 @@
             "tennis": {
                 "catName": "tennis",
                 "activityName": "Tennis",
-                "activityCount": 0,
+                "activityCount": 1,
                 "activityImage": "..\/pictures\/stock\/tennis.jpg",
                 "activityDesc": "Tennis is een balsport voor twee spelers (enkelspel) of paren (dubbelspel), waarbij een bal van gemiddeld 67 mm diameter (meestal geel met witte lijn) met een racket over een net gespeeld moet worden."
             },
@@ -24,21 +24,21 @@
             "boogschieten": {
                 "catName": "boogschieten",
                 "activityName": "Boogschieten",
-                "activityCount": 0,
+                "activityCount": 4,
                 "activityImage": "..\/pictures\/stock\/boogschieten.jpg",
                 "activityDesc": "Boogschieten is een sport waarbij pijlen worden weggeschoten naar een doel met behulp van een boog."
             },
             "e-sports": {
                 "catName": "e-sports",
                 "activityName": "E-sports",
-                "activityCount": 0,
+                "activityCount": 3,
                 "activityImage": "..\/pictures\/stock\/e-sports.jpg",
                 "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
             },
             "Voetbal": {
                 "catName": "Voetbal",
                 "activityName": "Voetbal",
-                "activityCount": 0,
+                "activityCount": 2,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "memes?"
             }
