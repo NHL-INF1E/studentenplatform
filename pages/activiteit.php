@@ -21,6 +21,39 @@ require_once('../utilities/dataStoreUtil.php');
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+    
+    <!-- Translation button script -->
+    <!-- Code provided by google -->
+    <script type="text/javascript">
+        function googleTranslateElementInit2() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'nl',
+                autoDisplay: false
+            }, 'google_translate_element2');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+    <!-- Translation button handler -->
+    <script type="text/javascript">
+        eval(function (p, a, c, k, e, r) {
+            e = function (c) {
+                return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+            };
+            if (!''.replace(/^/, String)) {
+                while (c--) r[e(c)] = k[c] || e(c);
+                k = [function (e) {
+                    return r[e]
+                }];
+                e = function () {
+                    return '\\w+'
+                };
+                c = 1
+            }
+            while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+            return p
+        }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
+    </script>
 </head>
 
 <body>
@@ -29,7 +62,9 @@ require_once('../utilities/dataStoreUtil.php');
         <div class="row">
             <!-- Header logo -->
             <div class="col-md-3 align-self-center">
-                <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                <a href=../index.php>
+                    <img src="../pictures/NHL_Stenden_Eropuit_Logo.png" alt="NHL Stenden Eropuit" id="logoheader">
+                </a>
             </div>
             <!-- Login gebruikersnaam placeholder -->
             <div class="col-md-4 align-self-center">
@@ -40,7 +75,7 @@ require_once('../utilities/dataStoreUtil.php');
                 ?>
             </div>
             <!-- Knoppen naar andere pagina's -->
-            <div class="col-md-5">
+            <div class="col-md-5 headerKnoppenContainer">
                 <div id="buttoncontainerheader">
                     <a href=../index.php class="headerbutton active">Activiteiten</a>
                     <?php
@@ -55,36 +90,18 @@ require_once('../utilities/dataStoreUtil.php');
                     }
                     ?>
                     <a href=contact.php class="headerbutton">Contact</a>
-                </div>
-            <!-- Taal wissel knop hier -->
-            <div id="google_translate_element" style="display: none"></div>
-                <script type="text/javascript">
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement({ 
-                        pageLanguage: 'nl', 
-                        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
-                        autoDisplay: false 
-                        }, 
-                    'google_translate_element');
-                }
-                </script>
-                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-                    type="text/javascript"></script>
-                <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-                <script>
-                function translateLanguage(lang) {
 
-                    var $frame = $('.goog-te-menu-frame:first');
-                    if (!$frame.size()) {
-                        alert("Error: Could not find Google translate frame.");
-                        return false;
-                }
-                    $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
-                    return false;
-                }
-                </script>
-                <a href="javascript:;" id="English" onclick="translateLanguage(this.id);"><span></span>
-                <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English"></a>
+                    <!-- Taal wissel knop hier -->
+                    <div id="google_translate_element" style="display: none">
+                    </div>
+                    <div id="google_translate_element2" style="display:none">
+                    </div>
+
+                    <a href="#" onclick="doGTranslate('nl|en');return false;" title="English">
+                        <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English"/>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
@@ -97,14 +114,15 @@ require_once('../utilities/dataStoreUtil.php');
         if (isset($_GET['cat'])) {
 
             //Activate function if GET isset true (get data for selected activity)
-            $getActivity = getActivity($_GET['cat'], '../datastores/activities2.json');
+            $activities = getActivities('../datastores/activities2.json');
+            $category = $activities[$_GET['cat']];
 
             //Like button function
             if (isset($_POST['like'])) {
                 $selectedActivity = $_SESSION['submittedActivity'];
 
                 //Loop door alle activiteiten heen van $getActivity (de kozen categorie, sport/art/film etc.)
-                foreach ($getActivity['activity'] as $activity) {
+                foreach ($category['activity'] as $activity) {
                     //Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
                     if ($activity['catName'] == $selectedActivity) {
                         //Tel activiteit deelnemers op met +1
@@ -115,12 +133,12 @@ require_once('../utilities/dataStoreUtil.php');
                 }
 
                 //Replace oude activityCount met de nieuwe activityCount en zet dit in $getActivity neer
-                $countReplace = array_replace($getActivity['activity'][$selectedActivity], $updatedValueCountArr);
-                $getActivity['activity'][$selectedActivity] = $countReplace;
+                $countReplace = array_replace($category['activity'][$selectedActivity], $updatedValueCountArr);
+                $category['activity'][$selectedActivity] = $countReplace;
 
                 //Hier wordt de oude volledige json lijst opgehaald en vervangen door de nieuwe value's
                 $oldJson = getActivities('../datastores/activities2.json');
-                $oldJson[$_GET['cat']] = $getActivity;
+                $oldJson[$_GET['cat']] = $category;
 
                 //Hier wordt de array omgezet in een JSON object, in json `pretty` formaat
                 $newJson = json_encode($oldJson, JSON_PRETTY_PRINT);
@@ -136,7 +154,7 @@ require_once('../utilities/dataStoreUtil.php');
                         //Check if activity was selected or just the category, based on that echo data
                         if (isset($_POST['activity'])) {
                             $_SESSION['submittedActivity'] = $_POST['activity'];
-                            foreach ($getActivity['activity'] as $key => $item) {
+                            foreach ($category['activity'] as $key => $item) {
                                 if ($_POST['activity'] == $item['catName']) {
                                     echo '
                                     <div class="col-md-12 text-end article-img">
@@ -148,7 +166,7 @@ require_once('../utilities/dataStoreUtil.php');
                         } else {
                             echo '
                             <div class="col-md-12 text-end article-img">
-                                <img class="img-fluid" alt=' . $getActivity['title'] . ' src=' . $getActivity['image'] . '>
+                                <img class="img-fluid" alt=' . $category['title'] . ' src=' . $category['image'] . '>
                             </div>
                             ';
                         }
@@ -158,7 +176,7 @@ require_once('../utilities/dataStoreUtil.php');
                             <?php
                             //Check if activity was selected or just the category, based on that echo data
                             if (isset($_POST['activity'])) {
-                                foreach ($getActivity['activity'] as $key => $item) {
+                                foreach ($category['activity'] as $key => $item) {
                                     if ($_POST['activity'] == $item['catName']) {
                                         echo '
                                         <h2 class="text-center"> 
@@ -176,13 +194,13 @@ require_once('../utilities/dataStoreUtil.php');
                             } else {
                                 echo '
                                 <h2 class="text-center"> 
-                                    <b class="text-capitalize"> ' . $getActivity["title"] . '</b>
+                                    <b class="text-capitalize"> ' . $category["title"] . '</b>
                                 </h2>
                                 ';
 
                                 echo '
                                 <div class="col-md-12 article-text">
-                                    <p>' . $getActivity["description"] . '</p>
+                                    <p>' . $category["description"] . '</p>
                                 </div>
                                 ';
                             }
@@ -206,7 +224,7 @@ require_once('../utilities/dataStoreUtil.php');
                                     <form method="POST">
                                         <?php
                                         //loop through the array of the json file
-                                        foreach ($getActivity['activity'] as $key => $item) {
+                                        foreach ($category['activity'] as $key => $item) {
                                         ?>
                                             <li>
                                                 <?php
@@ -246,14 +264,13 @@ require_once('../utilities/dataStoreUtil.php');
                                     if it has been clicked value in html will be echoed
                                     */
                                     if (isset($_POST["activity"])) {
-                                        foreach ($getActivity['activity'] as $key => $item) {
+                                        foreach ($category['activity'] as $key => $item) {
                                             if ($_POST['activity'] == $item['catName']) {
                                                 //Als de sessie niet leeg is(oftwel er is iemand ingelogd)
-                                                if (!empty($_SESSION['name'])) {
-
+                                                if (!empty($_SESSION['name']) && $_SESSION['role'] != 'admin') {
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
-                                                        <p>Are you interested in this activity?</p>
+                                                        <p>Wil je meedoen aan deze activiteit?</p>
                                                     </div>
                                                     ';
 
@@ -267,13 +284,13 @@ require_once('../utilities/dataStoreUtil.php');
 
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
-                                                        <p> ' . $item["activityCount"] . ' said yes</p>
+                                                        <p> ' . $item["activityCount"] . ' zeiden ja.</p>
                                                     </div>
                                                     ';
                                                 } else {
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check1 fw-bold">
-                                                        Login to sign up for an activity
+                                                        Je moet ingelogd zijn als student om je aan te melden voor een activiteit
                                                     </div>
                                                     ';
 
@@ -287,7 +304,7 @@ require_once('../utilities/dataStoreUtil.php');
 
                                                     echo '
                                                     <div class="col-sm-12 text-center log-check3 fw-bold">
-                                                        <p> ' . $item["activityCount"] . ' said yes</p>
+                                                        <p> ' . $item["activityCount"] . ' zeiden ja.</p>
                                                     </div>
                                                     ';
                                                 }

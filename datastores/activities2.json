@@ -3,17 +3,10 @@
         "title": "Sport",
         "color": "groen",
         "link": "pages\/activiteit.php?cat=sport",
-        "description": "<p>Als jij het atletische type bent, dat graag in teamverband sport? Dan is dit de categorie voor jou.<\/p><p>Bij het sporten zoals voetbal, tennis of roeien leg je contact met zowel Nederlandse als internationale studenten.<\/p><p>Als je meer het Strategisch type bent, zijn er ook sporten zoals E-sports en Boogschieten beschikbaar.<\/p> ",
+        "description": "Als jij het atletische type bent, dat graag in teamverband sport? Dan is dit de categorie voor jou.<br><br>Bij het sporten zoals voetbal, tennis of roeien leg je contact met zowel Nederlandse als internationale studenten.<br><br>Als je meer het Strategisch type bent, zijn er ook sporten zoals E-sports en Boogschieten beschikbaar. ",
         "homeImage": "pictures\/stock\/hardloopTracks.jpeg",
         "image": "..\/pictures\/stock\/hardloopTracks.jpeg",
         "activity": {
-            "voetbal": {
-                "catName": "voetbal",
-                "activityName": "Voetbal",
-                "activityCount": 0,
-                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "Voetbal is een wereldwijd populaire balsport waarbij twee ploegen van elf spelers moeten proberen de bal in het doel van de tegenstander te krijgen."
-            },
             "tennis": {
                 "catName": "tennis",
                 "activityName": "Tennis",
@@ -41,33 +34,38 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/e-sports.jpg",
                 "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen."
+            },
+            "Voetbal": {
+                "catName": "Voetbal",
+                "activityName": "Voetbal",
+                "activityCount": 0,
+                "activityImage": "..\/pictures\/stock\/voetbal.jpg",
+                "activityDesc": "memes?"
             }
         }
     },
-
     "beeldendekunst": {
         "title": "Beeldende kunst",
         "color": "roze",
         "link": "pages\/activiteit.php?cat=beeldendekunst",
-        "description": "<p>Beeldende kunst is de vorm van kunst waarbij de afbeelding, of het visuele, voorop staat. De afbeelding wordt gerealiseerd, of uitgebeeld, in de vorm van een kunstobject. Een kunstobject kan een platte vorm aannemen, bijvoorbeeld een schilderij, of een ruimtelijke vorm, bijvoorbeeld een beeldhouwwerk.<\/p> ",
+        "description": "Beeldende kunst is de vorm van kunst waarbij de afbeelding, of het visuele, voorop staat. De afbeelding wordt gerealiseerd, of uitgebeeld, in de vorm van een kunstobject. Een kunstobject kan een platte vorm aannemen, bijvoorbeeld een schilderij, of een ruimtelijke vorm, bijvoorbeeld een beeldhouwwerk. ",
         "homeImage": "pictures\/stock\/beeldendekunst.jpg",
         "image": "..\/pictures\/stock\/beeldendekunst.jpg",
         "activity": {
             "schilderen": {
                 "catName": "schilderen",
                 "activityName": "Schilderen",
-                "activityCount": 0,
+                "activityCount": 1,
                 "activityImage": "..\/pictures\/stock\/schilderen.jpg",
-                "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (geëmulgeerde) pigmenten."
+                "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (ge\u00ebmulgeerde) pigmenten."
             }
         }
     },
-
     "muziekendans": {
         "title": "Muziek en dans",
         "color": "blauw",
         "link": "pages\/activiteit.php?cat=muziekendans",
-        "description": "<p>Dans (van het Franse danse) is een sport, kunstvorm en een sociaal gebeuren dat meestal op beweging duidt van het lichaam, vaak in combinatie met muziek. Het wordt gebruikt als een vorm van emotionele expressie, sociale interactie of in een spirituele of uitvoerende vorm.<\/p> ",
+        "description": "Dans (van het Franse danse) is een sport, kunstvorm en een sociaal gebeuren dat meestal op beweging duidt van het lichaam, vaak in combinatie met muziek. Het wordt gebruikt als een vorm van emotionele expressie, sociale interactie of in een spirituele of uitvoerende vorm. ",
         "homeImage": "pictures\/stock\/dans.jpeg",
         "image": "..\/pictures\/stock\/dans.jpeg",
         "activity": {
@@ -80,12 +78,11 @@
             }
         }
     },
-
     "film": {
         "title": "Film",
         "color": "rood",
         "link": "pages\/activiteit.php?cat=film",
-        "description": "<p>Een film, rolprent of video is een serie opeenvolgend getoonde, stilstaande beelden. Door de snelheid waarmee de beelden elkaar opvolgen en de nawerking van elk beeld op het netvlies lijken ze een vloeiende en continue beweging te vormen. Vaak is er ook geluid bij.<\/p> ",
+        "description": "Een film, rolprent of video is een serie opeenvolgend getoonde, stilstaande beelden. Door de snelheid waarmee de beelden elkaar opvolgen en de nawerking van elk beeld op het netvlies lijken ze een vloeiende en continue beweging te vormen. Vaak is er ook geluid bij. ",
         "homeImage": "pictures\/stock\/film2.jpg",
         "image": "..\/pictures\/stock\/film2.jpg",
         "activity": {

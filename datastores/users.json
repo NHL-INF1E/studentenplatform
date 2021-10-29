@@ -1,16 +1,23 @@
 {
     "people":[
       {
-        "name": "stefan",
+        "name": "Stefan",
         "email": "stefan@nhlstenden.com",
         "password": "$2y$10$D/FPBfseoQxQrGtKGMCUMeihORnG9ksxUal1Lt35bShkaqsToF9PW",
         "role": "admin"
       },
       { 
-        "name": "sylvana",
+        "name": "Sylvana",
         "email": "sylvana@nhlstenden.com",
         "password": "$2y$10$D/FPBfseoQxQrGtKGMCUMeihORnG9ksxUal1Lt35bShkaqsToF9PW",
         "role": "user"
+      },
+      {
+        "name": "Henk",
+        "email": "henk@nhlstenden.com",
+        "password": "$2y$10$D/FPBfseoQxQrGtKGMCUMeihORnG9ksxUal1Lt35bShkaqsToF9PW",
+        "role": "user"
       }
+
     ]
   }

@@ -5,7 +5,7 @@
 
 .contentContainer {
     overflow: auto;
-    height: 500px;
+    height: 80vh;
 }
 
 .contentContainer::-webkit-scrollbar {
@@ -50,4 +50,28 @@
 
 .contentWrapper{
     width: 100%;
+}
+
+.inputBox{
+	border: 1px solid black;
+	border-radius: 5px;
+	margin: 1%;
+	height: 45px;
+	
+} 
+
+
+.form{
+	border: 2px solid black;
+	margin: 10%;
+	padding: 1%;
+}
+
+.knop{
+	margin: 1%;
+}
+
+#description{
+	width: 90%;
+	height: 120px;
 }
