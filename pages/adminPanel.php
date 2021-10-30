@@ -108,8 +108,6 @@ session_start();
     if (isset($_POST["deletus"])) {
         //verwijdert een activity met de gegeven category en activity ID
         removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
-        header("Location: activiteit.php?cat=" . $_SESSION["categoryID"]);
-        exit();
     }
     
     //opslaan button afhandeling
