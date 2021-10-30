@@ -10,6 +10,8 @@ function getCategories($filepathActivities) {
 
 function getActivity($categoryID, $ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
+    print_r($activities[$categoryID]["activity"][$ID]);
+    
     if(isset($activities[$categoryID]["activity"][$ID])){
         return ($activities[$categoryID]["activity"][$ID]);
     }else{
@@ -29,7 +31,9 @@ function getActivities($filepathActivities){
 
 function removeActivity($categoryID, $ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    unset($activities[$categoryID]["activity"][$ID]);
+    if(isset($activities[$categoryID]["activity"][$ID])){
+        unset($activities[$categoryID]["activity"][$ID]);
+    }
     $jsonString = json_encode($activities, JSON_PRETTY_PRINT);
     file_put_contents($filepathActivities, $jsonString);
 }
@@ -41,7 +45,9 @@ function editActivity($ID, $content, $oldCategory, $newCategory, $filepathActivi
 
 function addActivity($content, $category, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    $activities[$category]["activity"] += $content;
+    if(isset($activities[$category]["activity"])){
+        $activities[$category]["activity"] += $content;
+    }
     file_put_contents($filepathActivities, json_encode($activities, JSON_PRETTY_PRINT));
 }
 

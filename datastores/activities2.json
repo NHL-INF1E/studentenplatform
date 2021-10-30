@@ -96,6 +96,13 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/dans.jpeg",
                 "activityDesc": "Dans (van het Franse danse) is een sport, kunstvorm en een sociaal gebeuren dat meestal op beweging duidt van het lichaam, vaak in combinatie met muziek"
+            },
+            "lekkermetdemeidenketa": {
+                "catName": "lekkermetdemeidenketa",
+                "activityName": "Lekker met de meiden keta",
+                "activityCount": 0,
+                "activityImage": "foto",
+                "activityDesc": "special K"
             }
         }
     },

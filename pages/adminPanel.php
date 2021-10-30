@@ -118,12 +118,13 @@ session_start();
         } else {
             //maakt een array van de values van de form velden
             $title = $_POST["title"];
+            $id = str_replace(" ", "", $title);
             $image = $_POST["image"];
             $description = $_POST["description"];
             $category = $_POST["category"];
             
-            $content = array($title => array(
-                "catName" => str_replace(" ", "", $title), 
+            $content = array($id => array(
+                "catName" => $id, 
                 "activityName" => ucfirst($title), 
                 "activityCount" => 0, 
                 "activityImage" => $image, 
@@ -149,6 +150,10 @@ session_start();
     if(isset($_POST["edit"])){
         $_SESSION["activityID"] = $_POST["activityID"];
         $_SESSION["categoryID"] = $_POST["categoryID"];
+        echo $_SESSION["categoryID"];
+        echo "<br>";
+        echo "<br>";
+        echo$_SESSION["activityID"];
     }
     
 
@@ -161,10 +166,17 @@ session_start();
     //wanneer er een activity bewerkt wordt, worde de oude waarden in de form input velden ingevuld
     if (!(empty($_SESSION["activityID"]))) {
         $currentActivity = getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
-        $title = $currentActivity["catName"];
+        print_r($currentActivity);
+        if(isset($currentActivity["catName"])){
+            $title = $currentActivity["catName"];
+        }
+        if(isset($currentActivity["activityImage"])){
+            $image = $currentActivity["activityImage"];
+        }
+        if(isset($currentActivity["activityDesc"])){
+            $description = $currentActivity["activityDesc"];
+        }
         $category = $_SESSION["categoryID"];
-        $image = $currentActivity["activityImage"];
-        $description = $currentActivity["activityDesc"];
         
     }
     ?>
