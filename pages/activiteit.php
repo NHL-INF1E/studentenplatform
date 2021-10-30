@@ -110,7 +110,6 @@ require_once('../utilities/dataStoreUtil.php');
     <!-- content -->
     <div class="container">
         <?php
-        $_SESSION['submittedActivity'] = "";
         // if $_GET request 'cat' is set
         if (isset($_GET['cat'])) {
 
@@ -121,10 +120,11 @@ require_once('../utilities/dataStoreUtil.php');
             //Like button function
             if (isset($_POST['like'])) {
                 $selectedActivity = $_SESSION['submittedActivity'];
-
+                
                 //Loop door alle activiteiten heen van $getActivity (de kozen categorie, sport/art/film etc.)
                 foreach ($category['activity'] as $activity) {
-                    //Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
+                    
+//                  Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
                     if ($activity['catName'] == $selectedActivity) {
                         //Tel activiteit deelnemers op met +1
                         $variableCount = $activity['activityCount'] + 1;
@@ -132,7 +132,7 @@ require_once('../utilities/dataStoreUtil.php');
                         $updatedValueCountArr = array('activityCount' => $variableCount);
                     }
                 }
-
+                
                 //Replace oude activityCount met de nieuwe activityCount en zet dit in $getActivity neer
                 $countReplace = array_replace($category['activity'][$selectedActivity], $updatedValueCountArr);
                 $category['activity'][$selectedActivity] = $countReplace;
@@ -147,6 +147,7 @@ require_once('../utilities/dataStoreUtil.php');
                 //Hier wordt het nieuwe JSON object in het bestand gezet
                 file_put_contents('../datastores/activities2.json', $newJson);
             }
+            $_SESSION['submittedActivity'] = "";
         ?>
             <div class="row">
                 <div class="col-md-4">

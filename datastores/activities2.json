@@ -10,7 +10,7 @@
             "voetbal": {
                 "catName": "voetbal",
                 "activityName": "Voetbal",
-                "activityCount": 2,
+                "activityCount": 4,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
                 "activityDesc": "memes?"
             },
@@ -49,10 +49,10 @@
                 "activityImage": "..\/pictures\/stock\/basketball.jpg",
                 "activityDesc": "lol"
             },
-            "honden uitlaten": {
+            "hondenuitlaten": {
                 "catName": "hondenuitlaten",
                 "activityName": "Honden uitlaten",
-                "activityCount": 0,
+                "activityCount": 4,
                 "activityImage": "..\\\/pictures\\\/stock\\\/beeldendekunst.jpg",
                 "activityDesc": "waf"
             }
