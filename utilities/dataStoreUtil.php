@@ -10,7 +10,6 @@ function getCategories($filepathActivities) {
 
 function getActivity($categoryID, $ID, $filepathActivities){
     $activities = getActivities($filepathActivities);
-    print_r($activities[$categoryID]["activity"][$ID]);
     
     if(isset($activities[$categoryID]["activity"][$ID])){
         return ($activities[$categoryID]["activity"][$ID]);
