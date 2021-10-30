@@ -147,6 +147,8 @@ require_once('../utilities/dataStoreUtil.php');
                 //Hier wordt het nieuwe JSON object in het bestand gezet
                 file_put_contents('../datastores/activities2.json', $newJson);
             }
+            
+            //wanneer je op de pagina komt op een andere manier dan de like button, moet de submittedActivity leeg beginnen.
             $_SESSION['submittedActivity'] = "";
         ?>
             <div class="row">

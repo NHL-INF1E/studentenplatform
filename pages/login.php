@@ -185,7 +185,7 @@ session_start();
                     <p><span class="error">* verplicht veld</span></p>
 
                     <p class="paragraph">E-mailadres <span class="text-danger">*</span></p>
-                    <input type="text" class="inputBox" name="email" placeholder="E-mailadres">
+                    <input type="text" class="inputBox" name="email" placeholder="E-mailadres" autofocus="autofocus">
                     <p><span class="error"><?php echo $emailErr; ?></span></p>
 
                     <p class="paragraph">Wachtwoord <span class="text-danger">*</span></p>

@@ -41,20 +41,6 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/e-sports.jpg",
                 "activityDesc": "videogames"
-            },
-            "fietsen": {
-                "catName": "fietsen",
-                "activityName": "Fietsen",
-                "activityCount": 0,
-                "activityImage": "..\/pictures\/stock\/basketball.jpg",
-                "activityDesc": "lol"
-            },
-            "hondenuitlaten": {
-                "catName": "hondenuitlaten",
-                "activityName": "Honden uitlaten",
-                "activityCount": 4,
-                "activityImage": "..\\\/pictures\\\/stock\\\/beeldendekunst.jpg",
-                "activityDesc": "waf"
             }
         }
     },
@@ -72,13 +58,6 @@
                 "activityCount": 1,
                 "activityImage": "..\/pictures\/stock\/schilderen.jpg",
                 "activityDesc": "De verf bestaat uit pigment (kleurstof) in een vloeibaar medium. Het fundamentele verschil tussen schilderkunst en andere tweedimensionale kunstvormen is dat schilderkunst werkt met in een vloeistof (schildermedium) opgeloste (ge\u00ebmulgeerde) pigmenten."
-            },
-            "boetseren": {
-                "catName": "boetseren",
-                "activityName": "Boetseren",
-                "activityCount": 0,
-                "activityImage": "foto",
-                "activityDesc": "boetseren"
             }
         }
     },

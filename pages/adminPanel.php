@@ -102,11 +102,14 @@ session_start();
     
     //deze error wordt gevuld wanneer er iets mis gaat en onderaan de pagina geprint
     $error = "";
+    $greatSucces = "";
     
     //delete button afhandeling
     if (isset($_POST["deletus"])) {
         //verwijdert een activity met de gegeven category en activity ID
         removeActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
+        header("Location: activiteit.php?cat=" . $_SESSION["categoryID"]);
+        exit();
     }
     
     //opslaan button afhandeling
@@ -137,7 +140,7 @@ session_start();
                     $error = "Er is al een Activiteit onder die naam";
                 }else{
                     addActivity($content, $category, "../datastores/activities2.json");
-                    echo 'Activiteit ' . $title . " aangemaakt";
+                    $greatSucces = 'Activiteit ' . $title . " aangemaakt";
                 }
             } else {
                 editActivity($_SESSION["activityID"], $content, $_SESSION["categoryID"], $category, "../datastores/activities2.json");
@@ -150,10 +153,6 @@ session_start();
     if(isset($_POST["edit"])){
         $_SESSION["activityID"] = $_POST["activityID"];
         $_SESSION["categoryID"] = $_POST["categoryID"];
-        echo $_SESSION["categoryID"];
-        echo "<br>";
-        echo "<br>";
-        echo$_SESSION["activityID"];
     }
     
 
@@ -166,9 +165,8 @@ session_start();
     //wanneer er een activity bewerkt wordt, worde de oude waarden in de form input velden ingevuld
     if (!(empty($_SESSION["activityID"]))) {
         $currentActivity = getActivity($_SESSION["categoryID"], $_SESSION["activityID"], "../datastores/activities2.json");
-        print_r($currentActivity);
-        if(isset($currentActivity["catName"])){
-            $title = $currentActivity["catName"];
+        if(isset($currentActivity["activityName"])){
+            $title = $currentActivity["activityName"];
         }
         if(isset($currentActivity["activityImage"])){
             $image = $currentActivity["activityImage"];
@@ -225,6 +223,8 @@ session_start();
 							</div>
 						</form>
 						<?= $error ?>
+                                            <?= $greatSucces ?>
+                                            
 					</section>
 				</div>
 			
