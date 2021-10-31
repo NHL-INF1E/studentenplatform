@@ -1,89 +1,89 @@
-.form-text  {
-    border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
-    border-radius: 5px; /*Dit zorgt ervoor dat de hoeken afgerond zijn met een radius van 5px.*/
-    width: 80%; /*Dit zorgt ervoor dat de breedte 95% is.*/
-    margin-bottom: 5%;
-    padding: 10px;
+.form-text {
+  border: 1px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
+  border-radius: 5px; /*Dit zorgt ervoor dat de hoeken afgerond zijn met een radius van 5px.*/
+  width: 80%; /*Dit zorgt ervoor dat de breedte 95% is.*/
+  margin-bottom: 5%;
+  padding: 10px;
 }
 
-input   {
-    height: 45px;
+input {
+  height: 45px;
 }
 
-.rand   {
-    border: 2px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
-    padding: 10px; /*Dit zorgt voor een leegte tussen de zwarte lijn en de inhoud van 10px.*/
+.rand {
+  border: 2px solid black; /*Dit zorgt ervoor dat de border 1px is en de kleur zwart heeft.*/
+  padding: 10px; /*Dit zorgt voor een leegte tussen de zwarte lijn en de inhoud van 10px.*/
 }
 
-label   {
-    float: left; /*Dit zorgt ervoor dat de text links is.*/
-    margin-left: 10%; /*Dit zorgt ervoor dat de tekst op gelijke hoogte is met de input.*/
-    color: black;
+label {
+  float: left; /*Dit zorgt ervoor dat de text links is.*/
+  margin-left: 10%; /*Dit zorgt ervoor dat de tekst op gelijke hoogte is met de input.*/
+  color: black;
 }
 
-.verzenden  {
-    float: right; /*Dit zorgt ervoor dat de knop verzenden rechts is.*/
-    margin-right: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
-    margin-bottom: 5%;
-    background-color: #005AAA; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
-    color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
-    font-weight: bold;
-    height: 35px;
-}
-
-.overzicht  {
-    float: left; /*Dit zorgt ervoor dat de knop overzicht links is.*/
-    margin-left: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
-    margin-bottom: 5%;
-    background-color: #005AAA; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
-    color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
-    font-weight: bold;
-    height: 35px;
-}
-
-.overzicht a {
-    text-decoration: none;
-    color: white;
-}
-
-.overzicht a:hover {
-    color: white;
+.verzenden {
+  float: right; /*Dit zorgt ervoor dat de knop verzenden rechts is.*/
+  margin-right: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
+  margin-bottom: 5%;
+  background-color: #005aaa; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
+  color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
+  font-weight: bold;
+  height: 35px;
 }
 
 .overzicht {
-    float: left; /*Dit zorgt ervoor dat de knop overzicht links is.*/
-    margin-left: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
-    margin-bottom: 5%;
-    background-color: #005AAA; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
-    color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
-    font-weight: bold;
-    height: 35px;
+  float: left; /*Dit zorgt ervoor dat de knop overzicht links is.*/
+  margin-left: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
+  margin-bottom: 5%;
+  background-color: #005aaa; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
+  color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
+  font-weight: bold;
+  height: 35px;
 }
 
 .overzicht a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
-#message    {
-    resize: none; /*Dit zorgt ervoor dat de textarea een vaste grootte heeft.*/
+.overzicht a:hover {
+  color: white;
 }
 
-.error  {
-    color: red; /*Dit geeft de tekst van de error de kleur rood.*/
-    margin: 0; /*Dit zorgt ervoor dat er geen extra ruimte zit tussen de error en de input.*/
-    float: right; /*Dit zorgt ervoor dat de error rechts is.*/
-    margin-right: 10%; /*Dit zorgt ervoor dat de error op gelijke hoogte is met de input.*/
+.overzicht {
+  float: left; /*Dit zorgt ervoor dat de knop overzicht links is.*/
+  margin-left: 10%; /*Dit zorgt ervoor dat de knop op gelijke hoogte is met de input.*/
+  margin-bottom: 5%;
+  background-color: #005aaa; /*Dit geeft de knop de kleur blauw uit het huisstijldocumen.t*/
+  color: white; /*Dit geeft de tekst in de knop een witte kleur.*/
+  font-weight: bold;
+  height: 35px;
+}
+
+.overzicht a {
+  text-decoration: none;
+  color: white;
+}
+
+#message {
+  resize: none; /*Dit zorgt ervoor dat de textarea een vaste grootte heeft.*/
+}
+
+.error {
+  color: red; /*Dit geeft de tekst van de error de kleur rood.*/
+  margin: 0; /*Dit zorgt ervoor dat er geen extra ruimte zit tussen de error en de input.*/
+  float: right; /*Dit zorgt ervoor dat de error rechts is.*/
+  margin-right: 10%; /*Dit zorgt ervoor dat de error op gelijke hoogte is met de input.*/
 }
 
 #gelukt {
-    color: #005AAA; /*Dit geeft de tekst van gelukt de kleur blauw uit het huisstijldocument.*/
-    float: left; /*Dit zorgt ervoor dat de tekst van geluk links naast de knop verzenden staat.*/
-    margin-left: 10%; /*Dit zorgt ervoor dat de tekst van geluk op gelijke hoogte is met de input.*/
+  color: #005aaa; /*Dit geeft de tekst van gelukt de kleur blauw uit het huisstijldocument.*/
+  float: left; /*Dit zorgt ervoor dat de tekst van geluk links naast de knop verzenden staat.*/
+  margin-left: 10%; /*Dit zorgt ervoor dat de tekst van geluk op gelijke hoogte is met de input.*/
 }
 
-#title  {
-    font-weight: bold;
-    font-size: 30px;
-    margin-left: 10%;
+#title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 10%;
 }

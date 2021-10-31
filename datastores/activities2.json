@@ -12,14 +12,14 @@
                 "activityName": "Voetbal",
                 "activityCount": 4,
                 "activityImage": "..\/pictures\/stock\/voetbal.jpg",
-                "activityDesc": "memes?"
+                "activityDesc": "Voetbal is een wereldwijd populaire balsport waarbij twee ploegen van elf spelers moeten proberen de bal in het doel van de tegenstander te krijgen. De bal mag met ieder deel van het lichaam gespeeld worden, met uitzondering van armen en handen (behalve bij de inworp)."
             },
             "tennis": {
                 "catName": "tennis",
                 "activityName": "Tennis",
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/tennis.jpg",
-                "activityDesc": "test"
+                "activityDesc": "Tennis is een balsport voor twee spelers (enkelspel) of paren (dubbelspel), waarbij een bal van gemiddeld 67 mm diameter (meestal geel met witte lijn) met een racket over een net gespeeld moet worden."
             },
             "roeien": {
                 "catName": "roeien",
@@ -33,14 +33,14 @@
                 "activityName": "Boogschieten",
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/boogschieten.jpg",
-                "activityDesc": "test"
+                "activityDesc": "Boogschieten is een sport waarbij pijlen worden weggeschoten naar een doel met behulp van een boog. Vroeger was de boog een jacht- en oorlogswapen, maar tegenwoordig is boogschieten vooral een concentratiesport, hoewel er in de Verenigde Staten ook nog wel met de boog gejaagd wordt."
             },
             "e-sports": {
                 "catName": "e-sports",
                 "activityName": "E-sports",
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/e-sports.jpg",
-                "activityDesc": "videogames"
+                "activityDesc": "E-sport (van het Engelse electronic sports) is het competitief (in wedstrijdverband) spelen van computerspellen. Over het algemeen worden de wedstrijden gespeeld met behulp van de multiplayer-modus van een computerspel. De regels van de competitie worden bepaald door de software (van het computerspel) en externe reglementen, zoals de regels van de wedstrijdorganisator. E-sport kan op pc's en op spelcomputers worden beoefend. De deelnemers worden e-sporters genoemd. Er kunnen verschillende disciplines per computergame zijn, zoals een aanvaller, een verdediger of verkenner. Bij individuele computerspellen zijn er competities zowel op individueel als op teamniveau."
             }
         }
     },
@@ -75,13 +75,6 @@
                 "activityCount": 0,
                 "activityImage": "..\/pictures\/stock\/dans.jpeg",
                 "activityDesc": "Dans (van het Franse danse) is een sport, kunstvorm en een sociaal gebeuren dat meestal op beweging duidt van het lichaam, vaak in combinatie met muziek"
-            },
-            "lekkermetdemeidenketa": {
-                "catName": "lekkermetdemeidenketa",
-                "activityName": "Lekker met de meiden keta",
-                "activityCount": 0,
-                "activityImage": "foto",
-                "activityDesc": "special K"
             }
         }
     },

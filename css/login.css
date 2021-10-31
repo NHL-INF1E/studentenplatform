@@ -1,48 +1,54 @@
-.error { /*For the error messages when someone fills in the wrong information.*/
-    color: #FF0000; /*Makes the error messages red.*/
-    margin-left: 10%; /*Creates space on the left-hand side.*/
+.error {
+  /*For the error messages when someone fills in the wrong information.*/
+  color: #ff0000; /*Makes the error messages red.*/
+  margin-left: 10%; /*Creates space on the left-hand side.*/
 }
 
-.inputBox { /*The email and password fields*/
-    width: 80%; /*Determines the width of the boxes where visitors input their information.*/
-    height: 45px; /*Determines the height.*/
-    border: 1px solid black; /*Creates a black border around the boxes.*/
-    border-radius: 5px; /*Creates rounded corners.*/
-    margin-left: 10%; 
-    margin-right: -10%; /*Creates space on the right-hand side.*/
-    margin-top: -10%; /*Creates space on top of the div.*/
+.inputBox {
+  /*The email and password fields*/
+  width: 80%; /*Determines the width of the boxes where visitors input their information.*/
+  height: 45px; /*Determines the height.*/
+  border: 1px solid black; /*Creates a black border around the boxes.*/
+  border-radius: 5px; /*Creates rounded corners.*/
+  margin-left: 10%;
+  margin-right: -10%; /*Creates space on the right-hand side.*/
+  margin-top: -10%; /*Creates space on top of the div.*/
 }
 
-.paragraph { /*The words 'emailaddress' and 'password' besides the input fields.*/
-    color: black; /*Makes the letters black.*/
-    margin-left: 10%; 
-    margin-top: -2%;
+.paragraph {
+  /*The words 'emailaddress' and 'password' besides the input fields.*/
+  color: black; /*Makes the letters black.*/
+  margin-left: 10%;
+  margin-top: -2%;
 }
 
-#title { /*The word 'login'.*/
-    font-weight: bold; /*Makes the letters bold.*/
-    font-size: 30px; /*Makes the font-size 30px large.*/
-    margin-left: 10%;
+#title {
+  /*The word 'login'.*/
+  font-weight: bold; /*Makes the letters bold.*/
+  font-size: 30px; /*Makes the font-size 30px large.*/
+  margin-left: 10%;
 }
 
-#login { /*The login button you can click after filling in the information.*/
-    border-radius: 0px; 
-    width: 30%;
-    background-color: #005AAA; /*Makes the background color of the div blue.*/
-    color: white;
-    font-weight: bold;
-    height: 35px;
-    float: right; /*Ensures that the div lines up neatly on the right-hand side.*/
-    margin-right: 10%;
-    margin-top: -3%;
+#login {
+  /*The login button you can click after filling in the information.*/
+  border-radius: 0px;
+  width: 30%;
+  background-color: #005aaa; /*Makes the background color of the div blue.*/
+  color: white;
+  font-weight: bold;
+  height: 35px;
+  float: right; /*Ensures that the div lines up neatly on the right-hand side.*/
+  margin-right: 10%;
+  margin-top: -3%;
 }
 
-#redirect { /*The words that appear when you have logged in.*/
-    text-align: center; /*Ensures that the words appear in the center of the page.*/
-    font-size: 20px; 
+#redirect {
+  /*The words that appear when you have logged in.*/
+  text-align: center; /*Ensures that the words appear in the center of the page.*/
+  font-size: 20px;
 }
 
-.rand   {
-    border: 2px solid black;
-    padding: 1%; /*Creates space between the black border and the contents.*/
+.rand {
+  border: 2px solid black;
+  padding: 1%; /*Creates space between the black border and the contents.*/
 }

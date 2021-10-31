@@ -15,7 +15,7 @@
   float: left;
 }
 .headerKnoppenContainer {
-  align-self: center!important;
+  align-self: center !important;
 }
 
 .headerbutton {
@@ -37,7 +37,7 @@
 }
 
 #headerbase {
-  background-color:#005AAA;
+  background-color: #005aaa;
 }
 
 #footerbase {

@@ -1,5 +1,5 @@
 /*Globale stijling hiero (fonts enzo)*/
 @import url(//db.onlinewebfonts.com/c/917a69d24b88e2d4d2ca803c0605bd59?family=CeraPRO-Regular); /*Hierdoor kan er gebruik worden gemaakt van CeraPRO.*/
-*   {
-    font-family: CeraPRO-Regular, sans-serif; /*Het lettertype CeraPRO, uit het huisstijldocument en sans-serif als back-up.*/
+* {
+  font-family: CeraPRO-Regular, sans-serif; /*Het lettertype CeraPRO, uit het huisstijldocument en sans-serif als back-up.*/
 }

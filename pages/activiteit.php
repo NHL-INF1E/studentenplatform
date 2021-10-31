@@ -21,7 +21,7 @@ require_once('../utilities/dataStoreUtil.php');
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
-    
+
     <!-- Translation button script -->
     <!-- Code provided by google -->
     <script type="text/javascript">
@@ -36,21 +36,22 @@ require_once('../utilities/dataStoreUtil.php');
 
     <!-- Translation button handler -->
     <script type="text/javascript">
-        eval(function (p, a, c, k, e, r) {
-            e = function (c) {
+        eval(function(p, a, c, k, e, r) {
+            e = function(c) {
                 return (c < a ? '' : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
             };
             if (!''.replace(/^/, String)) {
                 while (c--) r[e(c)] = k[c] || e(c);
-                k = [function (e) {
+                k = [function(e) {
                     return r[e]
                 }];
-                e = function () {
+                e = function() {
                     return '\\w+'
                 };
                 c = 1
             }
-            while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+            while (c--)
+                if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
             return p
         }('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}', 43, 43, '||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'), 0, {}))
     </script>
@@ -98,7 +99,7 @@ require_once('../utilities/dataStoreUtil.php');
                     </div>
 
                     <a href="#" onclick="doGTranslate('nl|en');return false;" title="English">
-                        <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English"/>
+                        <img src="../pictures/flags/UK_flag.jpg" id="langflag" alt="English" />
                     </a>
                 </div>
 
@@ -120,11 +121,11 @@ require_once('../utilities/dataStoreUtil.php');
             //Like button function
             if (isset($_POST['like'])) {
                 $selectedActivity = $_SESSION['submittedActivity'];
-                
+
                 //Loop door alle activiteiten heen van $getActivity (de kozen categorie, sport/art/film etc.)
                 foreach ($category['activity'] as $activity) {
-                    
-//                  Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
+
+                    //Als de geloopte activiteitnaam gelijk is aan het geselecteerde activiteit dan pak die array
                     if ($activity['catName'] == $selectedActivity) {
                         //Tel activiteit deelnemers op met +1
                         $variableCount = $activity['activityCount'] + 1;
@@ -132,7 +133,7 @@ require_once('../utilities/dataStoreUtil.php');
                         $updatedValueCountArr = array('activityCount' => $variableCount);
                     }
                 }
-                
+
                 //Replace oude activityCount met de nieuwe activityCount en zet dit in $getActivity neer
                 $countReplace = array_replace($category['activity'][$selectedActivity], $updatedValueCountArr);
                 $category['activity'][$selectedActivity] = $countReplace;
@@ -147,7 +148,7 @@ require_once('../utilities/dataStoreUtil.php');
                 //Hier wordt het nieuwe JSON object in het bestand gezet
                 file_put_contents('../datastores/activities2.json', $newJson);
             }
-            
+
             //wanneer je op de pagina komt op een andere manier dan de like button, moet de submittedActivity leeg beginnen.
             $_SESSION['submittedActivity'] = "";
         ?>
@@ -320,12 +321,12 @@ require_once('../utilities/dataStoreUtil.php');
                             </div>
                         </div>
                         <?php
-                        if ($_SESSION['role'] == 'admin' && !empty($_SESSION['submittedActivity'])) {
+                        if (!empty($_SESSION['role']) && $_SESSION['role'] == 'admin' && !empty($_SESSION['submittedActivity'])) {
                             echo '<form action="adminPanel.php" method="post">';
                             echo '<input type="hidden" id="categoryID" name="categoryID" value="' . $_GET["cat"] . '">';
                             echo '<input type="hidden" id="activityID" name="activityID" value="' . $_SESSION['submittedActivity'] . '">';
-                            echo'<input type="submit" name="edit" id="edit" value="Wijzig">';
-                            echo'</form>';
+                            echo '<input type="submit" name="edit" id="edit" value="Wijzig">';
+                            echo '</form>';
                         }
                         ?>
                     </div>

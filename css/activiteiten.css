@@ -1,73 +1,73 @@
 /* CARDS */
 .kaartje {
-    border: 1px solid black;
-    margin-right: 1% !important;
-    margin-left: 1% !important;
-    margin-top: 5% !important;
-    transition: all 0.3s ease;
+  border: 1px solid black;
+  margin-right: 1% !important;
+  margin-left: 1% !important;
+  margin-top: 5% !important;
+  transition: all 0.3s ease;
 }
 
 .content {
-    height: 70vh;
-    display: block;
+  height: 70vh;
+  display: block;
 }
 
 .rowOne {
-    margin-bottom: 1.5rem!important;
-    height: 28vh;
-    overflow-wrap: break-word;
-    display: block;
-    overflow: hidden;
+  margin-bottom: 1.5rem !important;
+  height: 28vh;
+  overflow-wrap: break-word;
+  display: block;
+  overflow: hidden;
 }
 
 .rowTwo {
-    padding-right: 1.5rem!important;
-    padding-left: 1.5rem!important;
-    height: 6vh;
-    overflow-wrap: break-word;
-    display: block;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  height: 6vh;
+  overflow-wrap: break-word;
+  display: block;
 }
 
 .rowThree {
-    padding-right: 1.5rem!important;
-    padding-left: 1.5rem!important;
-    height: 25vh;
-    overflow-wrap: break-word;
-    display: block;
-    overflow: auto;
+  padding-right: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  height: 25vh;
+  overflow-wrap: break-word;
+  display: block;
+  overflow: auto;
 }
 
 .rowFour {
-    height: 8vh;
-    overflow-wrap: break-word;
-    display: block;
+  height: 8vh;
+  overflow-wrap: break-word;
+  display: block;
 }
 
 /* CARD BUTTON */
 .inschrijfKnop {
-    color: white;
-    background-color: royalblue;
-    width: 125px;
-    height: 35px;
-    font-size: 17px;
-    font-weight: bold;
-    border: none;
-    transition: all 0.3s ease;
+  color: white;
+  background-color: royalblue;
+  width: 125px;
+  height: 35px;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  transition: all 0.3s ease;
 }
 .inschrijfKnop:hover {
-    color: deepskyblue;
+  color: deepskyblue;
 }
 
 /* CARD BACKGROUNDS */
 .groen:hover {
-    background-color: #5baa002c;
+  background-color: #5baa002c;
 }
 .roze:hover {
-    background-color: #aa005b2a;
+  background-color: #aa005b2a;
 }
 .blauw:hover {
-    background-color: #0006aa28;
+  background-color: #0006aa28;
 }
 .rood:hover {
-    background-color: #aa000636;
+  background-color: #aa000636;
 }

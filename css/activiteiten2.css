@@ -1,79 +1,78 @@
 .left-content {
-    background-color: #EEEEEC;
-    padding: 10px;
-    margin: 10px; 
-    height: auto;
+  background-color: #eeeeec;
+  padding: 10px;
+  margin: 10px;
+  height: auto;
 }
 
 .article-img {
-    padding: 0;
-    margin: 0;
-} 
+  padding: 0;
+  margin: 0;
+}
 
 .article-img img {
-    margin-left: 40px;
-    margin-bottom: 30px;
-    box-shadow: -8px 7px rgb(0 0 0 / 10%);
-    width: 360px;
-    height: 210px;
+  margin-left: 40px;
+  margin-bottom: 30px;
+  box-shadow: -8px 7px rgb(0 0 0 / 10%);
+  width: 360px;
+  height: 210px;
 }
 
 .article-title {
-    padding: 10px;
-    color: grey;
+  padding: 10px;
+  color: grey;
 }
 
 .article-text {
-    color: grey;
-    padding: 10px;
+  color: grey;
+  padding: 10px;
 }
 
 .right-content {
-    background-color: #EEEEEC;
-    padding: 10px;
-    margin: 10px; 
-    height: 70vh;
-    margin-left: 5vw;
-    margin-top: 85px;
-    padding-left: 25px;
+  background-color: #eeeeec;
+  padding: 10px;
+  margin: 10px;
+  height: 70vh;
+  margin-left: 5vw;
+  margin-top: 85px;
+  padding-left: 25px;
 }
 
 .activity-drop {
-    list-style-type: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
+  list-style-type: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
 }
 
 .activity-button {
-    width: 135px;
-    text-align: left;
-    background-color: #EEEEEC;
-    color: grey;
-    border-style: none;
+  width: 135px;
+  text-align: left;
+  background-color: #eeeeec;
+  color: grey;
+  border-style: none;
 }
 
 .log-check1 {
-    color: red;
-    padding: 10px;
+  color: red;
+  padding: 10px;
 }
 
 .log-check3 {
-    color: #009BA4;
-    padding: 10px;
+  color: #009ba4;
+  padding: 10px;
 }
 
 .log-check2 {
-    opacity: 20%;
-    padding: 10px;
+  opacity: 20%;
+  padding: 10px;
 }
 
 .log-check4 {
-    opacity: 100%;
-    padding: 10px;
+  opacity: 100%;
+  padding: 10px;
 }
 
 .activeActivity {
-    color: #009BA4;
+  color: #009ba4;
 }
-
